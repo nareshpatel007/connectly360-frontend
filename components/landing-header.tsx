@@ -92,6 +92,7 @@ export function LandingHeader() {
     const pathname = usePathname();
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
+    const appUrl = process.env.NEXT_PUBLIC_APP_URL || "";
 
     return (
         <div className="w-full z-50 flex flex-col fixed top-0">
@@ -194,10 +195,6 @@ export function LandingHeader() {
                     <Link href="/blog" className={`text-sm font-bold hover:text-[#35877D] transition-colors ${pathname.startsWith("/blog") ? "text-[#35877D]" : "text-gray-700"}`}>
                         Blog
                     </Link>
-                    {/* <div className="relative group cursor-pointer py-2 flex items-center gap-1 text-sm font-bold text-gray-700 hover:text-[#35877D] transition-colors">
-                        <span>Resources</span>
-                        <ChevronDown size={14} className="text-gray-400 group-hover:text-[#35877D] transition-colors" />
-                    </div> */}
                 </nav>
 
                 {/* Right Actions Menu */}
@@ -210,7 +207,7 @@ export function LandingHeader() {
                                 </Link>
                             </Button>
                             <Button asChild size="sm" className="rounded-full px-4 py-2 h-9 bg-[#35877D] hover:bg-[#2c6f66] text-white transition-all shadow-sm font-extrabold text-xs flex items-center gap-1">
-                                <Link href="/dashboard">
+                                <Link href={`${appUrl}/dashboard`}>
                                     Dashboard <ArrowRight size={12} />
                                 </Link>
                             </Button>
@@ -223,12 +220,12 @@ export function LandingHeader() {
                                 </Link>
                             </Button>
                             <Button asChild size="sm" className="rounded-full px-4 py-2 h-9 bg-[#35877D] hover:bg-[#2c6f66] text-white transition-all shadow-sm font-extrabold text-xs flex items-center gap-1">
-                                <Link href="/register">
+                                <Link href={`${appUrl}/register`}>
                                     Start Free Trial <ArrowRight size={12} />
                                 </Link>
                             </Button>
                             <Button asChild variant="outline" size="sm" className="rounded-full px-4 py-2 h-9 border-[#35877D] text-[#35877D] hover:bg-[#EAF7F2] hover:text-[#2c6f66] bg-transparent transition-all font-extrabold text-xs">
-                                <Link href="/login">
+                                <Link href={`${appUrl}/login`}>
                                     Log In
                                 </Link>
                             </Button>
@@ -293,13 +290,13 @@ export function LandingHeader() {
                         <Link href="/book-demo" className="text-center font-bold text-gray-700 p-2" onClick={() => setMobileMenuOpen(false)}>Demo</Link>
                         {isAuthenticated ? (
                             <Button asChild className="w-full bg-[#35877D] text-white font-extrabold rounded-full py-3 text-sm">
-                                <Link href="/dashboard" onClick={() => setMobileMenuOpen(false)}>Dashboard</Link>
+                                <Link href={`${appUrl}/dashboard`} onClick={() => setMobileMenuOpen(false)}>Dashboard</Link>
                             </Button>
                         ) : (
                             <>
-                                <Link href="/login" className="text-center font-bold text-gray-700 p-2" onClick={() => setMobileMenuOpen(false)}>Login</Link>
+                                <Link href={`${appUrl}/login`} className="text-center font-bold text-gray-700 p-2" onClick={() => setMobileMenuOpen(false)}>Login</Link>
                                 <Button asChild className="w-full bg-[#35877D] text-white font-extrabold rounded-full py-3 text-sm">
-                                    <Link href="/register" onClick={() => setMobileMenuOpen(false)}>Start Free Trial</Link>
+                                    <Link href={`${appUrl}/register`} onClick={() => setMobileMenuOpen(false)}>Start Free Trial</Link>
                                 </Button>
                             </>
                         )}
