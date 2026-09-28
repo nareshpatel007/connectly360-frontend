@@ -19,6 +19,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { blogPosts, BlogPost } from "./posts";
 
+
 export default function BlogPage() {
     const [searchQuery, setSearchQuery] = useState("");
     const [selectedCategory, setSelectedCategory] = useState("All");
@@ -81,11 +82,10 @@ export default function BlogPage() {
                                     <button
                                         key={category}
                                         onClick={() => setSelectedCategory(category)}
-                                        className={`px-4 py-2 text-xs font-bold rounded-xl transition-all cursor-pointer border ${
-                                            selectedCategory === category
-                                                ? "bg-[#35877D] border-[#35877D] text-white shadow-sm"
-                                                : "bg-slate-50 border-slate-200 text-slate-600 hover:bg-slate-100 hover:text-slate-900"
-                                        }`}
+                                        className={`px-4 py-2 text-xs font-bold rounded-xl transition-all cursor-pointer border ${selectedCategory === category
+                                            ? "bg-[#35877D] border-[#35877D] text-white shadow-sm"
+                                            : "bg-slate-50 border-slate-200 text-slate-600 hover:bg-slate-100 hover:text-slate-900"
+                                            }`}
                                     >
                                         {category}
                                     </button>
