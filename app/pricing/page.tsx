@@ -23,6 +23,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { useAuth } from "@/lib/auth-context";
 import { LandingHeader } from "@/components/landing-header";
 import { LandingFooter } from "@/components/landing-footer";
+import { APP_URL } from "@/lib/config";
 
 export default function PricingPage() {
     const { isAuthenticated } = useAuth();
@@ -135,7 +136,7 @@ export default function PricingPage() {
                                     <span>Free Signup Bonus: 50 Free Credits included with every new account!</span>
                                 </div>
                                 <Button asChild size="sm" className="bg-[#00382B] hover:bg-[#35877D] text-white text-xs font-bold rounded-xl h-8 px-4 cursor-pointer border-0">
-                                    <Link href={isAuthenticated ? "/dashboard" : "/register"}>
+                                    <Link href={isAuthenticated ? `${APP_URL}/dashboard` : `${APP_URL}/register`}>
                                         Claim 50 Free Credits <ArrowRight size={13} className="ml-1" />
                                     </Link>
                                 </Button>
@@ -218,7 +219,7 @@ export default function PricingPage() {
                                                 : "bg-slate-900 hover:bg-slate-800 text-white"
                                         }`}
                                     >
-                                        <Link href={isAuthenticated ? "/billing/recharge-credits" : "/register"}>
+                                        <Link href={isAuthenticated ? `${APP_URL}/billing/buy-credits` : `${APP_URL}/register`}>
                                             {isAuthenticated ? `Buy ${pack.name}` : "Sign Up & Purchase"}
                                         </Link>
                                     </Button>

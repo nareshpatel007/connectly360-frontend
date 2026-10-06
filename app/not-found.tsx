@@ -4,6 +4,7 @@ import Link from "next/link";
 import { LandingHeader } from "@/components/landing-header";
 import { LandingFooter } from "@/components/landing-footer";
 import { ArrowRight, Home, Search, MessageSquare } from "lucide-react";
+import { APP_URL } from "@/lib/config";
 
 export default function NotFound() {
     return (
@@ -54,7 +55,7 @@ export default function NotFound() {
                             <ArrowRight size={13} className="group-hover:translate-x-0.5 transition-transform" />
                         </Link>
                         <Link
-                            href="/login"
+                            href={`${APP_URL}/dashboard`}
                             className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-[#35877D] text-[#35877D] hover:bg-[#EAF7F2] text-sm font-bold transition-all duration-200"
                         >
                             Go to Dashboard

@@ -43,6 +43,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { useAuth } from "@/lib/auth-context";
 import { LandingHeader } from "@/components/landing-header";
 import { LandingFooter } from "@/components/landing-footer";
+import { APP_URL } from "@/lib/config";
 
 const staggerContainer = {
     hidden: { opacity: 0 },
@@ -187,14 +188,14 @@ export default function LandingPage() {
                                 <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4 mb-8">
                                     {isAuthenticated ? (
                                         <Button asChild size="lg" className="h-13 px-8 text-sm font-semibold rounded-xl bg-[#35877D] hover:bg-[#2c6f66] text-white shadow-md hover:shadow-lg transition-all font-bold">
-                                            <Link href="/dashboard">
+                                            <Link href={`${APP_URL}/dashboard`}>
                                                 Go to Dashboard <ArrowRight className="ml-2 h-4 w-4" />
                                             </Link>
                                         </Button>
                                     ) : (
                                         <>
                                             <Button asChild size="lg" className="h-13 px-8 text-sm font-semibold rounded-xl bg-[#35877D] hover:bg-[#2c6f66] text-white shadow-md hover:shadow-lg transition-all font-bold">
-                                                <Link href="/register">
+                                                <Link href={`${APP_URL}/register`}>
                                                     Start Free Trial <ArrowRight className="ml-2 h-4 w-4" />
                                                 </Link>
                                             </Button>
@@ -642,7 +643,7 @@ export default function LandingPage() {
                                             </span>
                                         </div>
                                         <Button asChild size="sm" className="h-8.5 text-xs font-bold bg-[#35877D] text-white rounded-lg">
-                                            <Link href={isAuthenticated ? "/dashboard" : "/register"}>View in CRM</Link>
+                                            <Link href={isAuthenticated ? `${APP_URL}/dashboard` : `${APP_URL}/register`}>View in CRM</Link>
                                         </Button>
                                     </div>
                                 </div>
@@ -719,7 +720,7 @@ export default function LandingPage() {
                                     <Code size={11} /> Drag & Drop builder canvas mockup
                                 </span>
                                 <Button asChild size="sm" className="bg-[#35877D] hover:bg-[#2c6f66] text-white text-xs font-bold rounded-xl h-8 px-3">
-                                    <Link href={isAuthenticated ? "/dashboard" : "/register"}>Open Workflow Builder</Link>
+                                    <Link href={isAuthenticated ? `${APP_URL}/dashboard` : `${APP_URL}/register`}>Open Workflow Builder</Link>
                                 </Button>
                             </div>
                         </div>
@@ -873,7 +874,7 @@ export default function LandingPage() {
                                     </ul>
                                 </div>
                                 <Button asChild variant="outline" className="w-full mt-6 h-11 border-slate-200 rounded-xl text-xs font-bold hover:bg-gray-50 cursor-pointer">
-                                    <Link href={isAuthenticated ? "/billing/recharge-credits" : "/register"}>Get Started</Link>
+                                    <Link href={isAuthenticated ? `${APP_URL}/billing/buy-credits` : `${APP_URL}/register`}>Get Started</Link>
                                 </Button>
                             </Card>
 
@@ -902,7 +903,7 @@ export default function LandingPage() {
                                     </ul>
                                 </div>
                                 <Button asChild className="w-full mt-6 h-11 bg-[#00382B] hover:bg-[#35877D] text-white rounded-xl text-xs font-bold shadow-md cursor-pointer border-0">
-                                    <Link href={isAuthenticated ? "/billing/recharge-credits" : "/register"}>Buy Growth Pack</Link>
+                                    <Link href={isAuthenticated ? `${APP_URL}/billing/buy-credits` : `${APP_URL}/register`}>Buy Growth Pack</Link>
                                 </Button>
                             </Card>
 
@@ -928,7 +929,7 @@ export default function LandingPage() {
                                     </ul>
                                 </div>
                                 <Button asChild variant="outline" className="w-full mt-6 h-11 border-slate-200 rounded-xl text-xs font-bold hover:bg-gray-50 cursor-pointer">
-                                    <Link href={isAuthenticated ? "/billing/recharge-credits" : "/register"}>Buy Pro Pack</Link>
+                                    <Link href={isAuthenticated ? `${APP_URL}/billing/buy-credits` : `${APP_URL}/register`}>Buy Pro Pack</Link>
                                 </Button>
                             </Card>
 
@@ -954,7 +955,7 @@ export default function LandingPage() {
                                     </ul>
                                 </div>
                                 <Button asChild variant="outline" className="w-full mt-6 h-11 border-slate-200 rounded-xl text-xs font-bold hover:bg-gray-50 cursor-pointer">
-                                    <Link href={isAuthenticated ? "/billing/recharge-credits" : "/register"}>Buy Enterprise Pack</Link>
+                                    <Link href={isAuthenticated ? `${APP_URL}/billing/buy-credits` : `${APP_URL}/register`}>Buy Enterprise Pack</Link>
                                 </Button>
                             </Card>
 
@@ -1057,11 +1058,11 @@ export default function LandingPage() {
 
                         {isAuthenticated ? (
                             <Button asChild size="lg" className="h-13 px-10 text-sm font-semibold rounded-xl bg-[#35877D] hover:bg-[#2c6f66] text-white shadow-lg">
-                                <Link href="/dashboard">Go to Dashboard</Link>
+                                <Link href={`${APP_URL}/dashboard`}>Go to Dashboard</Link>
                             </Button>
                         ) : (
                             <Button asChild size="lg" className="h-13 px-10 text-sm font-semibold rounded-xl bg-[#35877D] hover:bg-[#2c6f66] text-white shadow-lg font-bold">
-                                <Link href="/register">Start Your Free Trial</Link>
+                                <Link href={`${APP_URL}/register`}>Start Your Free Trial</Link>
                             </Button>
                         )}
 

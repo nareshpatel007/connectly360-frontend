@@ -2,6 +2,7 @@
 
 import React, { createContext, useContext, useState, useEffect } from "react";
 import { useRouter, usePathname } from "next/navigation";
+import { APP_URL } from "@/lib/config";
 
 interface User {
     id: number;
@@ -104,11 +105,11 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
             pathname === "/forgot-password";
 
         if (!token && !isPublicPage) {
-            // Redirect to login if not authenticated and not on a public page
-            router.push("/login");
+            // Redirect to app login if not authenticated and not on a public page
+            window.location.href = `${APP_URL}/login`;
         } else if (token && isAuthPage) {
-            // Redirect to dashboard home if already logged in and visiting auth pages
-            router.push("/dashboard");
+            // Redirect to app dashboard if already logged in and visiting auth pages
+            window.location.href = `${APP_URL}/dashboard`;
         }
     }, [token, user, pathname, isLoading, router]);
 
@@ -117,7 +118,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         setToken(newToken);
         setIsLoading(true);
         fetchProfile(newToken);
-        router.push("/dashboard");
+        window.location.href = `${APP_URL}/dashboard`;
     };
 
     const logout = () => {
@@ -125,7 +126,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         localStorage.removeItem("auth_user");
         setToken(null);
         setUser(null);
-        router.push("/login");
+        window.location.href = `${APP_URL}/login`;
     };
 
     const isPublicPage =

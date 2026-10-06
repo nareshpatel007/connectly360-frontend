@@ -24,7 +24,17 @@ const nextConfig: NextConfig = {
                 permanent: false,
             },
             {
+                source: "/signin",
+                destination: `${appUrl}/login`,
+                permanent: false,
+            },
+            {
                 source: "/register",
+                destination: `${appUrl}/register`,
+                permanent: false,
+            },
+            {
+                source: "/signup",
                 destination: `${appUrl}/register`,
                 permanent: false,
             },
