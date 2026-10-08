@@ -99,6 +99,51 @@ export default function CookiePolicyPage() {
                                             <strong>Purpose:</strong> Temporary cryptographic session tokens to protect against Cross-Site Request Forgery (CSRF) and ensure forms submitted on our platform originate from verified browser sessions.
                                         </p>
                                     </div>
+
+                                    {/* Inventory Table */}
+                                    <div className="overflow-x-auto pt-2">
+                                        <table className="w-full text-left text-xs border border-slate-200 rounded-xl overflow-hidden">
+                                            <thead className="bg-slate-100 text-slate-800 font-bold uppercase tracking-wider text-[11px]">
+                                                <tr>
+                                                    <th className="p-3 border-b border-slate-200">Storage Name / Key</th>
+                                                    <th className="p-3 border-b border-slate-200">Category</th>
+                                                    <th className="p-3 border-b border-slate-200">Provider</th>
+                                                    <th className="p-3 border-b border-slate-200">Duration</th>
+                                                    <th className="p-3 border-b border-slate-200">Purpose</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody className="divide-y divide-slate-200 text-slate-700 bg-white">
+                                                <tr>
+                                                    <td className="p-3 font-mono font-medium text-slate-900">auth_token</td>
+                                                    <td className="p-3"><span className="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-semibold text-[10px]">Strictly Necessary</span></td>
+                                                    <td className="p-3">Connectly360 (First-party Local Storage)</td>
+                                                    <td className="p-3">Session / 30 days or until logout</td>
+                                                    <td className="p-3">Stores encrypted user authentication JWT for CRM access</td>
+                                                </tr>
+                                                <tr>
+                                                    <td className="p-3 font-mono font-medium text-slate-900">connectly360_active_visitor_id</td>
+                                                    <td className="p-3"><span className="px-2 py-0.5 rounded bg-blue-100 text-blue-800 font-semibold text-[10px]">Functional</span></td>
+                                                    <td className="p-3">Connectly360 (First-party Cookie)</td>
+                                                    <td className="p-3">1 year</td>
+                                                    <td className="p-3">Preserves ongoing live chat thread across page loads</td>
+                                                </tr>
+                                                <tr>
+                                                    <td className="p-3 font-mono font-medium text-slate-900">connectly360_visitors</td>
+                                                    <td className="p-3"><span className="px-2 py-0.5 rounded bg-blue-100 text-blue-800 font-semibold text-[10px]">Functional</span></td>
+                                                    <td className="p-3">Connectly360 (First-party Cookie)</td>
+                                                    <td className="p-3">1 year</td>
+                                                    <td className="p-3">Tracks visitor conversation history in support widget</td>
+                                                </tr>
+                                                <tr>
+                                                    <td className="p-3 font-mono font-medium text-slate-900">XSRF-TOKEN / csrf_token</td>
+                                                    <td className="p-3"><span className="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-semibold text-[10px]">Security</span></td>
+                                                    <td className="p-3">Connectly360 API (First-party Cookie)</td>
+                                                    <td className="p-3">Session</td>
+                                                    <td className="p-3">Prevents Cross-Site Request Forgery attacks</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </section>
 

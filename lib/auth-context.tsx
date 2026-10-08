@@ -80,28 +80,37 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         }
     }, []);
 
+    const isPublic = (path: string | null) => {
+        if (!path) return false;
+        return (
+            path === "/" ||
+            path === "/pricing" ||
+            path === "/contact" ||
+            path === "/book-demo" ||
+            path === "/privacy" ||
+            path === "/privacy-policy" ||
+            path === "/terms" ||
+            path === "/terms-of-service" ||
+            path === "/terms-and-conditions" ||
+            path === "/cookie-policy" ||
+            path === "/refund-policy" ||
+            path === "/data-deletion" ||
+            path === "/user-data-deletion" ||
+            path === "/data-deletion-instructions" ||
+            path === "/faq" ||
+            path.startsWith("/blog") ||
+            path === "/login" ||
+            path === "/register" ||
+            path === "/forgot-password" ||
+            path.startsWith("/verify")
+        );
+    };
+
     // Route protection logic
     useEffect(() => {
         if (isLoading) return;
 
-        const isPublicPage =
-            pathname === "/" ||
-            pathname === "/pricing" ||
-            pathname === "/contact" ||
-            pathname === "/book-demo" ||
-            pathname === "/privacy" ||
-            pathname === "/privacy-policy" ||
-            pathname === "/terms" ||
-            pathname === "/terms-of-service" ||
-            pathname === "/cookie-policy" ||
-            pathname === "/refund-policy" ||
-            pathname === "/data-deletion" ||
-            pathname === "/faq" ||
-            (pathname ? pathname.startsWith("/blog") : false) ||
-            pathname === "/login" ||
-            pathname === "/register" ||
-            pathname === "/forgot-password" ||
-            (pathname ? pathname.startsWith("/verify") : false);
+        const isPublicPage = isPublic(pathname);
 
         const isAuthPage =
             pathname === "/login" ||
@@ -133,20 +142,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         window.location.href = `${APP_URL}/login`;
     };
 
-    const isPublicPage =
-        pathname === "/" ||
-        pathname === "/pricing" ||
-        pathname === "/contact" ||
-        pathname === "/book-demo" ||
-        pathname === "/privacy" ||
-        pathname === "/terms" ||
-        pathname === "/cookie-policy" ||
-        pathname === "/refund-policy" ||
-        pathname === "/faq" ||
-        pathname === "/login" ||
-        pathname === "/register" ||
-        pathname === "/forgot-password" ||
-        pathname.startsWith("/verify");
+    const isPublicPage = isPublic(pathname);
 
     const showContent = isPublicPage || (token && !isLoading);
 
