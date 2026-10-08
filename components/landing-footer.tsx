@@ -20,8 +20,16 @@ export function LandingFooter() {
                         {/* Contact Details */}
                         <div className="space-y-2.5 pt-2 text-sm font-medium text-gray-455">
                             <div className="flex items-center gap-2">
-                                <Mail size={13} className="text-[#35877D]/60" />
-                                <span>support@connectly360.com</span>
+                                <Mail size={13} className="text-[#35877D]/60 shrink-0" />
+                                <a href="mailto:support@connectly360.com" className="hover:text-[#35877D] transition-colors">support@connectly360.com</a>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <Phone size={13} className="text-[#35877D]/60 shrink-0" />
+                                <span>+91 9586557162</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <MapPin size={13} className="text-[#35877D]/60 shrink-0" />
+                                <span>Ahmedabad, Gujarat, India</span>
                             </div>
                         </div>
                     </div>
@@ -53,14 +61,15 @@ export function LandingFooter() {
 
                     {/* Column 4: Resources */}
                     <div className="space-y-4">
-                        <h4 className="font-extrabold text-sm text-[#0B2E1E] uppercase tracking-wider">Resources</h4>
+                        <h4 className="font-extrabold text-sm text-[#0B2E1E] uppercase tracking-wider">Resources & Legal</h4>
                         <ul className="space-y-3 text-sm font-medium text-gray-455">
-                            <li><Link href="/blog" className="hover:text-[#35877D] transition-colors">Blog</Link></li>
-                            <li><Link href="/privacy" className="hover:text-[#35877D] transition-colors">Privacy Policy</Link></li>
-                            <li><Link href="/terms" className="hover:text-[#35877D] transition-colors">Terms of Service</Link></li>
+                            <li><Link href="/privacy" className="hover:text-[#35877D] transition-colors font-semibold">Privacy Policy</Link></li>
+                            <li><Link href="/terms" className="hover:text-[#35877D] transition-colors font-semibold">Terms of Service</Link></li>
+                            <li><Link href="/data-deletion" className="hover:text-[#35877D] transition-colors">Data Deletion Instructions</Link></li>
                             <li><Link href="/cookie-policy" className="hover:text-[#35877D] transition-colors">Cookie Policy</Link></li>
                             <li><Link href="/refund-policy" className="hover:text-[#35877D] transition-colors">Refund Policy</Link></li>
                             <li><Link href="/faq" className="hover:text-[#35877D] transition-colors">FAQs</Link></li>
+                            <li><Link href="/blog" className="hover:text-[#35877D] transition-colors">Blog</Link></li>
                         </ul>
                     </div>
                 </div>

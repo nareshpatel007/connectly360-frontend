@@ -90,14 +90,18 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
             pathname === "/contact" ||
             pathname === "/book-demo" ||
             pathname === "/privacy" ||
+            pathname === "/privacy-policy" ||
             pathname === "/terms" ||
+            pathname === "/terms-of-service" ||
             pathname === "/cookie-policy" ||
             pathname === "/refund-policy" ||
+            pathname === "/data-deletion" ||
             pathname === "/faq" ||
+            (pathname ? pathname.startsWith("/blog") : false) ||
             pathname === "/login" ||
             pathname === "/register" ||
             pathname === "/forgot-password" ||
-            pathname.startsWith("/verify");
+            (pathname ? pathname.startsWith("/verify") : false);
 
         const isAuthPage =
             pathname === "/login" ||
