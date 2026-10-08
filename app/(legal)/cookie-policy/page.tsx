@@ -5,9 +5,24 @@ import Link from "next/link";
 import { LandingHeader } from "@/components/landing-header";
 import { LandingFooter } from "@/components/landing-footer";
 import { Card } from "@/components/ui/card";
-import { Cookie, ShieldCheck, CheckCircle2, Lock, ExternalLink, Mail } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import {
+    Cookie,
+    ShieldCheck,
+    CheckCircle2,
+    Lock,
+    ExternalLink,
+    Mail,
+    SlidersHorizontal,
+    RefreshCw,
+    HelpCircle
+} from "lucide-react";
+import { useCookieConsent } from "@/components/cookie-consent/cookie-consent-context";
+import { COOKIE_INVENTORY } from "@/lib/cookie-consent";
 
 export default function CookiePolicyPage() {
+    const { openPreferences, consent } = useCookieConsent();
+
     return (
         <div className="min-h-screen bg-slate-50 text-slate-800 font-sans overflow-x-hidden selection:bg-[#35877D] selection:text-white">
             <LandingHeader />
@@ -18,17 +33,29 @@ export default function CookiePolicyPage() {
                     <div className="w-full px-4 sm:px-8 md:px-12 lg:px-16 max-w-7xl mx-auto text-center space-y-4">
                         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#35877D]/10 text-[#35877D] text-xs font-bold border border-[#35877D]/25">
                             <Cookie size={14} className="text-[#35877D]" />
-                            <span>Transparency & Tracking Disclosure</span>
+                            <span>Transparency &amp; Tracking Disclosure</span>
                         </div>
                         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
                             Cookie Policy
                         </h1>
                         <p className="text-sm sm:text-base text-gray-600 font-medium max-w-3xl mx-auto leading-relaxed">
-                            Effective Date: October 8, 2026 &bull; Last Updated: October 8, 2026
+                            Effective Date: October 8, 2026 &bull; Version: 1.0
                         </p>
-                        <p className="text-sm text-gray-500 max-w-2xl mx-auto">
-                            This Cookie Policy explains how Connectly360 utilizes cookies and browser storage technologies to maintain secure authentication and provide customer support.
+                        <p className="text-sm text-gray-500 max-w-2xl mx-auto leading-relaxed">
+                            This Cookie Policy explains how Connectly360 utilizes cookies, local storage, and related technologies, your right to control them, and how you can update your consent at any time.
                         </p>
+
+                        {/* Interactive Manage Preferences Button */}
+                        <div className="pt-2 flex justify-center">
+                            <Button
+                                type="button"
+                                onClick={openPreferences}
+                                className="bg-[#35877D] hover:bg-[#2d736a] text-white text-xs sm:text-sm font-bold h-10 px-6 rounded-xl shadow-md hover:shadow-lg transition-all gap-2"
+                            >
+                                <SlidersHorizontal size={15} />
+                                Manage Cookie Preferences
+                            </Button>
+                        </div>
                     </div>
                 </section>
 
@@ -36,155 +63,209 @@ export default function CookiePolicyPage() {
                 <section className="py-12 sm:py-16">
                     <div className="w-full px-4 sm:px-8 md:px-12 lg:px-16 max-w-5xl mx-auto">
                         <Card className="p-6 sm:p-10 md:p-12 bg-white border border-slate-200 rounded-3xl shadow-xs space-y-10">
-                            
-                            {/* Privacy-First Commitment */}
-                            <div className="p-5 rounded-2xl bg-emerald-50/70 border border-emerald-200/80 space-y-2">
-                                <div className="flex items-center gap-2 text-emerald-900 font-bold text-sm">
-                                    <ShieldCheck size={16} className="text-emerald-700" />
-                                    <span>Privacy-First Tracking Commitment</span>
+
+                            {/* Current User Consent Status Banner */}
+                            <div className="p-5 rounded-2xl bg-teal-50/70 border border-teal-200/80 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                                <div className="space-y-1">
+                                    <div className="flex items-center gap-2 text-teal-950 font-bold text-sm">
+                                        <ShieldCheck size={16} className="text-[#35877D]" />
+                                        <span>Your Active Cookie Status</span>
+                                    </div>
+                                    <p className="text-xs text-teal-900/80">
+                                        {consent ? (
+                                            <>
+                                                Strictly Necessary: <strong>Active</strong> &bull; Functional:{" "}
+                                                <strong>{consent.functional ? "Granted" : "Blocked"}</strong> &bull; Analytics:{" "}
+                                                <strong>{consent.analytics ? "Granted" : "Blocked"}</strong> &bull; Marketing:{" "}
+                                                <strong>{consent.marketing ? "Granted" : "Blocked"}</strong>
+                                            </>
+                                        ) : (
+                                            "You have not saved custom cookie preferences yet (defaulting to Strictly Necessary only)."
+                                        )}
+                                    </p>
                                 </div>
-                                <p className="text-xs sm:text-sm text-emerald-950/80 leading-relaxed">
-                                    Connectly360 respects your privacy. <strong>We do not deploy third-party advertising tracking pixels (such as Meta Pixel or cross-site ad networks) across our marketing pages.</strong> We only employ strictly necessary cookies and local storage items required for platform security, user authentication, and interactive on-site support.
-                                </p>
+                                <Button
+                                    type="button"
+                                    variant="outline"
+                                    size="sm"
+                                    onClick={openPreferences}
+                                    className="h-8 text-xs font-semibold bg-white border-teal-200 text-teal-900 hover:bg-teal-50 shrink-0"
+                                >
+                                    Change Preferences
+                                </Button>
                             </div>
 
-                            {/* Section 1 */}
+                            {/* Section 1: What Are Cookies */}
                             <section className="space-y-3">
                                 <h2 className="text-xl font-extrabold text-slate-900">
-                                    1. What Are Cookies and Local Storage?
+                                    1. What Are Cookies and Storage Technologies?
                                 </h2>
                                 <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
-                                    Cookies are small text files placed on your device by web browsers when you visit a website. Local Storage is a browser feature that allows websites to store key-value data persistently within your browser. These technologies allow web applications to recognize your browser, retain authenticated sessions, and provide seamless user experience.
+                                    Cookies are compact data files placed on your computer or mobile device when you visit websites. They are widely used by service providers to ensure websites operate efficiently, secure user sessions, and provide usage statistics. In addition to HTTP cookies, modern web platforms may use browser <strong>Local Storage</strong> or <strong>Session Storage</strong> to retain necessary authentication tokens without sending them on every HTTP asset request.
                                 </p>
                             </section>
 
-                            {/* Section 2 */}
+                            {/* Section 2: Why We Use Cookies */}
                             <section className="space-y-3">
                                 <h2 className="text-xl font-extrabold text-slate-900">
-                                    2. Technologies Used by Connectly360
+                                    2. Why Does Connectly360 Use Cookies?
                                 </h2>
                                 <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
-                                    Connectly360 employs the following categories of storage technologies:
+                                    We use first-party and third-party cookies for several critical purposes:
                                 </p>
+                                <ul className="list-disc pl-5 space-y-2 text-xs sm:text-sm text-slate-700 leading-relaxed">
+                                    <li><strong>Essential Operation:</strong> To authenticate team members, secure platform APIs, maintain CSRF defense, and store your cookie consent preferences.</li>
+                                    <li><strong>User Experience (Functional):</strong> To maintain continuity of live support sessions across page navigation.</li>
+                                    <li><strong>Performance (Analytics):</strong> To measure page load times, detect errors, and understand how visitors discover Connectly360.</li>
+                                    <li><strong>Marketing Attribution:</strong> To measure the effectiveness of digital campaigns and guide users to relevant WhatsApp automation solutions.</li>
+                                </ul>
+                            </section>
 
-                                <div className="space-y-4 pt-2">
+                            {/* Section 3: Categories of Cookies */}
+                            <section className="space-y-4">
+                                <h2 className="text-xl font-extrabold text-slate-900">
+                                    3. Cookie Categories &amp; Consent Controls
+                                </h2>
+
+                                <div className="space-y-4">
+                                    {/* Necessary */}
                                     <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-1.5">
                                         <div className="flex items-center justify-between">
-                                            <p className="font-bold text-slate-900 text-sm">A. Essential Authentication Tokens (Local Storage)</p>
-                                            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-slate-200 text-slate-800">Strictly Necessary</span>
+                                            <p className="font-bold text-slate-900 text-sm">A. Strictly Necessary (Always Active)</p>
+                                            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800">
+                                                Required
+                                            </span>
                                         </div>
                                         <p className="text-xs sm:text-sm text-slate-650 leading-relaxed">
-                                            <strong>Key:</strong> <code className="bg-white px-1.5 py-0.5 rounded border border-slate-300 font-mono text-xs">auth_token</code><br />
-                                            <strong>Purpose:</strong> Stores an encrypted JSON Web Token (JWT) after you log in, authorizing your browser to make secure requests to our backend CRM and API servers without requiring credentials on each page change.
+                                            These cookies are required for core website features, CSRF defense, session management, and storing your consent preferences. They cannot be turned off.
                                         </p>
                                     </div>
 
+                                    {/* Functional */}
                                     <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-1.5">
                                         <div className="flex items-center justify-between">
-                                            <p className="font-bold text-slate-900 text-sm">B. Support Chat Continuity Cookies (First-Party Cookie)</p>
-                                            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-slate-200 text-slate-800">Functional</span>
+                                            <p className="font-bold text-slate-900 text-sm">B. Functional &amp; Preferences</p>
+                                            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-slate-200 text-slate-800">
+                                                Optional &bull; Default OFF
+                                            </span>
                                         </div>
                                         <p className="text-xs sm:text-sm text-slate-650 leading-relaxed">
-                                            <strong>Names:</strong> <code className="bg-white px-1.5 py-0.5 rounded border border-slate-300 font-mono text-xs">connectly360_active_visitor_id</code>, <code className="bg-white px-1.5 py-0.5 rounded border border-slate-300 font-mono text-xs">connectly360_visitors</code><br />
-                                            <strong>Purpose:</strong> Preserves your interactive visitor conversation thread when using our on-site live support widget, so your support conversation remains intact if you navigate between pages.
+                                            These cookies remember settings and maintain your support chat visitor history across pages. If disabled, support chats will run in memory only.
                                         </p>
                                     </div>
 
+                                    {/* Analytics */}
                                     <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-1.5">
                                         <div className="flex items-center justify-between">
-                                            <p className="font-bold text-slate-900 text-sm">C. Security & CSRF Cookies (Session Cookies)</p>
-                                            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-slate-200 text-slate-800">Strictly Necessary</span>
+                                            <p className="font-bold text-slate-900 text-sm">C. Analytics &amp; Performance</p>
+                                            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-slate-200 text-slate-800">
+                                                Optional &bull; Default OFF
+                                            </span>
                                         </div>
                                         <p className="text-xs sm:text-sm text-slate-650 leading-relaxed">
-                                            <strong>Purpose:</strong> Temporary cryptographic session tokens to protect against Cross-Site Request Forgery (CSRF) and ensure forms submitted on our platform originate from verified browser sessions.
+                                            Help us understand visitor counts and traffic sources via Google Analytics 4 or Microsoft Clarity. No scripts or tracking pixels load unless you explicitly consent.
                                         </p>
                                     </div>
 
-                                    {/* Inventory Table */}
-                                    <div className="overflow-x-auto pt-2">
-                                        <table className="w-full text-left text-xs border border-slate-200 rounded-xl overflow-hidden">
-                                            <thead className="bg-slate-100 text-slate-800 font-bold uppercase tracking-wider text-[11px]">
-                                                <tr>
-                                                    <th className="p-3 border-b border-slate-200">Storage Name / Key</th>
-                                                    <th className="p-3 border-b border-slate-200">Category</th>
-                                                    <th className="p-3 border-b border-slate-200">Provider</th>
-                                                    <th className="p-3 border-b border-slate-200">Duration</th>
-                                                    <th className="p-3 border-b border-slate-200">Purpose</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody className="divide-y divide-slate-200 text-slate-700 bg-white">
-                                                <tr>
-                                                    <td className="p-3 font-mono font-medium text-slate-900">auth_token</td>
-                                                    <td className="p-3"><span className="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-semibold text-[10px]">Strictly Necessary</span></td>
-                                                    <td className="p-3">Connectly360 (First-party Local Storage)</td>
-                                                    <td className="p-3">Session / 30 days or until logout</td>
-                                                    <td className="p-3">Stores encrypted user authentication JWT for CRM access</td>
-                                                </tr>
-                                                <tr>
-                                                    <td className="p-3 font-mono font-medium text-slate-900">connectly360_active_visitor_id</td>
-                                                    <td className="p-3"><span className="px-2 py-0.5 rounded bg-blue-100 text-blue-800 font-semibold text-[10px]">Functional</span></td>
-                                                    <td className="p-3">Connectly360 (First-party Cookie)</td>
-                                                    <td className="p-3">1 year</td>
-                                                    <td className="p-3">Preserves ongoing live chat thread across page loads</td>
-                                                </tr>
-                                                <tr>
-                                                    <td className="p-3 font-mono font-medium text-slate-900">connectly360_visitors</td>
-                                                    <td className="p-3"><span className="px-2 py-0.5 rounded bg-blue-100 text-blue-800 font-semibold text-[10px]">Functional</span></td>
-                                                    <td className="p-3">Connectly360 (First-party Cookie)</td>
-                                                    <td className="p-3">1 year</td>
-                                                    <td className="p-3">Tracks visitor conversation history in support widget</td>
-                                                </tr>
-                                                <tr>
-                                                    <td className="p-3 font-mono font-medium text-slate-900">XSRF-TOKEN / csrf_token</td>
-                                                    <td className="p-3"><span className="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-semibold text-[10px]">Security</span></td>
-                                                    <td className="p-3">Connectly360 API (First-party Cookie)</td>
-                                                    <td className="p-3">Session</td>
-                                                    <td className="p-3">Prevents Cross-Site Request Forgery attacks</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                                    {/* Marketing */}
+                                    <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-1.5">
+                                        <div className="flex items-center justify-between">
+                                            <p className="font-bold text-slate-900 text-sm">D. Marketing &amp; Advertising</p>
+                                            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-slate-200 text-slate-800">
+                                                Optional &bull; Default OFF
+                                            </span>
+                                        </div>
+                                        <p className="text-xs sm:text-sm text-slate-650 leading-relaxed">
+                                            Measure marketing effectiveness and campaign attribution via Meta Pixel or Google Ads. These scripts are blocked until you grant marketing consent.
+                                        </p>
                                     </div>
                                 </div>
                             </section>
 
-                            {/* Section 3 */}
-                            <section className="space-y-3">
+                            {/* Section 4: Inventory Table */}
+                            <section className="space-y-4">
                                 <h2 className="text-xl font-extrabold text-slate-900">
-                                    3. What We Do NOT Track
+                                    4. Detailed Cookie Inventory
                                 </h2>
-                                <ul className="list-disc pl-5 space-y-2 text-sm sm:text-base text-slate-700">
-                                    <li>We do <strong>not</strong> use third-party advertising cookies or cross-site behavioral tracking cookies.</li>
-                                    <li>We do <strong>not</strong> sell or exchange cookie identifiers with commercial marketing aggregators.</li>
-                                    <li>We do <strong>not</strong> track your browsing habits across unrelated third-party websites.</li>
-                                </ul>
+
+                                <div className="overflow-x-auto border border-slate-200 rounded-2xl">
+                                    <table className="w-full text-left text-xs">
+                                        <thead className="bg-slate-50 text-slate-800 font-bold uppercase tracking-wider text-[11px] border-b border-slate-200">
+                                            <tr>
+                                                <th className="p-3.5">Storage Key / Cookie</th>
+                                                <th className="p-3.5">Category</th>
+                                                <th className="p-3.5">Provider</th>
+                                                <th className="p-3.5">Duration</th>
+                                                <th className="p-3.5">Purpose</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody className="divide-y divide-slate-100 text-slate-700 bg-white">
+                                            {COOKIE_INVENTORY.map((item) => (
+                                                <tr key={item.name} className="hover:bg-slate-50/50">
+                                                    <td className="p-3.5 font-mono font-medium text-slate-900">{item.name}</td>
+                                                    <td className="p-3.5">
+                                                        <span
+                                                            className={`px-2 py-0.5 rounded font-semibold text-[10px] ${
+                                                                item.category === "necessary"
+                                                                    ? "bg-emerald-100 text-emerald-800"
+                                                                    : item.category === "functional"
+                                                                    ? "bg-blue-100 text-blue-800"
+                                                                    : item.category === "analytics"
+                                                                    ? "bg-amber-100 text-amber-800"
+                                                                    : "bg-purple-100 text-purple-800"
+                                                            }`}
+                                                        >
+                                                            {item.category.toUpperCase()}
+                                                        </span>
+                                                    </td>
+                                                    <td className="p-3.5">{item.provider}</td>
+                                                    <td className="p-3.5">{item.duration}</td>
+                                                    <td className="p-3.5 text-slate-600">{item.purpose}</td>
+                                                </tr>
+                                            ))}
+                                        </tbody>
+                                    </table>
+                                </div>
                             </section>
 
-                            {/* Section 4 */}
+                            {/* Section 5: Withdrawing Consent */}
                             <section className="space-y-3">
                                 <h2 className="text-xl font-extrabold text-slate-900">
-                                    4. How to Manage and Disable Cookies
+                                    5. How to Change or Withdraw Your Consent
                                 </h2>
                                 <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
-                                    You have the right to accept, block, or delete cookies at any time through your browser settings:
+                                    You can change your preferences or withdraw consent at any time:
+                                </p>
+                                <ol className="list-decimal pl-5 space-y-2 text-xs sm:text-sm text-slate-700 leading-relaxed">
+                                    <li>Click the <strong>Cookie Settings</strong> button located in the footer of any page or the floating cookie icon at the bottom-left corner.</li>
+                                    <li>Adjust the category toggles to your desired choices.</li>
+                                    <li>Click <strong>Save Preferences</strong>. When you disable a category, existing non-essential cookies for that category are immediately removed from your browser.</li>
+                                </ol>
+                            </section>
+
+                            {/* Section 6: Browser Controls */}
+                            <section className="space-y-3">
+                                <h2 className="text-xl font-extrabold text-slate-900">
+                                    6. Browser-Level Controls
+                                </h2>
+                                <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
+                                    Most browsers allow you to manage cookies directly in settings:
                                 </p>
                                 <ul className="list-disc pl-5 space-y-1.5 text-xs sm:text-sm text-slate-700 font-medium">
-                                    <li><strong>Google Chrome:</strong> Settings &gt; Privacy and security &gt; Third-party cookies.</li>
-                                    <li><strong>Mozilla Firefox:</strong> Settings &gt; Privacy &amp; Security &gt; Cookies and Site Data.</li>
-                                    <li><strong>Apple Safari:</strong> Preferences &gt; Privacy &gt; Block all cookies.</li>
-                                    <li><strong>Microsoft Edge:</strong> Settings &gt; Cookies and site permissions &gt; Manage and delete cookies.</li>
+                                    <li><strong>Google Chrome:</strong> Settings &gt; Privacy and security &gt; Third-party cookies</li>
+                                    <li><strong>Mozilla Firefox:</strong> Settings &gt; Privacy &amp; Security &gt; Enhanced Tracking Protection</li>
+                                    <li><strong>Apple Safari:</strong> Preferences &gt; Privacy &gt; Prevent cross-site tracking</li>
+                                    <li><strong>Microsoft Edge:</strong> Settings &gt; Cookies and site permissions</li>
                                 </ul>
-                                <p className="text-xs sm:text-sm text-slate-500 pt-1">
-                                    <em>Note: Disabling strictly necessary cookies or clearing local storage will prevent you from signing in to the Connectly360 dashboard and using authenticated CRM tools.</em>
-                                </p>
                             </section>
 
-                            {/* Section 5 */}
+                            {/* Section 7: Contact */}
                             <section className="space-y-3">
                                 <h2 className="text-xl font-extrabold text-slate-900">
-                                    5. Contact Our Privacy Desk
+                                    7. Contact Our Privacy Desk
                                 </h2>
                                 <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
-                                    For inquiries concerning our cookie practices, please contact our support desk:
+                                    If you have questions regarding this Cookie Policy or our privacy practices:
                                 </p>
                                 <div className="p-5 bg-slate-50 border border-slate-200 rounded-2xl text-xs sm:text-sm text-slate-700 space-y-1 font-medium">
                                     <p><strong>Email:</strong> <a href="mailto:support@connectly360.com" className="text-[#35877D] underline">support@connectly360.com</a></p>

@@ -2,8 +2,10 @@
 
 import Link from "next/link";
 import { Mail, Phone, MapPin } from "lucide-react";
+import { useCookieConsent } from "@/components/cookie-consent/cookie-consent-context";
 
 export function LandingFooter() {
+    const { openPreferences } = useCookieConsent();
     return (
         <footer className="bg-white border-t border-slate-200 py-16">
             <div className="w-full px-4 sm:px-8 md:px-12 lg:px-16 max-w-7xl mx-auto">
@@ -67,6 +69,15 @@ export function LandingFooter() {
                             <li><Link href="/terms" className="hover:text-[#35877D] transition-colors font-semibold">Terms of Service</Link></li>
                             <li><Link href="/data-deletion" className="hover:text-[#35877D] transition-colors">Data Deletion Instructions</Link></li>
                             <li><Link href="/cookie-policy" className="hover:text-[#35877D] transition-colors">Cookie Policy</Link></li>
+                            <li>
+                                <button
+                                    type="button"
+                                    onClick={openPreferences}
+                                    className="hover:text-[#35877D] transition-colors text-left font-medium cursor-pointer"
+                                >
+                                    Cookie Settings
+                                </button>
+                            </li>
                             <li><Link href="/refund-policy" className="hover:text-[#35877D] transition-colors">Refund Policy</Link></li>
                             <li><Link href="/faq" className="hover:text-[#35877D] transition-colors">FAQs</Link></li>
                             <li><Link href="/blog" className="hover:text-[#35877D] transition-colors">Blog</Link></li>

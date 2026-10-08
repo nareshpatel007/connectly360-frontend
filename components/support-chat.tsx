@@ -22,6 +22,7 @@ import {
 } from "lucide-react";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
+import { getStoredConsent } from "@/lib/cookie-consent";
 
 // Helper cookie functions
 const getCookie = (name: string): string | null => {
@@ -38,6 +39,16 @@ const getCookie = (name: string): string | null => {
 
 const setCookie = (name: string, value: string, days = 365) => {
     if (typeof window === "undefined") return;
+
+    // Check if this is a functional cookie and verify consent
+    if (name.startsWith("connectly360_")) {
+        const consent = getStoredConsent();
+        if (consent && !consent.functional) {
+            // User opted out of functional cookies
+            return;
+        }
+    }
+
     let expires = "";
     if (days) {
         const date = new Date();

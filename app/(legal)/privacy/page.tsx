@@ -369,15 +369,16 @@ export default function PrivacyPolicyPage() {
                                             16. Cookies & Tracking Technologies
                                         </h2>
                                         <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
-                                            We use minimal, strictly necessary cookies and local storage tokens to operate our web application:
+                                            We use cookies and storage technologies governed by our Cookie Consent &amp; Preferences Management System:
                                         </p>
                                         <ul className="list-disc pl-6 space-y-1.5 text-sm sm:text-base text-slate-700">
-                                            <li><strong>Authentication:</strong> Secure JSON Web Tokens stored in browser <code className="bg-slate-100 px-1 py-0.5 rounded text-xs">localStorage (&apos;auth_token&apos;)</code> to authenticate session API requests.</li>
-                                            <li><strong>Support Chat Continuity:</strong> First-party cookies (<code className="bg-slate-100 px-1 py-0.5 rounded text-xs">connectly360_active_visitor_id</code>) that allow visitors to resume conversations with our support desk across pages.</li>
-                                            <li><strong>No Cross-Site Ad Trackers:</strong> We do not deploy Meta Pixel, Google AdSense, or third-party behavioral advertising cookies across our public site.</li>
+                                            <li><strong>Authentication (Strictly Necessary):</strong> Secure JSON Web Tokens stored in browser <code className="bg-slate-100 px-1 py-0.5 rounded text-xs">localStorage (&apos;auth_token&apos;)</code> to authenticate session API requests.</li>
+                                            <li><strong>Consent State (Strictly Necessary):</strong> <code className="bg-slate-100 px-1 py-0.5 rounded text-xs">connectly360_cookie_consent</code> cookie storing your chosen privacy preferences.</li>
+                                            <li><strong>Support Chat Continuity (Functional):</strong> First-party cookies (<code className="bg-slate-100 px-1 py-0.5 rounded text-xs">connectly360_active_visitor_id</code>) that allow visitors to resume conversations with our support desk across pages, active only when Functional cookies are allowed.</li>
+                                            <li><strong>Gated Analytics &amp; Marketing:</strong> Any performance or marketing analytics tools are strictly gated and will not initialize unless you explicitly grant consent.</li>
                                         </ul>
                                         <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
-                                            For further details, please review our dedicated <Link href="/cookie-policy" className="text-[#35877D] font-semibold underline">Cookie Policy</Link>.
+                                            You can adjust or withdraw your preferences at any time by clicking <strong>Cookie Settings</strong> in the website footer or viewing our dedicated <Link href="/cookie-policy" className="text-[#35877D] font-semibold underline">Cookie Policy</Link>.
                                         </p>
                                     </section>
 
