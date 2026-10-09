@@ -63,15 +63,15 @@ export default function PrivacyPolicyPage() {
     ];
 
     return (
-        <div className="min-h-screen bg-slate-50 text-slate-800 font-sans overflow-x-hidden selection:bg-[#35877D] selection:text-white">
+        <div className="min-h-screen bg-slate-50 text-slate-800 font-sans overflow-x-hidden selection:bg-[#2F8F83] selection:text-white">
             <LandingHeader />
 
             <main className="pt-36 sm:pt-40">
                 {/* Hero Header */}
                 <section className="relative pb-12 sm:pb-16 overflow-hidden border-b border-slate-200/80 bg-white">
                     <div className="w-full px-4 sm:px-8 md:px-12 lg:px-16 max-w-7xl mx-auto text-center space-y-4">
-                        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#35877D]/10 text-[#35877D] text-xs font-bold border border-[#35877D]/25">
-                            <Shield size={14} className="text-[#35877D]" />
+                        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#2F8F83]/10 text-[#2F8F83] text-xs font-bold border border-[#2F8F83]/25">
+                            <Shield size={14} className="text-[#2F8F83]" />
                             <span>Privacy & Compliance Center</span>
                         </div>
                         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
@@ -94,7 +94,7 @@ export default function PrivacyPolicyPage() {
                             {/* Sticky Sidebar Navigation (Desktop) */}
                             <aside className="hidden lg:block lg:col-span-4 sticky top-28 bg-white border border-slate-200 rounded-3xl p-6 shadow-xs max-h-[calc(100vh-8rem)] overflow-y-auto">
                                 <h3 className="text-xs font-extrabold text-slate-900 uppercase tracking-wider mb-4 flex items-center gap-2">
-                                    <FileText size={14} className="text-[#35877D]" />
+                                    <FileText size={14} className="text-[#2F8F83]" />
                                     Table of Contents
                                 </h3>
                                 <nav className="space-y-1">
@@ -105,7 +105,7 @@ export default function PrivacyPolicyPage() {
                                             onClick={() => setActiveSection(item.id)}
                                             className={`block text-xs py-1.5 px-2.5 rounded-lg transition-colors font-medium ${
                                                 activeSection === item.id
-                                                    ? "bg-[#35877D]/10 text-[#35877D] font-bold"
+                                                    ? "bg-[#2F8F83]/10 text-[#2F8F83] font-bold"
                                                     : "text-slate-600 hover:bg-slate-100 hover:text-slate-900"
                                             }`}
                                         >
@@ -116,7 +116,7 @@ export default function PrivacyPolicyPage() {
                                 <div className="mt-6 pt-6 border-t border-slate-200 space-y-2">
                                     <Link
                                         href="/data-deletion"
-                                        className="flex items-center justify-between text-xs font-bold text-[#35877D] hover:underline"
+                                        className="flex items-center justify-between text-xs font-bold text-[#2F8F83] hover:underline"
                                     >
                                         <span>User Data Deletion Page</span>
                                         <ChevronRight size={14} />
@@ -155,7 +155,7 @@ export default function PrivacyPolicyPage() {
                                             Welcome to <strong>Connectly360</strong> (&ldquo;Connectly360&rdquo;, &ldquo;we&rdquo;, &ldquo;our&rdquo;, or &ldquo;us&rdquo;). Connectly360 is an enterprise multi-tenant Conversational Customer Relationship Management (&ldquo;CRM&rdquo;), team inbox, automated workflow, and marketing campaign platform designed to help businesses manage customer interactions through the official Meta WhatsApp Business Platform (Cloud API).
                                         </p>
                                         <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
-                                            We value the privacy of our business customers (&ldquo;Customers&rdquo;, &ldquo;Workspaces&rdquo;, or &ldquo;Users&rdquo;) and their end-consumers (&ldquo;Contacts&rdquo; or &ldquo;Recipients&rdquo;). This Privacy Policy explains our practices regarding the collection, use, disclosure, storage, security, and deletion of personal data processed through our website (<a href="https://connectly360.com" className="text-[#35877D] font-semibold underline">connectly360.com</a>), our web applications, our APIs, and our WhatsApp integration services.
+                                            We value the privacy of our business customers (&ldquo;Customers&rdquo;, &ldquo;Workspaces&rdquo;, or &ldquo;Users&rdquo;) and their end-consumers (&ldquo;Contacts&rdquo; or &ldquo;Recipients&rdquo;). This Privacy Policy explains our practices regarding the collection, use, disclosure, storage, security, and deletion of personal data processed through our website (<a href="https://connectly360.com" className="text-[#2F8F83] font-semibold underline">connectly360.com</a>), our web applications, our APIs, and our WhatsApp integration services.
                                         </p>
                                     </section>
 
@@ -170,7 +170,7 @@ export default function PrivacyPolicyPage() {
                                         <div className="bg-slate-50 border border-slate-200 rounded-2xl p-4 text-xs sm:text-sm text-slate-700 space-y-1.5 font-medium">
                                             <p><strong>Platform Name:</strong> Connectly360</p>
                                             <p><strong>Operating Region:</strong> Ahmedabad, Gujarat, India</p>
-                                            <p><strong>Contact Email:</strong> <a href="mailto:support@connectly360.com" className="text-[#35877D] underline">support@connectly360.com</a></p>
+                                            <p><strong>Contact Email:</strong> <a href="mailto:support@connectly360.com" className="text-[#2F8F83] underline">support@connectly360.com</a></p>
                                             <p><strong>Support Telephone:</strong> +91 9586557162</p>
                                             <p><strong>Official Website:</strong> https://connectly360.com</p>
                                         </div>
@@ -378,7 +378,7 @@ export default function PrivacyPolicyPage() {
                                             <li><strong>Gated Analytics &amp; Marketing:</strong> Any performance or marketing analytics tools are strictly gated and will not initialize unless you explicitly grant consent.</li>
                                         </ul>
                                         <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
-                                            You can adjust or withdraw your preferences at any time by clicking <strong>Cookie Settings</strong> in the website footer or viewing our dedicated <Link href="/cookie-policy" className="text-[#35877D] font-semibold underline">Cookie Policy</Link>.
+                                            You can adjust or withdraw your preferences at any time by clicking <strong>Cookie Settings</strong> in the website footer or viewing our dedicated <Link href="/cookie-policy" className="text-[#2F8F83] font-semibold underline">Cookie Policy</Link>.
                                         </p>
                                     </section>
 
@@ -440,7 +440,7 @@ export default function PrivacyPolicyPage() {
                                     {/* Section 19 */}
                                     <section id="sec-19" className="space-y-3 scroll-mt-28">
                                         <div className="flex items-center gap-2">
-                                            <span className="p-1.5 rounded-lg bg-[#35877D]/10 text-[#35877D]">
+                                            <span className="p-1.5 rounded-lg bg-[#2F8F83]/10 text-[#2F8F83]">
                                                 <Smartphone size={18} />
                                             </span>
                                             <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900">
@@ -508,7 +508,7 @@ export default function PrivacyPolicyPage() {
                                     {/* Section 23 */}
                                     <section id="sec-23" className="space-y-3 scroll-mt-28">
                                         <div className="flex items-center gap-2">
-                                            <span className="p-1.5 rounded-lg bg-[#35877D]/10 text-[#35877D]">
+                                            <span className="p-1.5 rounded-lg bg-[#2F8F83]/10 text-[#2F8F83]">
                                                 <RefreshCw size={18} />
                                             </span>
                                             <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900">
@@ -519,7 +519,7 @@ export default function PrivacyPolicyPage() {
                                             We respect your right to have personal data deleted. Connectly360 provides a transparent deletion framework:
                                         </p>
                                         <ul className="list-disc pl-6 space-y-2 text-sm sm:text-base text-slate-700">
-                                            <li><strong>How to Submit a Deletion Request:</strong> You or your authorized representative can submit a deletion request via our public <Link href="/data-deletion" className="text-[#35877D] font-bold underline">Data Deletion Instructions Page</Link> or by emailing our privacy desk at <a href="mailto:support@connectly360.com" className="text-[#35877D] font-bold underline">support@connectly360.com</a> with the subject line <em>&ldquo;Data Deletion Request&rdquo;</em>.</li>
+                                            <li><strong>How to Submit a Deletion Request:</strong> You or your authorized representative can submit a deletion request via our public <Link href="/data-deletion" className="text-[#2F8F83] font-bold underline">Data Deletion Instructions Page</Link> or by emailing our privacy desk at <a href="mailto:support@connectly360.com" className="text-[#2F8F83] font-bold underline">support@connectly360.com</a> with the subject line <em>&ldquo;Data Deletion Request&rdquo;</em>.</li>
                                             <li><strong>Verification:</strong> To protect accounts against unauthorized deletion, we verify workspace ownership via the registered primary administrator email address.</li>
                                             <li><strong>Processing Timeline:</strong> Deletion requests are acknowledged within 48 hours and completed within 30 days.</li>
                                             <li><strong>What Is Purged:</strong> Workspace CRM contacts, incoming/outgoing message records, media attachment files, custom templates, campaign history, and API keys are completely deleted from active databases.</li>
@@ -539,7 +539,7 @@ export default function PrivacyPolicyPage() {
                                     {/* Section 25 */}
                                     <section id="sec-25" className="space-y-3 scroll-mt-28">
                                         <div className="flex items-center gap-2">
-                                            <span className="p-1.5 rounded-lg bg-[#35877D]/10 text-[#35877D]">
+                                            <span className="p-1.5 rounded-lg bg-[#2F8F83]/10 text-[#2F8F83]">
                                                 <Lock size={18} />
                                             </span>
                                             <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900">
@@ -605,7 +605,7 @@ export default function PrivacyPolicyPage() {
                                             <li><strong>Data Portability:</strong> Obtain your data in a structured, commonly used, and machine-readable format.</li>
                                         </ul>
                                         <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
-                                            To exercise any of these rights, please contact our privacy desk at <a href="mailto:support@connectly360.com" className="text-[#35877D] font-bold underline">support@connectly360.com</a>.
+                                            To exercise any of these rights, please contact our privacy desk at <a href="mailto:support@connectly360.com" className="text-[#2F8F83] font-bold underline">support@connectly360.com</a>.
                                         </p>
                                     </section>
 
@@ -623,7 +623,7 @@ export default function PrivacyPolicyPage() {
                                             Businesses using Connectly360 must comply with all relevant messaging regulations and Meta Platform policies:
                                         </p>
                                         <ul className="list-disc pl-6 space-y-2 text-sm sm:text-base text-slate-700">
-                                            <li><strong>WhatsApp Business Policy:</strong> Customers must comply fully with Meta&rsquo;s <a href="https://www.whatsapp.com/legal/business-messaging-policy" target="_blank" rel="noopener noreferrer" className="text-[#35877D] underline inline-flex items-center gap-1 font-semibold">WhatsApp Business Messaging Policy <ExternalLink size={12} /></a> and WhatsApp Commerce Policy.</li>
+                                            <li><strong>WhatsApp Business Policy:</strong> Customers must comply fully with Meta&rsquo;s <a href="https://www.whatsapp.com/legal/business-messaging-policy" target="_blank" rel="noopener noreferrer" className="text-[#2F8F83] underline inline-flex items-center gap-1 font-semibold">WhatsApp Business Messaging Policy <ExternalLink size={12} /></a> and WhatsApp Commerce Policy.</li>
                                             <li><strong>Mandatory Opt-In:</strong> You must obtain explicit opt-in consent from recipients before sending outbound marketing or notification messages on WhatsApp.</li>
                                             <li><strong>Honoring Opt-Outs:</strong> You must promptly honor opt-out requests (e.g., STOP, CANCEL, UNSUBSCRIBE) and mark contacts as opted-out in your Connectly360 CRM.</li>
                                             <li><strong>Approved Templates:</strong> Business-initiated messages sent outside the 24-hour customer service window must use approved WhatsApp Message Templates.</li>
@@ -644,7 +644,7 @@ export default function PrivacyPolicyPage() {
                                     {/* Section 32 */}
                                     <section id="sec-32" className="space-y-3 scroll-mt-28">
                                         <div className="flex items-center gap-2">
-                                            <span className="p-1.5 rounded-lg bg-[#35877D]/10 text-[#35877D]">
+                                            <span className="p-1.5 rounded-lg bg-[#2F8F83]/10 text-[#2F8F83]">
                                                 <Mail size={18} />
                                             </span>
                                             <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900">
@@ -658,22 +658,22 @@ export default function PrivacyPolicyPage() {
                                             <p className="font-extrabold text-slate-900 text-base">Connectly360 Privacy & Compliance Desk</p>
                                             <div className="space-y-2 text-slate-700">
                                                 <div className="flex items-center gap-2.5">
-                                                    <Mail size={15} className="text-[#35877D]" />
-                                                    <span>Email: <a href="mailto:support@connectly360.com" className="text-[#35877D] font-bold underline">support@connectly360.com</a></span>
+                                                    <Mail size={15} className="text-[#2F8F83]" />
+                                                    <span>Email: <a href="mailto:support@connectly360.com" className="text-[#2F8F83] font-bold underline">support@connectly360.com</a></span>
                                                 </div>
                                                 <div className="flex items-center gap-2.5">
-                                                    <Phone size={15} className="text-[#35877D]" />
+                                                    <Phone size={15} className="text-[#2F8F83]" />
                                                     <span>Phone: <span className="font-semibold">+91 9586557162</span></span>
                                                 </div>
                                                 <div className="flex items-center gap-2.5">
-                                                    <MapPin size={15} className="text-[#35877D]" />
+                                                    <MapPin size={15} className="text-[#2F8F83]" />
                                                     <span>Location: Ahmedabad, Gujarat, India</span>
                                                 </div>
                                             </div>
                                             <div className="pt-2 flex flex-wrap gap-3">
                                                 <Link
                                                     href="/data-deletion"
-                                                    className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-2 rounded-xl bg-[#35877D] text-white hover:bg-[#2c7168] transition-colors"
+                                                    className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-2 rounded-xl bg-[#2F8F83] text-white hover:bg-[#2c7168] transition-colors"
                                                 >
                                                     Submit Data Deletion Request
                                                 </Link>

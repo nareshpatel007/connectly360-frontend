@@ -193,7 +193,7 @@ export function BuyCreditsModal({ open, onOpenChange, highlightCredits }: BuyCre
                     }
                 },
                 theme: {
-                    color: "#00382B"
+                    color: "#0B2E1E"
                 }
             };
 
@@ -210,8 +210,8 @@ export function BuyCreditsModal({ open, onOpenChange, highlightCredits }: BuyCre
         <Dialog open={open} onOpenChange={onOpenChange}>
             <DialogContent className="sm:max-w-[620px] p-6 rounded-3xl border border-slate-200 bg-white shadow-2xl">
                 <DialogHeader className="text-center space-y-1.5 pb-2">
-                    <div className="mx-auto h-12 w-12 rounded-2xl bg-[#35877D]/10 text-[#00382B] flex items-center justify-center mb-1">
-                        <Zap size={24} className="fill-[#35877D] text-[#35877D]" />
+                    <div className="mx-auto h-12 w-12 rounded-2xl bg-[#2F8F83]/10 text-[#0B2E1E] flex items-center justify-center mb-1">
+                        <Zap size={24} className="fill-[#2F8F83] text-[#2F8F83]" />
                     </div>
                     <DialogTitle className="text-2xl font-black text-slate-900 tracking-tight">
                         Choose a Credit Pack
@@ -223,7 +223,7 @@ export function BuyCreditsModal({ open, onOpenChange, highlightCredits }: BuyCre
 
                 {isLoadingPacks ? (
                     <div className="py-12 flex flex-col items-center justify-center gap-3">
-                        <Loader2 className="animate-spin text-[#35877D]" size={32} />
+                        <Loader2 className="animate-spin text-[#2F8F83]" size={32} />
                         <span className="text-xs text-slate-500">Loading credit packs...</span>
                     </div>
                 ) : (
@@ -239,12 +239,12 @@ export function BuyCreditsModal({ open, onOpenChange, highlightCredits }: BuyCre
                                     onClick={() => setSelectedPack(pack)}
                                     className={`relative p-4 rounded-2xl border-2 transition-all cursor-pointer flex flex-col justify-between select-none ${
                                         isSelected
-                                            ? "border-[#00382B] bg-[#35877D]/5 shadow-sm"
+                                            ? "border-[#0B2E1E] bg-[#2F8F83]/5 shadow-sm"
                                             : "border-slate-200 hover:border-slate-300 bg-white"
                                     }`}
                                 >
                                     {pack.is_popular && (
-                                        <span className="absolute -top-2.5 right-3 bg-[#35877D] text-white text-[9px] font-black uppercase tracking-wider px-2 py-0.5 rounded-full shadow-xs">
+                                        <span className="absolute -top-2.5 right-3 bg-[#2F8F83] text-white text-[9px] font-black uppercase tracking-wider px-2 py-0.5 rounded-full shadow-xs">
                                             Most Popular
                                         </span>
                                     )}
@@ -252,7 +252,7 @@ export function BuyCreditsModal({ open, onOpenChange, highlightCredits }: BuyCre
                                         <div className="flex items-center justify-between">
                                             <h4 className="text-sm font-bold text-slate-800">{pack.name}</h4>
                                             {isSelected ? (
-                                                <CheckCircle2 size={16} className="text-[#00382B]" />
+                                                <CheckCircle2 size={16} className="text-[#0B2E1E]" />
                                             ) : (
                                                 <div className="h-4 w-4 rounded-full border border-slate-300" />
                                             )}
@@ -281,7 +281,7 @@ export function BuyCreditsModal({ open, onOpenChange, highlightCredits }: BuyCre
                     <Button
                         onClick={handleCheckout}
                         disabled={isProcessing}
-                        className="w-full h-11 rounded-xl bg-[#00382B] hover:bg-[#00241B] text-white font-bold text-sm shadow-md flex items-center justify-center gap-2 cursor-pointer border-0"
+                        className="w-full h-11 rounded-xl bg-[#0B2E1E] hover:bg-[#00241B] text-white font-bold text-sm shadow-md flex items-center justify-center gap-2 cursor-pointer border-0"
                     >
                         {isProcessing ? (
                             <>

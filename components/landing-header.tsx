@@ -114,7 +114,7 @@ export function LandingHeader() {
         >
             {/* 1. TOP ANNOUNCEMENT BANNER */}
             <div
-                className={`w-full bg-[#00382b] text-white text-xs font-normal text-center flex items-center justify-center px-4 overflow-hidden transition-all duration-300 ease-in-out pointer-events-auto relative ${
+                className={`w-full bg-[#0B2E1E] text-white text-xs font-normal text-center flex items-center justify-center px-4 overflow-hidden transition-all duration-300 ease-in-out pointer-events-auto relative ${
                     isBannerVisible ? "max-h-12 opacity-100 py-2.5 border-b border-emerald-950/20" : "max-h-0 opacity-0 py-0 border-transparent -translate-y-full"
                 }`}
             >
@@ -180,7 +180,7 @@ export function LandingHeader() {
                                         key={item.id}
                                         href={item.href || "#"}
                                         className={`text-sm font-bold transition-colors ${
-                                            isActive ? "text-[#35877D]" : "text-gray-700 hover:text-[#35877D]"
+                                            isActive ? "text-[#2F8F83]" : "text-gray-700 hover:text-[#2F8F83]"
                                         }`}
                                     >
                                         {item.label}
@@ -203,15 +203,15 @@ export function LandingHeader() {
                                         aria-expanded={isOpen}
                                         aria-haspopup="true"
                                         aria-controls={`mega-menu-${item.id}`}
-                                        className={`group cursor-pointer h-full flex items-center gap-1.5 text-sm font-bold transition-colors border-0 bg-transparent py-2 px-1 focus:outline-none focus-visible:text-[#35877D] ${
-                                            isOpen ? "text-[#35877D]" : "text-gray-700 hover:text-[#35877D]"
+                                        className={`group cursor-pointer h-full flex items-center gap-1.5 text-sm font-bold transition-colors border-0 bg-transparent py-2 px-1 focus:outline-none focus-visible:text-[#2F8F83] ${
+                                            isOpen ? "text-[#2F8F83]" : "text-gray-700 hover:text-[#2F8F83]"
                                         }`}
                                     >
                                         <span>{item.label}</span>
                                         <ChevronDown
                                             size={13}
                                             className={`text-gray-400 transition-transform duration-200 ${
-                                                isOpen ? "rotate-180 text-[#35877D]" : "group-hover:text-[#35877D]"
+                                                isOpen ? "rotate-180 text-[#2F8F83]" : "group-hover:text-[#2F8F83]"
                                             }`}
                                         />
                                     </button>
@@ -269,16 +269,16 @@ export function LandingHeader() {
                                                                             onClick={() => setActiveMenuId(null)}
                                                                             className="group/item flex items-start gap-3 p-2 rounded-xl hover:bg-slate-50 transition-colors"
                                                                         >
-                                                                            <div className="h-8 w-8 rounded-lg bg-emerald-50 text-[#35877D] border border-emerald-100/60 flex items-center justify-center shrink-0 transition-transform duration-200 group-hover/item:scale-110">
+                                                                            <div className="h-8 w-8 rounded-lg bg-emerald-50 text-[#2F8F83] border border-emerald-100/60 flex items-center justify-center shrink-0 transition-transform duration-200 group-hover/item:scale-110">
                                                                                 <NavIcon name={sub.icon} size={15} />
                                                                             </div>
                                                                             <div className="min-w-0 flex-1 space-y-0.5">
                                                                                 <div className="flex items-center gap-1.5">
-                                                                                    <span className="text-xs font-bold text-slate-800 transition-colors group-hover/item:text-[#35877D] truncate">
+                                                                                    <span className="text-xs font-bold text-slate-800 transition-colors group-hover/item:text-[#2F8F83] truncate">
                                                                                         {sub.title}
                                                                                     </span>
                                                                                     {sub.badge && (
-                                                                                        <span className="text-[9px] font-extrabold px-1.5 py-0.2 rounded-full bg-[#35877D]/10 text-[#35877D] shrink-0">
+                                                                                        <span className="text-[9px] font-extrabold px-1.5 py-0.2 rounded-full bg-[#2F8F83]/10 text-[#2F8F83] shrink-0">
                                                                                             {sub.badge}
                                                                                         </span>
                                                                                     )}
@@ -296,10 +296,10 @@ export function LandingHeader() {
 
                                                 {/* Right Featured Card (if present) */}
                                                 {item.megaMenu.featured && (
-                                                    <div className="col-span-3 bg-gradient-to-br from-[#00382B]/6 via-[#35877D]/10 to-transparent border border-slate-200/80 rounded-2xl p-5 flex flex-col justify-between relative overflow-hidden group/promo">
+                                                    <div className="col-span-3 bg-gradient-to-br from-[#0B2E1E]/6 via-[#2F8F83]/10 to-transparent border border-slate-200/80 rounded-2xl p-5 flex flex-col justify-between relative overflow-hidden group/promo">
                                                         <div className="space-y-3">
                                                             {item.megaMenu.featured.badge && (
-                                                                <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#35877D]/15 text-[#00382B] text-[10px] font-extrabold uppercase tracking-wider">
+                                                                <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#2F8F83]/15 text-[#0B2E1E] text-[10px] font-extrabold uppercase tracking-wider">
                                                                     {item.megaMenu.featured.badge}
                                                                 </span>
                                                             )}
@@ -315,7 +315,7 @@ export function LandingHeader() {
                                                             <Button
                                                                 asChild
                                                                 size="sm"
-                                                                className="w-full h-8.5 bg-[#35877D] hover:bg-[#2c6f66] text-white rounded-xl font-bold text-xs shadow-xs cursor-pointer border-0"
+                                                                className="w-full h-8.5 bg-[#2F8F83] hover:bg-[#267A70] text-white rounded-xl font-bold text-xs shadow-xs cursor-pointer border-0"
                                                             >
                                                                 <Link
                                                                     href={item.megaMenu.featured.primaryCta.href}
@@ -354,7 +354,7 @@ export function LandingHeader() {
                                                         <Link
                                                             href={item.megaMenu.bottomBanner.href}
                                                             onClick={() => setActiveMenuId(null)}
-                                                            className="text-[#35877D] font-bold hover:underline inline-flex items-center gap-1"
+                                                            className="text-[#2F8F83] font-bold hover:underline inline-flex items-center gap-1"
                                                         >
                                                             {item.megaMenu.bottomBanner.linkText} <ArrowRight size={12} />
                                                         </Link>
@@ -388,7 +388,7 @@ export function LandingHeader() {
                                     asChild
                                     variant="outline"
                                     size="sm"
-                                    className="rounded-full px-4 py-2 h-9 border-[#35877D] text-[#35877D] hover:bg-[#EAF7F2] hover:text-[#2c6f66] bg-transparent transition-all font-extrabold text-xs"
+                                    className="rounded-lg px-4 py-2 h-9 border-[#2F8F83] text-[#2F8F83] hover:bg-[#E8F6F3] hover:text-[#267A70] bg-transparent transition-all font-semibold text-xs"
                                 >
                                     <Link href={navigationConfig.actions.authenticated.help.href}>
                                         {navigationConfig.actions.authenticated.help.label}
@@ -397,7 +397,7 @@ export function LandingHeader() {
                                 <Button
                                     asChild
                                     size="sm"
-                                    className="rounded-full px-4 py-2 h-9 bg-[#35877D] hover:bg-[#2c6f66] text-white transition-all shadow-sm font-extrabold text-xs flex items-center gap-1"
+                                    className="rounded-lg px-4 py-2 h-9 bg-[#2F8F83] hover:bg-[#267A70] text-white transition-all shadow-xs font-semibold text-xs flex items-center gap-1 cursor-pointer"
                                 >
                                     <Link href={navigationConfig.actions.authenticated.dashboard.href}>
                                         {navigationConfig.actions.authenticated.dashboard.label} <ArrowRight size={12} />
@@ -410,7 +410,7 @@ export function LandingHeader() {
                                     asChild
                                     variant="outline"
                                     size="sm"
-                                    className="rounded-full px-4 py-2 h-9 border-slate-300 text-slate-700 hover:border-[#35877D] hover:text-[#35877D] bg-transparent transition-all font-extrabold text-xs"
+                                    className="rounded-lg px-4 py-2 h-9 border-slate-200 text-slate-700 hover:border-[#2F8F83] hover:text-[#2F8F83] hover:bg-slate-50 bg-white transition-all font-semibold text-xs shadow-2xs"
                                 >
                                     <Link href={navigationConfig.actions.guest.login.href}>
                                         {navigationConfig.actions.guest.login.label}
@@ -419,7 +419,7 @@ export function LandingHeader() {
                                 <Button
                                     asChild
                                     size="sm"
-                                    className="rounded-full px-4 py-2 h-9 bg-[#35877D] hover:bg-[#2c6f66] text-white transition-all shadow-sm font-extrabold text-xs flex items-center gap-1"
+                                    className="rounded-lg px-4 py-2 h-9 bg-[#2F8F83] hover:bg-[#267A70] text-white transition-all shadow-xs font-semibold text-xs flex items-center gap-1 cursor-pointer"
                                 >
                                     <Link href={navigationConfig.actions.guest.register.href}>
                                         {navigationConfig.actions.guest.register.label} <ArrowRight size={12} />
@@ -432,7 +432,7 @@ export function LandingHeader() {
                     {/* Mobile Hamburger Button */}
                     <button
                         type="button"
-                        className="lg:hidden text-gray-700 hover:text-[#35877D] p-2 focus:outline-none"
+                        className="lg:hidden text-gray-700 hover:text-[#2F8F83] p-2 focus:outline-none"
                         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                         aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
                     >
@@ -456,7 +456,7 @@ export function LandingHeader() {
                                         key={item.id}
                                         href={item.href || "#"}
                                         onClick={() => setMobileMenuOpen(false)}
-                                        className="text-base font-bold text-gray-800 p-2.5 hover:text-[#35877D] rounded-xl hover:bg-slate-50 transition-colors"
+                                        className="text-base font-bold text-gray-800 p-2.5 hover:text-[#2F8F83] rounded-xl hover:bg-slate-50 transition-colors"
                                     >
                                         {item.label}
                                     </Link>
@@ -476,7 +476,7 @@ export function LandingHeader() {
                                         <ChevronDown
                                             size={16}
                                             className={`text-gray-400 transition-transform duration-200 ${
-                                                isExpanded ? "rotate-180 text-[#35877D]" : ""
+                                                isExpanded ? "rotate-180 text-[#2F8F83]" : ""
                                             }`}
                                         />
                                     </button>
@@ -497,7 +497,7 @@ export function LandingHeader() {
                                                                 onClick={() => setMobileMenuOpen(false)}
                                                                 className="flex items-start gap-2.5 p-2 rounded-xl hover:bg-white transition-colors"
                                                             >
-                                                                <div className="h-7 w-7 rounded-lg bg-emerald-50 text-[#35877D] flex items-center justify-center shrink-0">
+                                                                <div className="h-7 w-7 rounded-lg bg-emerald-50 text-[#2F8F83] flex items-center justify-center shrink-0">
                                                                     <NavIcon name={sub.icon} size={14} />
                                                                 </div>
                                                                 <div className="min-w-0 flex-1">
@@ -506,7 +506,7 @@ export function LandingHeader() {
                                                                             {sub.title}
                                                                         </span>
                                                                         {sub.badge && (
-                                                                            <span className="text-[8px] font-extrabold px-1.5 rounded-full bg-[#35877D]/10 text-[#35877D]">
+                                                                            <span className="text-[8px] font-extrabold px-1.5 rounded-full bg-[#2F8F83]/10 text-[#2F8F83]">
                                                                                 {sub.badge}
                                                                             </span>
                                                                         )}
@@ -532,11 +532,11 @@ export function LandingHeader() {
                                     <Link
                                         href={navigationConfig.actions.authenticated.help.href}
                                         onClick={() => setMobileMenuOpen(false)}
-                                        className="text-center font-bold text-gray-700 p-2 text-xs hover:text-[#35877D]"
+                                        className="text-center font-semibold text-slate-700 p-2 text-xs hover:text-[#2F8F83]"
                                     >
                                         {navigationConfig.actions.authenticated.help.label}
                                     </Link>
-                                    <Button asChild className="w-full bg-[#35877D] text-white font-extrabold rounded-full py-2.5 text-xs">
+                                    <Button asChild className="w-full bg-[#2F8F83] hover:bg-[#267A70] text-white font-semibold rounded-lg py-2.5 text-xs shadow-xs">
                                         <Link
                                             href={navigationConfig.actions.authenticated.dashboard.href}
                                             onClick={() => setMobileMenuOpen(false)}
@@ -550,11 +550,11 @@ export function LandingHeader() {
                                     <Link
                                         href={navigationConfig.actions.guest.login.href}
                                         onClick={() => setMobileMenuOpen(false)}
-                                        className="text-center font-bold text-gray-700 p-2 text-xs hover:text-[#35877D]"
+                                        className="text-center font-semibold text-slate-700 p-2 text-xs hover:text-[#2F8F83]"
                                     >
                                         {navigationConfig.actions.guest.login.label}
                                     </Link>
-                                    <Button asChild className="w-full bg-[#35877D] text-white font-extrabold rounded-full py-2.5 text-xs">
+                                    <Button asChild className="w-full bg-[#2F8F83] hover:bg-[#267A70] text-white font-semibold rounded-lg py-2.5 text-xs shadow-xs">
                                         <Link
                                             href={navigationConfig.actions.guest.register.href}
                                             onClick={() => setMobileMenuOpen(false)}
@@ -571,3 +571,4 @@ export function LandingHeader() {
         </div>
     );
 }
+

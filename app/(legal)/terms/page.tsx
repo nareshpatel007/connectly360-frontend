@@ -58,15 +58,15 @@ export default function TermsPage() {
     ];
 
     return (
-        <div className="min-h-screen bg-slate-50 text-slate-800 font-sans overflow-x-hidden selection:bg-[#35877D] selection:text-white">
+        <div className="min-h-screen bg-slate-50 text-slate-800 font-sans overflow-x-hidden selection:bg-[#2F8F83] selection:text-white">
             <LandingHeader />
 
             <main className="pt-36 sm:pt-40">
                 {/* Hero Header */}
                 <section className="relative pb-12 sm:pb-16 overflow-hidden border-b border-slate-200/80 bg-white">
                     <div className="w-full px-4 sm:px-8 md:px-12 lg:px-16 max-w-7xl mx-auto text-center space-y-4">
-                        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#35877D]/10 text-[#35877D] text-xs font-bold border border-[#35877D]/25">
-                            <Scale size={14} className="text-[#35877D]" />
+                        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#2F8F83]/10 text-[#2F8F83] text-xs font-bold border border-[#2F8F83]/25">
+                            <Scale size={14} className="text-[#2F8F83]" />
                             <span>Legal Terms & Platform Agreement</span>
                         </div>
                         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
@@ -89,7 +89,7 @@ export default function TermsPage() {
                             {/* Sticky Sidebar Navigation (Desktop) */}
                             <aside className="hidden lg:block lg:col-span-4 sticky top-28 bg-white border border-slate-200 rounded-3xl p-6 shadow-xs max-h-[calc(100vh-8rem)] overflow-y-auto">
                                 <h3 className="text-xs font-extrabold text-slate-900 uppercase tracking-wider mb-4 flex items-center gap-2">
-                                    <FileCheck size={14} className="text-[#35877D]" />
+                                    <FileCheck size={14} className="text-[#2F8F83]" />
                                     Table of Contents
                                 </h3>
                                 <nav className="space-y-1">
@@ -100,7 +100,7 @@ export default function TermsPage() {
                                             onClick={() => setActiveSection(item.id)}
                                             className={`block text-xs py-1.5 px-2.5 rounded-lg transition-colors font-medium ${
                                                 activeSection === item.id
-                                                    ? "bg-[#35877D]/10 text-[#35877D] font-bold"
+                                                    ? "bg-[#2F8F83]/10 text-[#2F8F83] font-bold"
                                                     : "text-slate-600 hover:bg-slate-100 hover:text-slate-900"
                                             }`}
                                         >
@@ -111,7 +111,7 @@ export default function TermsPage() {
                                 <div className="mt-6 pt-6 border-t border-slate-200 space-y-2">
                                     <Link
                                         href="/privacy"
-                                        className="flex items-center justify-between text-xs font-bold text-[#35877D] hover:underline"
+                                        className="flex items-center justify-between text-xs font-bold text-[#2F8F83] hover:underline"
                                     >
                                         <span>Privacy Policy</span>
                                         <ChevronRight size={14} />
@@ -147,7 +147,7 @@ export default function TermsPage() {
                                             1. Acceptance of Terms
                                         </h2>
                                         <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
-                                            These Terms of Service (&ldquo;Terms&rdquo; or &ldquo;Agreement&rdquo;) constitute a legally binding agreement between you (&ldquo;Customer&rdquo;, &ldquo;you&rdquo;, or &ldquo;your&rdquo;) and <strong>Connectly360</strong> (&ldquo;Connectly360&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;). By accessing or using the Connectly360 website, signing up for an account, launching a workspace, connecting a WhatsApp Business Account, or utilizing our APIs, you acknowledge that you have read, understood, and agree to be bound by these Terms and our <Link href="/privacy" className="text-[#35877D] font-semibold underline">Privacy Policy</Link>.
+                                            These Terms of Service (&ldquo;Terms&rdquo; or &ldquo;Agreement&rdquo;) constitute a legally binding agreement between you (&ldquo;Customer&rdquo;, &ldquo;you&rdquo;, or &ldquo;your&rdquo;) and <strong>Connectly360</strong> (&ldquo;Connectly360&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;). By accessing or using the Connectly360 website, signing up for an account, launching a workspace, connecting a WhatsApp Business Account, or utilizing our APIs, you acknowledge that you have read, understood, and agree to be bound by these Terms and our <Link href="/privacy" className="text-[#2F8F83] font-semibold underline">Privacy Policy</Link>.
                                         </p>
                                         <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
                                             If you are entering into these Terms on behalf of an enterprise, company, or legal entity, you represent and warrant that you possess the legal authority to bind that entity to this Agreement. If you do not agree to these Terms, you must not access or use Connectly360.
@@ -186,7 +186,7 @@ export default function TermsPage() {
                                             4. Workspace Accounts & Security
                                         </h2>
                                         <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
-                                            Your account operates within a designated workspace. You are responsible for safeguarding your login credentials (passwords, Google OAuth access, and API tokens). You are entirely responsible for all activities that occur under your workspace, whether authorized by you or not. You agree to notify us immediately at <a href="mailto:support@connectly360.com" className="text-[#35877D] font-semibold underline">support@connectly360.com</a> of any unauthorized access or breach of security.
+                                            Your account operates within a designated workspace. You are responsible for safeguarding your login credentials (passwords, Google OAuth access, and API tokens). You are entirely responsible for all activities that occur under your workspace, whether authorized by you or not. You agree to notify us immediately at <a href="mailto:support@connectly360.com" className="text-[#2F8F83] font-semibold underline">support@connectly360.com</a> of any unauthorized access or breach of security.
                                         </p>
                                     </section>
 
@@ -203,7 +203,7 @@ export default function TermsPage() {
                                     {/* Section 6 */}
                                     <section id="sec-6" className="space-y-3 scroll-mt-28">
                                         <div className="flex items-center gap-2">
-                                            <span className="p-1.5 rounded-lg bg-[#35877D]/10 text-[#35877D]">
+                                            <span className="p-1.5 rounded-lg bg-[#2F8F83]/10 text-[#2F8F83]">
                                                 <Smartphone size={18} />
                                             </span>
                                             <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900">
@@ -215,7 +215,7 @@ export default function TermsPage() {
                                         </p>
                                         <ul className="list-disc pl-6 space-y-1.5 text-sm sm:text-base text-slate-700">
                                             <li>Meta Platforms, Inc. is an independent third party that owns and operates the WhatsApp messaging network.</li>
-                                            <li>Your connection to and use of WhatsApp is governed directly by Meta&rsquo;s terms, including the <a href="https://www.whatsapp.com/legal/business-terms" target="_blank" rel="noopener noreferrer" className="text-[#35877D] underline inline-flex items-center gap-1 font-semibold">WhatsApp Business Terms <ExternalLink size={12} /></a> and Meta Commercial Terms.</li>
+                                            <li>Your connection to and use of WhatsApp is governed directly by Meta&rsquo;s terms, including the <a href="https://www.whatsapp.com/legal/business-terms" target="_blank" rel="noopener noreferrer" className="text-[#2F8F83] underline inline-flex items-center gap-1 font-semibold">WhatsApp Business Terms <ExternalLink size={12} /></a> and Meta Commercial Terms.</li>
                                             <li>Connectly360 cannot guarantee message delivery rates, sender reputation, phone number quality ratings, or bypass messaging tier limits enforced by Meta.</li>
                                             <li>Meta reserves the right to restrict, suspend, or terminate WABAs or phone numbers that violate Meta guidelines.</li>
                                         </ul>
@@ -224,7 +224,7 @@ export default function TermsPage() {
                                     {/* Section 7 */}
                                     <section id="sec-7" className="space-y-3 scroll-mt-28">
                                         <div className="flex items-center gap-2">
-                                            <span className="p-1.5 rounded-lg bg-[#35877D]/10 text-[#35877D]">
+                                            <span className="p-1.5 rounded-lg bg-[#2F8F83]/10 text-[#2F8F83]">
                                                 <ShieldAlert size={18} />
                                             </span>
                                             <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900">
@@ -278,7 +278,7 @@ export default function TermsPage() {
                                             10. Mandatory WhatsApp Opt-In Requirements
                                         </h2>
                                         <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
-                                            Under Meta&rsquo;s <a href="https://www.whatsapp.com/legal/business-messaging-policy" target="_blank" rel="noopener noreferrer" className="text-[#35877D] underline inline-flex items-center gap-1 font-semibold">WhatsApp Business Messaging Policy <ExternalLink size={12} /></a>, businesses must obtain verifiable opt-in consent from customers before sending messages outside of a 24-hour service window. The opt-in must clearly specify the business name and state that the person is opting in to receive messages over WhatsApp. Purchasing third-party telephone number lists or scraping directories is strictly prohibited.
+                                            Under Meta&rsquo;s <a href="https://www.whatsapp.com/legal/business-messaging-policy" target="_blank" rel="noopener noreferrer" className="text-[#2F8F83] underline inline-flex items-center gap-1 font-semibold">WhatsApp Business Messaging Policy <ExternalLink size={12} /></a>, businesses must obtain verifiable opt-in consent from customers before sending messages outside of a 24-hour service window. The opt-in must clearly specify the business name and state that the person is opting in to receive messages over WhatsApp. Purchasing third-party telephone number lists or scraping directories is strictly prohibited.
                                         </p>
                                     </section>
 
@@ -332,7 +332,7 @@ export default function TermsPage() {
                                     {/* Section 15 */}
                                     <section id="sec-15" className="space-y-3 scroll-mt-28">
                                         <div className="flex items-center gap-2">
-                                            <span className="p-1.5 rounded-lg bg-[#35877D]/10 text-[#35877D]">
+                                            <span className="p-1.5 rounded-lg bg-[#2F8F83]/10 text-[#2F8F83]">
                                                 <CreditCard size={18} />
                                             </span>
                                             <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900">
@@ -340,7 +340,7 @@ export default function TermsPage() {
                                             </h2>
                                         </div>
                                         <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
-                                            Connectly360 provides subscription plans (such as Starter, Growth, Business, and Enterprise) billed on a recurring monthly or annual basis. Plan details, credit quotas, user seats, and feature entitlements are described on our <Link href="/pricing" className="text-[#35877D] font-semibold underline">Pricing Page</Link>. Subscriptions renew automatically at the end of each billing cycle unless cancelled prior to renewal in your workspace settings.
+                                            Connectly360 provides subscription plans (such as Starter, Growth, Business, and Enterprise) billed on a recurring monthly or annual basis. Plan details, credit quotas, user seats, and feature entitlements are described on our <Link href="/pricing" className="text-[#2F8F83] font-semibold underline">Pricing Page</Link>. Subscriptions renew automatically at the end of each billing cycle unless cancelled prior to renewal in your workspace settings.
                                         </p>
                                     </section>
 
@@ -365,7 +365,7 @@ export default function TermsPage() {
                                             17. Connectly360 Credits & Ledgers
                                         </h2>
                                         <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
-                                            Credits purchased for messaging, automated AI workflows, or campaigns are recorded in your workspace ledger. Credits are non-transferable between unrelated workspaces and carry no cash surrender value. In accordance with our <Link href="/refund-policy" className="text-[#35877D] font-semibold underline">Refund Policy</Link>, consumed credits are non-refundable.
+                                            Credits purchased for messaging, automated AI workflows, or campaigns are recorded in your workspace ledger. Credits are non-transferable between unrelated workspaces and carry no cash surrender value. In accordance with our <Link href="/refund-policy" className="text-[#2F8F83] font-semibold underline">Refund Policy</Link>, consumed credits are non-refundable.
                                         </p>
                                     </section>
 
@@ -406,7 +406,7 @@ export default function TermsPage() {
                                         <ul className="list-disc pl-6 space-y-1.5 text-sm sm:text-base text-slate-700">
                                             <li>Connectly360 stops using the access token for new WhatsApp operations and invalidates active session tokens.</li>
                                             <li>Outbound message dispatches and campaign automations for that number are halted.</li>
-                                            <li>Historical CRM conversations and contact logs remain accessible until you cancel your workspace or request permanent deletion under our <Link href="/data-deletion" className="text-[#35877D] font-semibold underline">Data Deletion Instructions</Link>.</li>
+                                            <li>Historical CRM conversations and contact logs remain accessible until you cancel your workspace or request permanent deletion under our <Link href="/data-deletion" className="text-[#2F8F83] font-semibold underline">Data Deletion Instructions</Link>.</li>
                                         </ul>
                                     </section>
 
@@ -416,7 +416,7 @@ export default function TermsPage() {
                                             21. Data Protection & Privacy
                                         </h2>
                                         <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
-                                            Our collection and processing of personal data is governed by our <Link href="/privacy" className="text-[#35877D] font-semibold underline">Privacy Policy</Link>, which is incorporated into these Terms by reference. Both parties agree to comply with applicable data protection legislation regarding customer contact information and message logs.
+                                            Our collection and processing of personal data is governed by our <Link href="/privacy" className="text-[#2F8F83] font-semibold underline">Privacy Policy</Link>, which is incorporated into these Terms by reference. Both parties agree to comply with applicable data protection legislation regarding customer contact information and message logs.
                                         </p>
                                     </section>
 
@@ -446,7 +446,7 @@ export default function TermsPage() {
                                             24. Third-Party Platform Rules (Meta)
                                         </h2>
                                         <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
-                                            You agree to strictly comply with all third-party platform rules that apply to your use of Connectly360, including the <a href="https://www.facebook.com/legal/terms" target="_blank" rel="noopener noreferrer" className="text-[#35877D] underline inline-flex items-center gap-1 font-semibold">Meta Terms of Service <ExternalLink size={12} /></a>, <a href="https://www.whatsapp.com/legal/business-terms" target="_blank" rel="noopener noreferrer" className="text-[#35877D] underline inline-flex items-center gap-1 font-semibold">WhatsApp Business Terms <ExternalLink size={12} /></a>, and <a href="https://www.whatsapp.com/legal/commerce-policy" target="_blank" rel="noopener noreferrer" className="text-[#35877D] underline inline-flex items-center gap-1 font-semibold">WhatsApp Commerce Policy <ExternalLink size={12} /></a>. Any violation of Meta&rsquo;s terms constitutes a material violation of these Terms.
+                                            You agree to strictly comply with all third-party platform rules that apply to your use of Connectly360, including the <a href="https://www.facebook.com/legal/terms" target="_blank" rel="noopener noreferrer" className="text-[#2F8F83] underline inline-flex items-center gap-1 font-semibold">Meta Terms of Service <ExternalLink size={12} /></a>, <a href="https://www.whatsapp.com/legal/business-terms" target="_blank" rel="noopener noreferrer" className="text-[#2F8F83] underline inline-flex items-center gap-1 font-semibold">WhatsApp Business Terms <ExternalLink size={12} /></a>, and <a href="https://www.whatsapp.com/legal/commerce-policy" target="_blank" rel="noopener noreferrer" className="text-[#2F8F83] underline inline-flex items-center gap-1 font-semibold">WhatsApp Commerce Policy <ExternalLink size={12} /></a>. Any violation of Meta&rsquo;s terms constitutes a material violation of these Terms.
                                         </p>
                                     </section>
 
@@ -526,7 +526,7 @@ export default function TermsPage() {
                                     {/* Section 32 */}
                                     <section id="sec-32" className="space-y-3 scroll-mt-28">
                                         <div className="flex items-center gap-2">
-                                            <span className="p-1.5 rounded-lg bg-[#35877D]/10 text-[#35877D]">
+                                            <span className="p-1.5 rounded-lg bg-[#2F8F83]/10 text-[#2F8F83]">
                                                 <Mail size={18} />
                                             </span>
                                             <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900">
@@ -540,22 +540,22 @@ export default function TermsPage() {
                                             <p className="font-extrabold text-slate-900 text-base">Connectly360 Legal Agreements Desk</p>
                                             <div className="space-y-2 text-slate-700">
                                                 <div className="flex items-center gap-2.5">
-                                                    <Mail size={15} className="text-[#35877D]" />
-                                                    <span>Email: <a href="mailto:support@connectly360.com" className="text-[#35877D] font-bold underline">support@connectly360.com</a></span>
+                                                    <Mail size={15} className="text-[#2F8F83]" />
+                                                    <span>Email: <a href="mailto:support@connectly360.com" className="text-[#2F8F83] font-bold underline">support@connectly360.com</a></span>
                                                 </div>
                                                 <div className="flex items-center gap-2.5">
-                                                    <Phone size={15} className="text-[#35877D]" />
+                                                    <Phone size={15} className="text-[#2F8F83]" />
                                                     <span>Phone: <span className="font-semibold">+91 9586557162</span></span>
                                                 </div>
                                                 <div className="flex items-center gap-2.5">
-                                                    <MapPin size={15} className="text-[#35877D]" />
+                                                    <MapPin size={15} className="text-[#2F8F83]" />
                                                     <span>Location: Ahmedabad, Gujarat, India</span>
                                                 </div>
                                             </div>
                                             <div className="pt-2 flex flex-wrap gap-3">
                                                 <Link
                                                     href="/privacy"
-                                                    className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-2 rounded-xl bg-[#35877D] text-white hover:bg-[#2c7168] transition-colors"
+                                                    className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-2 rounded-xl bg-[#2F8F83] text-white hover:bg-[#2c7168] transition-colors"
                                                 >
                                                     Read Privacy Policy
                                                 </Link>

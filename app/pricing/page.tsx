@@ -107,7 +107,7 @@ export default function PricingPage() {
     ];
 
     return (
-        <div className="min-h-screen bg-slate-50 text-slate-800 font-sans overflow-x-hidden selection:bg-[#00382B] selection:text-white">
+        <div className="min-h-screen bg-slate-50 text-slate-800 font-sans overflow-x-hidden selection:bg-[#0B2E1E] selection:text-white">
             {/* Header */}
             <LandingHeader />
 
@@ -115,16 +115,16 @@ export default function PricingPage() {
                 {/* Hero Title Grid */}
                 <section className="relative pb-14 overflow-hidden">
                     <div className="w-full px-4 sm:px-8 md:px-12 lg:px-16 max-w-5xl mx-auto text-center space-y-4">
-                        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#35877D]/10 text-[#00382B] text-xs font-bold border border-[#35877D]/20 mb-1">
-                            <Coins size={13} className="text-[#35877D] animate-pulse" />
+                        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#2F8F83]/10 text-[#0B2E1E] text-xs font-bold border border-[#2F8F83]/20 mb-1">
+                            <Coins size={13} className="text-[#2F8F83] animate-pulse" />
                             100% Pay-As-You-Go — No Monthly Subscription
                         </span>
                         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight tracking-tight">
                             Pay Only For What You Use. <br className="hidden sm:inline" />
-                            <span className="text-[#00382B]">Zero Recurring Subscriptions.</span>
+                            <span className="text-[#0B2E1E]">Zero Recurring Subscriptions.</span>
                         </h1>
                         <p className="text-sm sm:text-base text-slate-600 font-medium max-w-2xl mx-auto leading-relaxed">
-                            Sign up free and receive <span className="text-[#00382B] font-bold">50 Free Credits</span> immediately. 
+                            Sign up free and receive <span className="text-[#0B2E1E] font-bold">50 Free Credits</span> immediately. 
                             Top up credit packs only when you need them. Unused credits never expire.
                         </p>
 
@@ -135,7 +135,7 @@ export default function PricingPage() {
                                     <Sparkles size={16} className="text-emerald-600" />
                                     <span>Free Signup Bonus: 50 Free Credits included with every new account!</span>
                                 </div>
-                                <Button asChild size="sm" className="bg-[#00382B] hover:bg-[#35877D] text-white text-xs font-bold rounded-xl h-8 px-4 cursor-pointer border-0">
+                                <Button asChild size="sm" className="bg-[#0B2E1E] hover:bg-[#2F8F83] text-white text-xs font-bold rounded-xl h-8 px-4 cursor-pointer border-0">
                                     <Link href={isAuthenticated ? `${APP_URL}/dashboard` : `${APP_URL}/register`}>
                                         Claim 50 Free Credits <ArrowRight size={13} className="ml-1" />
                                     </Link>
@@ -161,30 +161,30 @@ export default function PricingPage() {
                             {creditPacks.map((pack) => (
                                 <Card 
                                     key={pack.name} 
-                                    className={`p-7 flex flex-col justify-between rounded-3xl transition-all duration-300 relative bg-white ${
+                                    className={`p-7 flex flex-col justify-between rounded-2xl transition-all duration-300 relative bg-white ${
                                         pack.popular 
-                                            ? "border-2 border-[#00382B] shadow-xl ring-2 ring-[#00382B]/10 xl:-translate-y-2" 
-                                            : "border border-slate-200 shadow-sm hover:shadow-md hover:border-slate-300"
+                                            ? "border-2 border-[#2F8F83] shadow-md ring-4 ring-[#2F8F83]/10 xl:-translate-y-2" 
+                                            : "border border-[#E5E9EE] shadow-2xs hover:shadow-xs hover:border-slate-300"
                                     }`}
                                 >
                                     {pack.popular && (
-                                        <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#00382B] text-white text-[10px] font-extrabold uppercase tracking-widest px-3.5 py-1 rounded-full shadow-sm flex items-center gap-1">
+                                        <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#2F8F83] text-white text-[10px] font-bold uppercase tracking-widest px-3.5 py-1 rounded-full shadow-xs flex items-center gap-1">
                                             <Zap size={10} className="fill-white" /> Most Popular
                                         </div>
                                     )}
 
                                     <div className="space-y-4">
                                         <div>
-                                            <span className={`text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-0.5 rounded-full ${
-                                                pack.popular ? "bg-[#00382B]/10 text-[#00382B]" : "bg-slate-100 text-slate-700"
+                                            <span className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full ${
+                                                pack.popular ? "bg-[#E8F6F3] text-[#2F8F83] border border-[#BFE4DD]" : "bg-slate-100 text-slate-700"
                                             }`}>
                                                 {pack.name}
                                             </span>
                                             <div className="flex items-baseline gap-1.5 mt-3">
-                                                <span className="text-3xl sm:text-4xl font-black text-slate-900">
+                                                <span className="text-3xl sm:text-4xl font-extrabold text-slate-900">
                                                     {pack.credits.toLocaleString()}
                                                 </span>
-                                                <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">Credits</span>
+                                                <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider">Credits</span>
                                             </div>
                                             <p className="text-xs text-slate-500 font-medium mt-1 leading-relaxed">
                                                 {pack.desc}
@@ -193,10 +193,10 @@ export default function PricingPage() {
 
                                         <div className="pt-2 pb-2 border-y border-slate-100 flex items-baseline justify-between">
                                             <div>
-                                                <span className="text-2xl font-black text-[#00382B]">₹{pack.price.toLocaleString()}</span>
-                                                <span className="text-slate-400 text-xs font-semibold ml-1">one-time</span>
+                                                <span className="text-2xl font-bold text-slate-900">₹{pack.price.toLocaleString()}</span>
+                                                <span className="text-slate-400 text-xs font-medium ml-1">one-time</span>
                                             </div>
-                                            <span className="text-[11px] font-bold text-slate-500 bg-slate-50 px-2 py-0.5 rounded border border-slate-200/60">
+                                            <span className="text-[11px] font-semibold text-slate-600 bg-slate-50 px-2 py-0.5 rounded border border-slate-200/60">
                                                 {pack.perCredit} / credit
                                             </span>
                                         </div>
@@ -204,7 +204,7 @@ export default function PricingPage() {
                                         <ul className="space-y-2 text-xs font-medium text-slate-700 pt-1">
                                             {pack.features.map((f) => (
                                                 <li key={f} className="flex items-center gap-2">
-                                                    <CheckCircle2 size={14} className="text-emerald-555 shrink-0" />
+                                                    <CheckCircle2 size={14} className="text-[#2F8F83] shrink-0" />
                                                     <span>{f}</span>
                                                 </li>
                                             ))}
@@ -213,9 +213,9 @@ export default function PricingPage() {
 
                                     <Button 
                                         asChild 
-                                        className={`w-full mt-6 h-11 rounded-xl text-xs font-bold shadow-xs cursor-pointer border-0 ${
+                                        className={`w-full mt-6 h-10 rounded-lg text-xs font-semibold shadow-xs cursor-pointer border-0 ${
                                             pack.popular 
-                                                ? "bg-[#00382B] hover:bg-[#35877D] text-white" 
+                                                ? "bg-[#2F8F83] hover:bg-[#267A70] text-white" 
                                                 : "bg-slate-900 hover:bg-slate-800 text-white"
                                         }`}
                                     >
@@ -233,7 +233,7 @@ export default function PricingPage() {
                 <section className="py-16 bg-white border-t border-slate-200">
                     <div className="w-full px-4 sm:px-8 md:px-12 lg:px-16 max-w-5xl mx-auto">
                         <div className="text-center mb-10">
-                            <span className="text-[10px] font-bold uppercase tracking-wider text-[#35877D] bg-[#35877D]/10 px-3 py-1 rounded-full border border-[#35877D]/20">
+                            <span className="text-[10px] font-bold uppercase tracking-wider text-[#2F8F83] bg-[#2F8F83]/10 px-3 py-1 rounded-full border border-[#2F8F83]/20">
                                 Transparent Usage
                             </span>
                             <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight mt-3">
@@ -280,21 +280,21 @@ export default function PricingPage() {
                         {/* Summary Badges */}
                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6">
                             <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 flex items-center gap-3">
-                                <Clock size={20} className="text-[#35877D] shrink-0" />
+                                <Clock size={20} className="text-[#2F8F83] shrink-0" />
                                 <div className="text-xs">
                                     <p className="font-bold text-slate-900">Never Expiring Balance</p>
                                     <p className="text-slate-500">Credits stay in your wallet indefinitely</p>
                                 </div>
                             </div>
                             <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 flex items-center gap-3">
-                                <Lock size={20} className="text-[#35877D] shrink-0" />
+                                <Lock size={20} className="text-[#2F8F83] shrink-0" />
                                 <div className="text-xs">
                                     <p className="font-bold text-slate-900">Zero Recurring Lock-in</p>
                                     <p className="text-slate-500">No auto-renewals or unexpected charges</p>
                                 </div>
                             </div>
                             <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 flex items-center gap-3">
-                                <ShieldCheck size={20} className="text-[#35877D] shrink-0" />
+                                <ShieldCheck size={20} className="text-[#2F8F83] shrink-0" />
                                 <div className="text-xs">
                                     <p className="font-bold text-slate-900">GST Invoice Provided</p>
                                     <p className="text-slate-500">Official tax invoices for all purchases</p>
@@ -314,7 +314,7 @@ export default function PricingPage() {
 
                         <Accordion type="single" collapsible className="w-full bg-white rounded-2xl border border-slate-200 px-6 py-2 shadow-xs">
                             <AccordionItem value="item-1">
-                                <AccordionTrigger className="text-left text-sm font-bold text-slate-900 hover:text-[#00382B]">
+                                <AccordionTrigger className="text-left text-sm font-bold text-slate-900 hover:text-[#0B2E1E]">
                                     Are there any monthly subscription fees?
                                 </AccordionTrigger>
                                 <AccordionContent className="text-slate-600 text-xs sm:text-sm leading-relaxed font-medium">
@@ -322,7 +322,7 @@ export default function PricingPage() {
                                 </AccordionContent>
                             </AccordionItem>
                             <AccordionItem value="item-2">
-                                <AccordionTrigger className="text-left text-sm font-bold text-slate-900 hover:text-[#00382B]">
+                                <AccordionTrigger className="text-left text-sm font-bold text-slate-900 hover:text-[#0B2E1E]">
                                     Do my purchased credits expire?
                                 </AccordionTrigger>
                                 <AccordionContent className="text-slate-600 text-xs sm:text-sm leading-relaxed font-medium">
@@ -330,7 +330,7 @@ export default function PricingPage() {
                                 </AccordionContent>
                             </AccordionItem>
                             <AccordionItem value="item-3">
-                                <AccordionTrigger className="text-left text-sm font-bold text-slate-900 hover:text-[#00382B]">
+                                <AccordionTrigger className="text-left text-sm font-bold text-slate-900 hover:text-[#0B2E1E]">
                                     What happens when my credit balance reaches zero?
                                 </AccordionTrigger>
                                 <AccordionContent className="text-slate-600 text-xs sm:text-sm leading-relaxed font-medium">
@@ -338,7 +338,7 @@ export default function PricingPage() {
                                 </AccordionContent>
                             </AccordionItem>
                             <AccordionItem value="item-4">
-                                <AccordionTrigger className="text-left text-sm font-bold text-slate-900 hover:text-[#00382B]">
+                                <AccordionTrigger className="text-left text-sm font-bold text-slate-900 hover:text-[#0B2E1E]">
                                     Are incoming customer messages charged?
                                 </AccordionTrigger>
                                 <AccordionContent className="text-slate-600 text-xs sm:text-sm leading-relaxed font-medium">
@@ -346,7 +346,7 @@ export default function PricingPage() {
                                 </AccordionContent>
                             </AccordionItem>
                             <AccordionItem value="item-5">
-                                <AccordionTrigger className="text-left text-sm font-bold text-slate-900 hover:text-[#00382B]">
+                                <AccordionTrigger className="text-left text-sm font-bold text-slate-900 hover:text-[#0B2E1E]">
                                     How many free credits do I get when I register?
                                 </AccordionTrigger>
                                 <AccordionContent className="text-slate-600 text-xs sm:text-sm leading-relaxed font-medium">

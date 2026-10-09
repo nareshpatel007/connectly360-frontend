@@ -119,27 +119,27 @@ const integrationCategories = [
 
 export default function IntegrationsPage() {
     return (
-        <div className="min-h-screen bg-slate-50 text-slate-800 font-sans overflow-x-hidden selection:bg-[#35877D] selection:text-white">
+        <div className="min-h-screen bg-slate-50 text-slate-800 font-sans overflow-x-hidden selection:bg-[#2F8F83] selection:text-white">
             <LandingHeader />
 
             <main className="pt-36">
                 {/* Hero Title Section */}
                 <section className="relative pb-16 overflow-hidden">
                     <div className="w-full px-4 sm:px-8 md:px-12 lg:px-16 max-w-5xl mx-auto text-center space-y-4">
-                        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#35877D]/10 text-[#35877D] text-xs font-bold border border-[#35877D]/20 mb-1">
-                            <Plug size={13} className="text-[#35877D] animate-pulse" />
+                        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#2F8F83]/10 text-[#2F8F83] text-xs font-bold border border-[#2F8F83]/20 mb-1">
+                            <Plug size={13} className="text-[#2F8F83] animate-pulse" />
                             Integrations Ecosystem
                         </span>
                         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight tracking-tight">
                             Connect WhatsApp to <br className="hidden sm:inline" />
-                            <span className="text-[#00382B]">Your Entire Tech Stack.</span>
+                            <span className="text-[#0B2E1E]">Your Entire Tech Stack.</span>
                         </h1>
                         <p className="text-base text-slate-600 font-medium max-w-2xl mx-auto leading-relaxed">
                             Seamlessly integrate your e-commerce stores, CRMs, payment gateways, and custom backend APIs with Connectly360&apos;s conversational platform.
                         </p>
 
                         <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
-                            <Button asChild size="lg" className="rounded-xl px-7 h-12 bg-[#35877D] hover:bg-[#2c6f66] text-white font-bold text-sm shadow-md">
+                            <Button asChild size="lg" className="rounded-xl px-7 h-12 bg-[#2F8F83] hover:bg-[#267A70] text-white font-bold text-sm shadow-md">
                                 <Link href="/register">
                                     Start Free Trial <ArrowRight size={14} className="ml-1" />
                                 </Link>
@@ -173,11 +173,11 @@ export default function IntegrationsPage() {
                                         return (
                                             <Card
                                                 key={itemIdx}
-                                                className="p-6 bg-white border border-slate-200 hover:border-[#35877D]/40 rounded-2xl shadow-xs hover:shadow-md transition-all duration-200 flex flex-col justify-between group"
+                                                className="p-6 bg-white border border-slate-200 hover:border-[#2F8F83]/40 rounded-2xl shadow-xs hover:shadow-md transition-all duration-200 flex flex-col justify-between group"
                                             >
                                                 <div className="space-y-3">
                                                     <div className="flex items-center justify-between">
-                                                        <div className="h-11 w-11 rounded-xl bg-emerald-50 text-[#35877D] border border-emerald-100 flex items-center justify-center transition-transform group-hover:scale-105">
+                                                        <div className="h-11 w-11 rounded-xl bg-emerald-50 text-[#2F8F83] border border-emerald-100 flex items-center justify-center transition-transform group-hover:scale-105">
                                                             <IconComp size={20} />
                                                         </div>
                                                         <div className="flex items-center gap-2">
@@ -190,7 +190,7 @@ export default function IntegrationsPage() {
                                                         </div>
                                                     </div>
 
-                                                    <h3 className="text-base font-extrabold text-slate-900 group-hover:text-[#35877D] transition-colors">
+                                                    <h3 className="text-base font-extrabold text-slate-900 group-hover:text-[#2F8F83] transition-colors">
                                                         {item.name}
                                                     </h3>
                                                     <p className="text-xs sm:text-sm text-slate-500 leading-relaxed font-medium">
@@ -201,7 +201,7 @@ export default function IntegrationsPage() {
                                                 <div className="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between">
                                                     <Link
                                                         href="/book-demo"
-                                                        className="text-xs font-bold text-[#35877D] hover:underline inline-flex items-center gap-1"
+                                                        className="text-xs font-bold text-[#2F8F83] hover:underline inline-flex items-center gap-1"
                                                     >
                                                         Setup with Connectly360 <ArrowRight size={12} />
                                                     </Link>
@@ -214,7 +214,7 @@ export default function IntegrationsPage() {
                         ))}
 
                         {/* Custom Integration Callout Card */}
-                        <div className="bg-gradient-to-br from-[#00382B] to-[#0A4B3A] text-white rounded-3xl p-8 sm:p-12 shadow-xl relative overflow-hidden">
+                        <div className="bg-gradient-to-br from-[#0B2E1E] to-[#0A4B3A] text-white rounded-3xl p-8 sm:p-12 shadow-xl relative overflow-hidden">
                             <div className="max-w-2xl space-y-4 relative z-10">
                                 <span className="inline-flex items-center gap-1 text-[11px] font-extrabold uppercase tracking-wider bg-white/10 px-3 py-1 rounded-full text-emerald-200 border border-white/10">
                                     Enterprise & Custom API
@@ -226,7 +226,7 @@ export default function IntegrationsPage() {
                                     Our dedicated engineering team builds and tests custom webhook pipelines, database synchronization, and legacy ERP connectors for enterprise teams.
                                 </p>
                                 <div className="pt-2">
-                                    <Button asChild className="rounded-xl bg-white hover:bg-slate-100 text-[#00382B] font-extrabold text-xs h-11 px-6 shadow-md border-0">
+                                    <Button asChild className="rounded-xl bg-white hover:bg-slate-100 text-[#0B2E1E] font-extrabold text-xs h-11 px-6 shadow-md border-0">
                                         <Link href="/contact">
                                             Speak with Solutions Engineering <ArrowRight size={14} className="ml-1" />
                                         </Link>

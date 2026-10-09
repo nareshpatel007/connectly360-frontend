@@ -215,20 +215,20 @@ function CollapsibleNavItem({
                         size="sm"
                         className={
                             isParentActive
-                                ? "!bg-[#378179]/10 !text-[#378179] hover:!bg-[#378179]/15 hover:!text-[#378179] font-semibold rounded-lg transition-all duration-200 group cursor-pointer w-full"
+                                ? "!bg-[#2F8F83]/10 !text-[#2F8F83] hover:!bg-[#2F8F83]/15 hover:!text-[#2F8F83] font-semibold rounded-lg transition-all duration-200 group cursor-pointer w-full"
                                 : "text-slate-700 hover:bg-slate-100 hover:text-slate-900 font-medium rounded-lg transition-all duration-200 group cursor-pointer w-full"
                         }
                     >
                         <div className="flex items-center gap-2.5 flex-1 min-w-0">
                             <item.icon
                                 size={15}
-                                className={isParentActive ? "text-[#378179] shrink-0" : "text-slate-400 group-hover:text-slate-700 transition-colors shrink-0"}
+                                className={isParentActive ? "text-[#2F8F83] shrink-0" : "text-slate-400 group-hover:text-slate-700 transition-colors shrink-0"}
                             />
                             <span className="text-xs truncate">{item.label}</span>
                         </div>
                         <ChevronDown
                             size={12}
-                            className={`shrink-0 transition-transform duration-200 group-data-[state=collapsed]:hidden ${open ? "rotate-180" : ""} ${isParentActive ? "text-[#378179]" : "text-slate-400"}`}
+                            className={`shrink-0 transition-transform duration-200 group-data-[state=collapsed]:hidden ${open ? "rotate-180" : ""} ${isParentActive ? "text-[#2F8F83]" : "text-slate-400"}`}
                         />
                     </SidebarMenuButton>
                 </CollapsibleTrigger>
@@ -245,14 +245,14 @@ function CollapsibleNavItem({
                                         size="sm"
                                         className={
                                              isSubActive
-                                                ? "!text-[#378179] !bg-[#378179]/8 font-semibold rounded-lg"
+                                                ? "!text-[#2F8F83] !bg-[#2F8F83]/8 font-semibold rounded-lg"
                                                 : "text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-lg transition-colors"
                                         }
                                     >
                                         <Link href={sub.href} className="flex items-center gap-2.5">
                                             <sub.icon
                                                 size={13}
-                                                className={isSubActive ? "text-[#378179] shrink-0" : "text-slate-400 shrink-0"}
+                                                className={isSubActive ? "text-[#2F8F83] shrink-0" : "text-slate-400 shrink-0"}
                                             />
                                             <span className="text-[11px] font-medium">{sub.label}</span>
                                         </Link>
@@ -311,11 +311,11 @@ function SidebarNav({ pathname }: { pathname: string }) {
                                     tooltip={item.label}
                                     size="sm"
                                     className={isActive
-                                        ? "!bg-[#378179]/10 !text-[#378179] hover:!bg-[#378179]/15 hover:!text-[#378179] font-semibold rounded-lg transition-all duration-200 group"
+                                        ? "!bg-[#2F8F83]/10 !text-[#2F8F83] hover:!bg-[#2F8F83]/15 hover:!text-[#2F8F83] font-semibold rounded-lg transition-all duration-200 group"
                                         : "text-slate-700 hover:bg-slate-100 hover:text-slate-900 font-medium rounded-lg transition-all duration-200 group"}
                                 >
                                     <Link href={item.href} className="flex items-center gap-2.5 w-full">
-                                        <item.icon size={15} className={isActive ? "text-[#378179]" : "text-slate-400 group-hover:text-slate-700 transition-colors"} />
+                                        <item.icon size={15} className={isActive ? "text-[#2F8F83]" : "text-slate-400 group-hover:text-slate-700 transition-colors"} />
                                         <span className="text-xs">{item.label}</span>
                                     </Link>
                                 </SidebarMenuButton>
@@ -418,7 +418,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
                         <CreditBalance variant="header" />
 
                         {/* WhatsApp Connection status indicator if needed */}
-                        <Button variant="outline" asChild className="hidden sm:inline-flex border-[#378179] text-[#378179] hover:bg-[#EAF7F2] text-xs font-medium h-8 px-3.5 rounded-lg bg-transparent cursor-pointer">
+                        <Button variant="outline" asChild className="hidden sm:inline-flex border-[#2F8F83] text-[#2F8F83] hover:bg-[#E8F6F3] text-xs font-medium h-8 px-3.5 rounded-lg bg-transparent cursor-pointer">
                             <Link href="/billing">Wallet &amp; Credits</Link>
                         </Button>
 
@@ -452,7 +452,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
                                                 e.stopPropagation();
                                                 handleReadAll();
                                             }}
-                                            className="text-[10px] text-[#378179] font-bold hover:underline bg-transparent border-0 cursor-pointer"
+                                            className="text-[10px] text-[#2F8F83] font-bold hover:underline bg-transparent border-0 cursor-pointer"
                                         >
                                             Mark all as read
                                         </button>
@@ -462,7 +462,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
                                 <div className="max-h-64 overflow-y-auto divide-y divide-slate-100 flex flex-col">
                                     {notifications.length === 0 ? (
                                         <div className="py-8 px-4 flex flex-col items-center justify-center text-center select-none animate-in fade-in-50 duration-300">
-                                            <div className="h-10 w-10 rounded-xl bg-[#378179]/5 border border-[#378179]/10 flex items-center justify-center text-[#378179] mb-2.5 shadow-xs">
+                                            <div className="h-10 w-10 rounded-xl bg-[#2F8F83]/5 border border-[#2F8F83]/10 flex items-center justify-center text-[#2F8F83] mb-2.5 shadow-xs">
                                                 <Bell size={16} />
                                             </div>
                                             <p className="text-xs font-bold text-slate-800">All caught up!</p>
@@ -479,7 +479,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
                                                 <div className="flex items-start justify-between gap-2">
                                                     <span className="text-xs font-bold text-slate-800 truncate">{n.title}</span>
                                                     {!n.is_read && (
-                                                        <span className="h-1.5 w-1.5 rounded-full bg-[#378179] shrink-0 mt-1" />
+                                                        <span className="h-1.5 w-1.5 rounded-full bg-[#2F8F83] shrink-0 mt-1" />
                                                     )}
                                                 </div>
                                                 <p className="text-[10.5px] text-slate-500 leading-normal">{n.message}</p>
@@ -494,7 +494,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
                                 <Button
                                     asChild
                                     variant="ghost"
-                                    className="w-full text-center text-xs font-bold text-[#378179] hover:bg-[#378179]/5 rounded-lg py-1.5 h-auto cursor-pointer border-0"
+                                    className="w-full text-center text-xs font-bold text-[#2F8F83] hover:bg-[#2F8F83]/5 rounded-lg py-1.5 h-auto cursor-pointer border-0"
                                 >
                                     <Link href="/notifications">View all notifications</Link>
                                 </Button>
@@ -507,7 +507,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
                         <DropdownMenu>
                             <DropdownMenuTrigger asChild>
                                 <button className="flex items-center gap-2 p-1 rounded-xl hover:bg-slate-50 border border-transparent transition-all focus:outline-none cursor-pointer group">
-                                    <div className="h-8 w-8 rounded-full bg-[#378179] text-white flex items-center justify-center font-extrabold text-xs shadow-xs transition-transform duration-200 group-hover:scale-102">
+                                    <div className="h-8 w-8 rounded-full bg-[#2F8F83] text-white flex items-center justify-center font-extrabold text-xs shadow-xs transition-transform duration-200 group-hover:scale-102">
                                         {user?.name ? user.name.charAt(0).toUpperCase() : "U"}
                                     </div>
                                     <span className="hidden md:inline-block text-xs font-medium text-slate-800 group-hover:text-slate-900 truncate max-w-[100px]">

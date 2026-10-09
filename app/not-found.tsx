@@ -18,13 +18,13 @@ export default function NotFound() {
                     {/* Animated 404 graphic */}
                     <div className="relative flex items-center justify-center mb-10 select-none">
                         <div className="absolute inset-0 flex items-center justify-center">
-                            <div className="w-64 h-64 rounded-full bg-[#35877D]/6 blur-3xl" />
+                            <div className="w-64 h-64 rounded-full bg-[#2F8F83]/6 blur-3xl" />
                         </div>
                         <div className="relative">
                             <span
                                 className="text-[140px] sm:text-[180px] font-black leading-none tracking-tighter"
                                 style={{
-                                    background: "linear-gradient(135deg, #35877D 0%, #0B2E1E 60%, #35877D 100%)",
+                                    background: "linear-gradient(135deg, #2F8F83 0%, #0B2E1E 60%, #2F8F83 100%)",
                                     WebkitBackgroundClip: "text",
                                     WebkitTextFillColor: "transparent",
                                     backgroundClip: "text",
@@ -48,7 +48,7 @@ export default function NotFound() {
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-12">
                         <Link
                             href="/"
-                            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#35877D] hover:bg-[#2c6f66] text-white text-sm font-bold shadow-md hover:shadow-lg transition-all duration-200 group"
+                            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#2F8F83] hover:bg-[#267A70] text-white text-sm font-bold shadow-md hover:shadow-lg transition-all duration-200 group"
                         >
                             <Home size={15} />
                             Back to Home
@@ -56,7 +56,7 @@ export default function NotFound() {
                         </Link>
                         <Link
                             href={`${APP_URL}/dashboard`}
-                            className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-[#35877D] text-[#35877D] hover:bg-[#EAF7F2] text-sm font-bold transition-all duration-200"
+                            className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-[#2F8F83] text-[#2F8F83] hover:bg-[#E8F6F3] text-sm font-bold transition-all duration-200"
                         >
                             Go to Dashboard
                         </Link>
@@ -79,7 +79,7 @@ export default function NotFound() {
                                 <Link
                                     key={link.href}
                                     href={link.href}
-                                    className="px-4 py-2 rounded-lg bg-slate-50 border border-slate-200 hover:border-[#35877D]/40 hover:bg-[#EAF7F2] text-slate-600 hover:text-[#35877D] text-xs font-semibold transition-all duration-150"
+                                    className="px-4 py-2 rounded-lg bg-slate-50 border border-slate-200 hover:border-[#2F8F83]/40 hover:bg-[#E8F6F3] text-slate-600 hover:text-[#2F8F83] text-xs font-semibold transition-all duration-150"
                                 >
                                     {link.label}
                                 </Link>
@@ -90,7 +90,7 @@ export default function NotFound() {
                     {/* Support hint */}
                     <p className="mt-10 text-xs text-gray-400">
                         Still lost?{" "}
-                        <Link href="/contact" className="text-[#35877D] font-semibold hover:underline">
+                        <Link href="/contact" className="text-[#2F8F83] font-semibold hover:underline">
                             Contact our support team
                         </Link>{" "}
                         — we&apos;re happy to help.

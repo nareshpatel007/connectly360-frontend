@@ -357,7 +357,7 @@ export function SupportChatWidget() {
                         <div className="bg-gradient-to-r from-[#0B2E1E] to-[#1F543C] text-white p-4 flex items-center justify-between relative overflow-hidden">
                             {/* Accent Gradients */}
                             <div className="absolute -top-12 -right-12 w-24 h-24 bg-white/10 rounded-full blur-xl pointer-events-none"></div>
-                            <div className="absolute -bottom-12 -left-12 w-24 h-24 bg-[#35877D]/30 rounded-full blur-xl pointer-events-none"></div>
+                            <div className="absolute -bottom-12 -left-12 w-24 h-24 bg-[#2F8F83]/30 rounded-full blur-xl pointer-events-none"></div>
 
                             <div className="flex items-center gap-3 relative z-10">
                                 <div className="w-10 h-10 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center relative shadow-sm">
@@ -387,7 +387,7 @@ export function SupportChatWidget() {
                                 {/* Session bar containing Customer info */}
                                 <div className="px-4 py-2.5 bg-slate-100/80 dark:bg-slate-800/40 border-b border-slate-200/50 dark:border-slate-800/50 flex justify-between items-center text-xs">
                                     <span className="font-bold text-slate-600 dark:text-slate-400 truncate max-w-[200px]">
-                                        Linked as: <span className="text-[#35877D] font-extrabold">{activeVisitor ? activeVisitor.name : "..."}</span>
+                                        Linked as: <span className="text-[#2F8F83] font-extrabold">{activeVisitor ? activeVisitor.name : "..."}</span>
                                     </span>
 
                                     <div className="flex items-center gap-3">
@@ -400,7 +400,7 @@ export function SupportChatWidget() {
                                                     setMessages([]);
                                                     setIsConnected(false);
                                                 }}
-                                                className="text-[10px] font-extrabold text-[#35877D] hover:underline uppercase tracking-wider cursor-pointer"
+                                                className="text-[10px] font-extrabold text-[#2F8F83] hover:underline uppercase tracking-wider cursor-pointer"
                                             >
                                                 Switch Chat
                                             </button>
@@ -420,13 +420,13 @@ export function SupportChatWidget() {
                                 <div className="flex-1 overflow-y-auto p-4 space-y-3">
                                     {loadingHistory ? (
                                         <div className="h-full flex flex-col items-center justify-center gap-2 text-slate-400 text-xs font-semibold">
-                                            <Loader2 className="w-5 h-5 text-[#35877D] animate-spin" />
+                                            <Loader2 className="w-5 h-5 text-[#2F8F83] animate-spin" />
                                             Retrieving conversation history...
                                         </div>
                                     ) : messages.length === 0 ? (
                                         <div className="h-full flex flex-col items-center justify-center p-6 text-center">
                                             <div className="w-12 h-12 rounded-2xl bg-emerald-50 dark:bg-emerald-950/30 flex items-center justify-center mb-3">
-                                                <Bot className="w-6 h-6 text-[#35877D]" />
+                                                <Bot className="w-6 h-6 text-[#2F8F83]" />
                                             </div>
                                             <h6 className="font-bold text-slate-800 dark:text-slate-200 text-sm">Welcome, {activeVisitor ? activeVisitor.name : "Visitor"}!</h6>
                                             <p className="text-xs font-semibold text-slate-500 mt-1 max-w-[220px]">
@@ -443,13 +443,13 @@ export function SupportChatWidget() {
                                                 >
                                                     <div className={`flex gap-2 max-w-[85%] ${isUser ? "flex-row-reverse" : "flex-row"}`}>
                                                         {!isUser && (
-                                                            <div className="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200/50 dark:border-slate-700/50 flex items-center justify-center text-[#35877D] flex-shrink-0 self-end shadow-xs">
+                                                            <div className="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200/50 dark:border-slate-700/50 flex items-center justify-center text-[#2F8F83] flex-shrink-0 self-end shadow-xs">
                                                                 <Bot className="w-4 h-4" />
                                                             </div>
                                                         )}
                                                         <div
                                                             className={`px-4 py-2.5 rounded-2xl text-[13px] font-medium leading-relaxed whitespace-pre-wrap ${isUser
-                                                                ? "bg-[#35877D] text-white rounded-tr-none"
+                                                                ? "bg-[#2F8F83] text-white rounded-tr-none"
                                                                 : "bg-slate-100 dark:bg-slate-800/80 text-slate-800 dark:text-slate-200 border border-slate-200/30 dark:border-slate-800/30 rounded-tl-none"
                                                                 }`}
                                                         >
@@ -465,13 +465,13 @@ export function SupportChatWidget() {
                                     {sendingMessage && (
                                         <div className="flex justify-start">
                                             <div className="flex gap-2 items-center max-w-[85%]">
-                                                <div className="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200/50 dark:border-slate-700/50 flex items-center justify-center text-[#35877D] flex-shrink-0 self-end shadow-xs">
+                                                <div className="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200/50 dark:border-slate-700/50 flex items-center justify-center text-[#2F8F83] flex-shrink-0 self-end shadow-xs">
                                                     <Bot className="w-4 h-4" />
                                                 </div>
                                                 <div className="px-4 py-3 rounded-2xl bg-slate-100 dark:bg-slate-800/80 border border-slate-200/30 dark:border-slate-800/30 rounded-tl-none flex items-center gap-1.5 shadow-xs">
-                                                    <span className="w-2 h-2 bg-[#35877D] rounded-full animate-bounce" style={{ animationDelay: "0ms" }}></span>
-                                                    <span className="w-2 h-2 bg-[#35877D] rounded-full animate-bounce" style={{ animationDelay: "150ms" }}></span>
-                                                    <span className="w-2 h-2 bg-[#35877D] rounded-full animate-bounce" style={{ animationDelay: "300ms" }}></span>
+                                                    <span className="w-2 h-2 bg-[#2F8F83] rounded-full animate-bounce" style={{ animationDelay: "0ms" }}></span>
+                                                    <span className="w-2 h-2 bg-[#2F8F83] rounded-full animate-bounce" style={{ animationDelay: "150ms" }}></span>
+                                                    <span className="w-2 h-2 bg-[#2F8F83] rounded-full animate-bounce" style={{ animationDelay: "300ms" }}></span>
                                                 </div>
                                             </div>
                                         </div>
@@ -503,12 +503,12 @@ export function SupportChatWidget() {
                                                 placeholder="Type your question..."
                                                 value={inputValue}
                                                 onChange={(e) => setInputValue(e.target.value)}
-                                                className="flex-1 h-10 px-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-950/20 focus:outline-none focus:ring-2 focus:ring-[#35877D]/20 focus:border-[#35877D] text-xs font-normal text-slate-800 dark:text-slate-100 transition-all placeholder:text-slate-500"
+                                                className="flex-1 h-10 px-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-950/20 focus:outline-none focus:ring-2 focus:ring-[#2F8F83]/20 focus:border-[#2F8F83] text-xs font-normal text-slate-800 dark:text-slate-100 transition-all placeholder:text-slate-500"
                                             />
                                             <button
                                                 type="submit"
                                                 disabled={sendingMessage || !inputValue.trim()}
-                                                className="w-10 h-10 bg-[#35877D] hover:bg-[#2e746b] disabled:opacity-50 disabled:hover:bg-[#35877D] text-white rounded-xl flex items-center justify-center transition-all shadow-sm shadow-[#35877D]/10 cursor-pointer flex-shrink-0"
+                                                className="w-10 h-10 bg-[#2F8F83] hover:bg-[#267A70] disabled:opacity-50 disabled:hover:bg-[#2F8F83] text-white rounded-xl flex items-center justify-center transition-all shadow-sm shadow-[#2F8F83]/10 cursor-pointer flex-shrink-0"
                                             >
                                                 <Send className="w-4.5 h-4.5" />
                                             </button>
@@ -521,14 +521,14 @@ export function SupportChatWidget() {
                             <div className="flex-1 p-5 overflow-y-auto flex flex-col justify-between bg-slate-50/50 dark:bg-slate-950/20">
                                 <div className="space-y-4">
                                     <div className="text-center pb-2">
-                                        <History className="w-8 h-8 text-[#35877D] mx-auto mb-2 opacity-70" />
+                                        <History className="w-8 h-8 text-[#2F8F83] mx-auto mb-2 opacity-70" />
                                         <h5 className="font-bold text-slate-800 dark:text-slate-100 text-base">Your Support Chats</h5>
                                         <p className="text-xs font-semibold text-slate-500 mt-1">Resume an existing discussion or start a new inquiry.</p>
                                     </div>
 
                                     {loadingPrevious ? (
                                         <div className="py-8 flex flex-col items-center justify-center gap-2 text-slate-400 text-xs font-semibold">
-                                            <Loader2 className="w-5 h-5 text-[#35877D] animate-spin" />
+                                            <Loader2 className="w-5 h-5 text-[#2F8F83] animate-spin" />
                                             Retrieving past chat details...
                                         </div>
                                     ) : (
@@ -537,13 +537,13 @@ export function SupportChatWidget() {
                                                 <div
                                                     key={v.id}
                                                     onClick={() => resumeChat(v.id)}
-                                                    className="p-3 bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 hover:border-[#35877D]/50 hover:bg-[#35877D]/5 dark:hover:bg-[#35877D]/10 rounded-xl cursor-pointer transition-all flex items-center justify-between group"
+                                                    className="p-3 bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 hover:border-[#2F8F83]/50 hover:bg-[#2F8F83]/5 dark:hover:bg-[#2F8F83]/10 rounded-xl cursor-pointer transition-all flex items-center justify-between group"
                                                 >
                                                     <div className="min-w-0 flex-1">
-                                                        <p className="font-extrabold text-xs text-slate-800 dark:text-slate-100 truncate group-hover:text-[#35877D]">{v.name}</p>
+                                                        <p className="font-extrabold text-xs text-slate-800 dark:text-slate-100 truncate group-hover:text-[#2F8F83]">{v.name}</p>
                                                         <p className="text-[10px] font-semibold text-slate-400 truncate">{v.email}</p>
                                                     </div>
-                                                    <div className="flex items-center gap-1.5 text-[11px] font-extrabold text-[#35877D] opacity-0 group-hover:opacity-100 transition-all flex-shrink-0">
+                                                    <div className="flex items-center gap-1.5 text-[11px] font-extrabold text-[#2F8F83] opacity-0 group-hover:opacity-100 transition-all flex-shrink-0">
                                                         Resume <ArrowRight className="w-3.5 h-3.5" />
                                                     </div>
                                                 </div>
@@ -572,7 +572,7 @@ export function SupportChatWidget() {
                                     <form onSubmit={handleIdentify} className="space-y-3.5">
                                         <div className="space-y-1">
                                             <label className="text-[11px] font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider flex items-center gap-1.5">
-                                                <User className="w-3.5 h-3.5 text-[#35877D]" /> Name
+                                                <User className="w-3.5 h-3.5 text-[#2F8F83]" /> Name
                                             </label>
                                             <input
                                                 type="text"
@@ -580,13 +580,13 @@ export function SupportChatWidget() {
                                                 placeholder="John Doe"
                                                 value={name}
                                                 onChange={(e) => setName(e.target.value)}
-                                                className="w-full h-11 px-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-[#35877D]/20 focus:border-[#35877D] text-sm font-semibold text-slate-800 dark:text-slate-100 transition-all placeholder:text-slate-400"
+                                                className="w-full h-11 px-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-[#2F8F83]/20 focus:border-[#2F8F83] text-sm font-semibold text-slate-800 dark:text-slate-100 transition-all placeholder:text-slate-400"
                                             />
                                         </div>
 
                                         <div className="space-y-1">
                                             <label className="text-[11px] font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider flex items-center gap-1.5">
-                                                <Mail className="w-3.5 h-3.5 text-[#35877D]" /> Email Address
+                                                <Mail className="w-3.5 h-3.5 text-[#2F8F83]" /> Email Address
                                             </label>
                                             <input
                                                 type="email"
@@ -594,13 +594,13 @@ export function SupportChatWidget() {
                                                 placeholder="john@example.com"
                                                 value={email}
                                                 onChange={(e) => setEmail(e.target.value)}
-                                                className="w-full h-11 px-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-[#35877D]/20 focus:border-[#35877D] text-sm font-semibold text-slate-800 dark:text-slate-100 transition-all placeholder:text-slate-400"
+                                                className="w-full h-11 px-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-[#2F8F83]/20 focus:border-[#2F8F83] text-sm font-semibold text-slate-800 dark:text-slate-100 transition-all placeholder:text-slate-400"
                                             />
                                         </div>
 
                                         <div className="space-y-1 custom-phone-input">
                                             <label className="text-[11px] font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider flex items-center gap-1.5">
-                                                <Phone className="w-3.5 h-3.5 text-[#35877D]" /> WhatsApp Mobile
+                                                <Phone className="w-3.5 h-3.5 text-[#2F8F83]" /> WhatsApp Mobile
                                             </label>
                                             <PhoneInput
                                                 placeholder="98765 43210"
@@ -609,7 +609,7 @@ export function SupportChatWidget() {
                                                 defaultCountry="IN"
                                                 required
                                                 numberInputProps={{
-                                                    className: "h-11 w-full border border-slate-200 dark:border-slate-800 focus:outline-none focus:ring-2 focus:ring-[#35877D]/20 focus:border-[#35877D] rounded-xl bg-white dark:bg-slate-900 font-semibold px-3.5 text-sm text-slate-800 dark:text-slate-100 transition-all"
+                                                    className: "h-11 w-full border border-slate-200 dark:border-slate-800 focus:outline-none focus:ring-2 focus:ring-[#2F8F83]/20 focus:border-[#2F8F83] rounded-xl bg-white dark:bg-slate-900 font-semibold px-3.5 text-sm text-slate-800 dark:text-slate-100 transition-all"
                                                 }}
                                                 className="flex gap-2 items-center"
                                             />

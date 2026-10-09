@@ -37,7 +37,7 @@ export default function DataDeletionPage() {
     };
 
     return (
-        <div className="min-h-screen bg-slate-50 text-slate-800 font-sans overflow-x-hidden selection:bg-[#35877D] selection:text-white">
+        <div className="min-h-screen bg-slate-50 text-slate-800 font-sans overflow-x-hidden selection:bg-[#2F8F83] selection:text-white">
             <LandingHeader />
 
             <main className="pt-36 sm:pt-40">
@@ -64,7 +64,7 @@ export default function DataDeletionPage() {
                         {/* Meta Platform Compliance Card */}
                         <Card className="p-6 sm:p-10 bg-white border border-slate-200 rounded-3xl shadow-xs space-y-6">
                             <div className="flex items-start gap-4">
-                                <div className="p-3 rounded-2xl bg-[#35877D]/10 text-[#35877D] shrink-0">
+                                <div className="p-3 rounded-2xl bg-[#2F8F83]/10 text-[#2F8F83] shrink-0">
                                     <Shield size={24} />
                                 </div>
                                 <div className="space-y-1">
@@ -96,7 +96,7 @@ export default function DataDeletionPage() {
                                     <li>Navigate to <strong>Settings &gt; WhatsApp Integration</strong>.</li>
                                     <li>Click <strong>&ldquo;Disconnect WhatsApp Account&rdquo;</strong>.</li>
                                     <li>Our backend immediately invalidates and deletes your stored Meta Access Token (<code className="bg-slate-100 px-1 py-0.5 rounded text-xs font-mono">access_token = null</code>), halts all webhook listeners, and sets the connection status to <strong>disconnected</strong>.</li>
-                                    <li>Alternatively, navigate to your <a href="https://business.facebook.com" target="_blank" rel="noopener noreferrer" className="text-[#35877D] underline inline-flex items-center gap-0.5">Meta Business Manager <ExternalLink size={10} /></a> under <strong>Business Settings &gt; Integrations &gt; Connected Apps</strong> and revoke permissions for Connectly360.</li>
+                                    <li>Alternatively, navigate to your <a href="https://business.facebook.com" target="_blank" rel="noopener noreferrer" className="text-[#2F8F83] underline inline-flex items-center gap-0.5">Meta Business Manager <ExternalLink size={10} /></a> under <strong>Business Settings &gt; Integrations &gt; Connected Apps</strong> and revoke permissions for Connectly360.</li>
                                 </ol>
                             </Card>
 
@@ -113,7 +113,7 @@ export default function DataDeletionPage() {
                                 </p>
                                 <ol className="list-decimal pl-5 space-y-2 text-xs sm:text-sm text-slate-700 font-medium">
                                     <li>Export any contacts or reports you wish to retain via the <strong>Export CSV</strong> button in your dashboard.</li>
-                                    <li>Submit a deletion request using the form below or email <a href="mailto:support@connectly360.com" className="text-[#35877D] underline">support@connectly360.com</a> from your registered administrative email address.</li>
+                                    <li>Submit a deletion request using the form below or email <a href="mailto:support@connectly360.com" className="text-[#2F8F83] underline">support@connectly360.com</a> from your registered administrative email address.</li>
                                     <li>Our team verifies workspace ownership and confirms receipt within <strong>48 business hours</strong>.</li>
                                     <li>Within <strong>30 days</strong>, all database records, chat logs, media files, contact tags, and API keys are permanently deleted.</li>
                                 </ol>
@@ -136,7 +136,7 @@ export default function DataDeletionPage() {
                             <ul className="list-disc pl-5 space-y-1.5 text-xs sm:text-sm text-slate-700">
                                 <li>Send a message saying <strong>&ldquo;STOP&rdquo;</strong> or <strong>&ldquo;UNSUBSCRIBE&rdquo;</strong> directly in the WhatsApp chat thread to immediately opt out of automated marketing workflows.</li>
                                 <li>Contact the business directly and request removal from their contact directory.</li>
-                                <li>Alternatively, email our privacy desk at <a href="mailto:support@connectly360.com" className="text-[#35877D] font-bold underline">support@connectly360.com</a> with your phone number and the name of the business you contacted; we will coordinate with the respective business workspace controller to purge your record.</li>
+                                <li>Alternatively, email our privacy desk at <a href="mailto:support@connectly360.com" className="text-[#2F8F83] font-bold underline">support@connectly360.com</a> with your phone number and the name of the business you contacted; we will coordinate with the respective business workspace controller to purge your record.</li>
                             </ul>
                         </Card>
 
@@ -174,7 +174,7 @@ export default function DataDeletionPage() {
                                                 placeholder="admin@yourbusiness.com"
                                                 value={workspaceEmail}
                                                 onChange={(e) => setWorkspaceEmail(e.target.value)}
-                                                className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-hidden focus:border-[#35877D] focus:ring-1 focus:ring-[#35877D]"
+                                                className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-hidden focus:border-[#2F8F83] focus:ring-1 focus:ring-[#2F8F83]"
                                             />
                                         </div>
                                         <div className="space-y-1.5">
@@ -186,7 +186,7 @@ export default function DataDeletionPage() {
                                                 placeholder="e.g. 102938475610293 or +91..."
                                                 value={wabaId}
                                                 onChange={(e) => setWabaId(e.target.value)}
-                                                className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-hidden focus:border-[#35877D] focus:ring-1 focus:ring-[#35877D]"
+                                                className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-hidden focus:border-[#2F8F83] focus:ring-1 focus:ring-[#2F8F83]"
                                             />
                                         </div>
                                     </div>
@@ -200,12 +200,12 @@ export default function DataDeletionPage() {
                                             placeholder="Please describe whether you want full workspace deletion, removal of specific contact phone numbers, or disconnection of your WhatsApp assets."
                                             value={requestDetails}
                                             onChange={(e) => setRequestDetails(e.target.value)}
-                                            className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-hidden focus:border-[#35877D] focus:ring-1 focus:ring-[#35877D]"
+                                            className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-hidden focus:border-[#2F8F83] focus:ring-1 focus:ring-[#2F8F83]"
                                         />
                                     </div>
                                     <button
                                         type="submit"
-                                        className="w-full sm:w-auto px-6 py-3 rounded-xl bg-[#35877D] hover:bg-[#2b6d65] text-white font-bold text-sm transition-colors flex items-center justify-center gap-2"
+                                        className="w-full sm:w-auto px-6 py-3 rounded-xl bg-[#2F8F83] hover:bg-[#2b6d65] text-white font-bold text-sm transition-colors flex items-center justify-center gap-2"
                                     >
                                         <span>Dispatch Deletion Request</span>
                                         <ArrowRight size={15} />

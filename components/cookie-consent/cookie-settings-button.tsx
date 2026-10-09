@@ -18,9 +18,9 @@ export function CookieSettingsButton() {
             onClick={openPreferences}
             aria-label="Manage cookie settings and privacy preferences"
             title="Cookie Settings"
-            className="fixed bottom-4 left-4 z-40 group flex items-center gap-2 bg-white/90 hover:bg-white text-slate-700 hover:text-[#35877D] border border-slate-200/90 shadow-md hover:shadow-lg rounded-full px-3 py-2 text-xs font-semibold backdrop-blur-sm transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#35877D] focus:ring-offset-2"
+            className="fixed bottom-4 left-4 z-40 group flex items-center gap-2 bg-white/90 hover:bg-white text-slate-700 hover:text-[#2F8F83] border border-slate-200/90 shadow-md hover:shadow-lg rounded-full px-3 py-2 text-xs font-semibold backdrop-blur-sm transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#2F8F83] focus:ring-offset-2"
         >
-            <div className="w-5 h-5 rounded-full bg-[#35877D]/10 text-[#35877D] flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+            <div className="w-5 h-5 rounded-full bg-[#2F8F83]/10 text-[#2F8F83] flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
                 <Cookie size={13} />
             </div>
             <span className="hidden sm:inline-block pr-1 font-medium">Cookie Settings</span>

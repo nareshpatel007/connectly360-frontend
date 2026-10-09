@@ -87,8 +87,8 @@ function BookDemoForm() {
 
     return (
         <Card className="p-8 bg-white border border-slate-200 rounded-3xl shadow-sm relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-radial-gradient from-[#35877D]/5 to-transparent -z-10 rounded-full blur-xl pointer-events-none"></div>
-            <div className="absolute bottom-0 left-0 w-32 h-32 bg-radial-gradient from-[#60B187]/5 to-transparent -z-10 rounded-full blur-xl pointer-events-none"></div>
+            <div className="absolute top-0 right-0 w-32 h-32 bg-radial-gradient from-[#2F8F83]/5 to-transparent -z-10 rounded-full blur-xl pointer-events-none"></div>
+            <div className="absolute bottom-0 left-0 w-32 h-32 bg-radial-gradient from-[#2E9B72]/5 to-transparent -z-10 rounded-full blur-xl pointer-events-none"></div>
 
             <AnimatePresence mode="wait">
                 {!submitted ? (
@@ -114,7 +114,7 @@ function BookDemoForm() {
                                     placeholder="Jane Doe"
                                     value={form.name}
                                     onChange={(e) => setForm({ ...form, name: e.target.value })}
-                                    className="h-12 rounded-xl border-slate-200 bg-slate-50/30 focus:border-[#35877D] text-sm font-semibold text-slate-900"
+                                    className="h-12 rounded-xl border-slate-200 bg-slate-50/30 focus:border-[#2F8F83] text-sm font-semibold text-slate-900"
                                 />
                             </div>
                             <div className="space-y-1.5">
@@ -126,7 +126,7 @@ function BookDemoForm() {
                                     placeholder="jane@company.com"
                                     value={form.email}
                                     onChange={(e) => setForm({ ...form, email: e.target.value })}
-                                    className="h-12 rounded-xl border-slate-200 bg-slate-50/30 focus:border-[#35877D] text-sm font-semibold text-slate-900"
+                                    className="h-12 rounded-xl border-slate-200 bg-slate-50/30 focus:border-[#2F8F83] text-sm font-semibold text-slate-900"
                                 />
                             </div>
                         </div>
@@ -143,7 +143,7 @@ function BookDemoForm() {
                                     disabled={loading}
                                     required
                                     numberInputProps={{
-                                        className: "h-12 w-full border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#35877D]/20 focus:border-[#35877D] rounded-xl bg-slate-50/30 font-semibold px-3 text-sm text-slate-900 transition-all"
+                                        className: "h-12 w-full border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#2F8F83]/20 focus:border-[#2F8F83] rounded-xl bg-slate-50/30 font-semibold px-3 text-sm text-slate-900 transition-all"
                                     }}
                                     className="flex gap-2 items-center"
                                 />
@@ -157,7 +157,7 @@ function BookDemoForm() {
                                     placeholder="Acme Corporation"
                                     value={form.company}
                                     onChange={(e) => setForm({ ...form, company: e.target.value })}
-                                    className="h-12 rounded-xl border-slate-200 bg-slate-50/30 focus:border-[#35877D] text-sm font-semibold text-slate-900"
+                                    className="h-12 rounded-xl border-slate-200 bg-slate-50/30 focus:border-[#2F8F83] text-sm font-semibold text-slate-900"
                                 />
                             </div>
                         </div>
@@ -169,7 +169,7 @@ function BookDemoForm() {
                                     id="companySize"
                                     value={form.companySize}
                                     onChange={(e) => setForm({ ...form, companySize: e.target.value })}
-                                    className="flex h-12 w-full items-center justify-between rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm font-semibold shadow-xs text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#35877D]/20 focus:border-[#35877D]"
+                                    className="flex h-12 w-full items-center justify-between rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm font-semibold shadow-xs text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#2F8F83]/20 focus:border-[#2F8F83]"
                                 >
                                     <option value="1-10">1-10 people</option>
                                     <option value="11-50">11-50 people</option>
@@ -185,7 +185,7 @@ function BookDemoForm() {
                                     required
                                     value={form.preferredDate}
                                     onChange={(e) => setForm({ ...form, preferredDate: e.target.value })}
-                                    className="h-12 rounded-xl border-slate-200 bg-slate-50/30 focus:border-[#35877D] text-sm font-semibold text-slate-900"
+                                    className="h-12 rounded-xl border-slate-200 bg-slate-50/30 focus:border-[#2F8F83] text-sm font-semibold text-slate-900"
                                 />
                             </div>
                             <div className="space-y-1.5 sm:col-span-1">
@@ -196,7 +196,7 @@ function BookDemoForm() {
                                     required
                                     value={form.preferredTime}
                                     onChange={(e) => setForm({ ...form, preferredTime: e.target.value })}
-                                    className="h-12 rounded-xl border-slate-200 bg-slate-50/30 focus:border-[#35877D] text-sm font-semibold text-slate-900"
+                                    className="h-12 rounded-xl border-slate-200 bg-slate-50/30 focus:border-[#2F8F83] text-sm font-semibold text-slate-900"
                                 />
                             </div>
                         </div>
@@ -210,14 +210,14 @@ function BookDemoForm() {
                                 placeholder="E.g., We need to broadcast weekly wholesale catalogs and sync customers automatically to our CRM database..."
                                 value={form.useCase}
                                 onChange={(e) => setForm({ ...form, useCase: e.target.value })}
-                                className="rounded-xl border-slate-200 bg-slate-50/30 focus:border-[#35877D] text-sm font-semibold text-slate-900 leading-relaxed resize-none"
+                                className="rounded-xl border-slate-200 bg-slate-50/30 focus:border-[#2F8F83] text-sm font-semibold text-slate-900 leading-relaxed resize-none"
                             />
                         </div>
 
                         <Button
                             type="submit"
                             disabled={loading}
-                            className="w-full h-12 bg-[#35877D] hover:bg-[#2c6f66] text-white rounded-xl text-sm font-bold shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 mt-4 cursor-pointer border-0"
+                            className="w-full h-12 bg-[#2F8F83] hover:bg-[#267A70] text-white rounded-xl text-sm font-bold shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 mt-4 cursor-pointer border-0"
                         >
                             {loading ? (
                                 <>
@@ -240,19 +240,19 @@ function BookDemoForm() {
                         exit={{ opacity: 0 }}
                         className="text-center py-8 space-y-6 flex flex-col items-center justify-center"
                     >
-                        <div className="h-16 w-16 bg-slate-50 border border-slate-200 rounded-full flex items-center justify-center text-[#35877D] shadow-sm animate-bounce">
+                        <div className="h-16 w-16 bg-slate-50 border border-slate-200 rounded-full flex items-center justify-center text-[#2F8F83] shadow-sm animate-bounce">
                             <CheckCircle2 size={36} className="stroke-[2.5]" />
                         </div>
                         <div className="space-y-2 max-w-sm">
                             <h3 className="text-2xl font-extrabold text-slate-900 tracking-tight">Walkthrough Scheduled!</h3>
-                            <p className="text-sm text-gray-650 font-semibold leading-relaxed">
-                                Thank you, <span className="text-[#35877D] font-bold">{form.name}</span>. We have scheduled a demonstration layout for <span className="text-[#60B187] font-bold">{form.company}</span>.
+                            <p className="text-sm text-slate-600 font-semibold leading-relaxed">
+                                Thank you, <span className="text-[#2F8F83] font-bold">{form.name}</span>. We have scheduled a demonstration layout for <span className="text-[#2E9B72] font-bold">{form.company}</span>.
                             </p>
                             <p className="text-xs text-gray-500 font-medium leading-relaxed mt-2">
                                 An integration specialist will reach out on WhatsApp at <span className="font-bold text-slate-900">{form.phone}</span> or email at <span className="font-bold text-slate-900">{form.email}</span> to coordinate access. We have also automatically logged this demo request in your CRM contacts!
                             </p>
                         </div>
-                        <Button asChild className="h-11 bg-[#35877D] hover:bg-[#2c6f66] text-white rounded-xl text-xs font-bold px-6 shadow-sm cursor-pointer border-0">
+                        <Button asChild className="h-11 bg-[#2F8F83] hover:bg-[#267A70] text-white rounded-xl text-xs font-bold px-6 shadow-sm cursor-pointer border-0">
                             <Link href="/">Return to Homepage</Link>
                         </Button>
                     </motion.div>
@@ -264,21 +264,21 @@ function BookDemoForm() {
 
 export default function BookDemoPage() {
     return (
-        <div className="min-h-screen bg-slate-50 text-slate-800 font-sans overflow-x-hidden selection:bg-[#35877D] selection:text-white">
+        <div className="min-h-screen bg-slate-50 text-slate-800 font-sans overflow-x-hidden selection:bg-[#2F8F83] selection:text-white">
             <LandingHeader />
 
             <main className="pt-40">
                 {/* Hero Title Section */}
                 <section className="relative pb-16 overflow-hidden">
                     <div className="w-full px-4 sm:px-8 md:px-12 lg:px-16 max-w-7xl mx-auto text-center space-y-4">
-                        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#35877D]/10 text-[#35877D] text-xs font-bold border border-[#35877D]/20 mb-1">
+                        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#2F8F83]/10 text-[#2F8F83] text-xs font-bold border border-[#2F8F83]/20 mb-1">
                             <Sparkles size={12} className="animate-pulse" />
                             Personalized Walkthrough Desk
                         </span>
                         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight tracking-tight">
-                            See Connectly360 in <span className="text-[#35877D]">Action</span>
+                            See Connectly360 in <span className="text-[#2F8F83]">Action</span>
                         </h1>
-                        <p className="text-base text-gray-550 font-semibold max-w-2xl mx-auto leading-relaxed">
+                        <p className="text-base text-slate-600 font-semibold max-w-2xl mx-auto leading-relaxed">
                             Book a live video demonstration tailored to your exact business needs. See how we automate chats, route leads, and sync with your favorite CRMs.
                         </p>
                     </div>
@@ -300,17 +300,17 @@ export default function BookDemoPage() {
                                 <div className="space-y-5">
                                     {[
                                         {
-                                            icon: <Laptop className="text-[#35877D]" size={16} />,
+                                            icon: <Laptop className="text-[#2F8F83]" size={16} />,
                                             title: "1-on-1 custom builder session",
                                             desc: "A screen-share walkthrough showing you exactly how to structure templates and connect your WABA."
                                         },
                                         {
-                                            icon: <Bot className="text-[#35877D]" size={16} />,
+                                            icon: <Bot className="text-[#2F8F83]" size={16} />,
                                             title: "AI Chatbot training test",
                                             desc: "Learn how to feed prompt rules and PDF document guides to train automated support agents."
                                         },
                                         {
-                                            icon: <Zap className="text-[#35877D]" size={16} />,
+                                            icon: <Zap className="text-[#2F8F83]" size={16} />,
                                             title: "Live database sync checks",
                                             desc: "We will demonstrate real-time data syncs between WhatsApp and target lead pipelines or custom APIs."
                                         }
@@ -329,7 +329,7 @@ export default function BookDemoPage() {
 
                                 {/* Trust Badge Area */}
                                 <div className="p-6 bg-white border border-slate-200 rounded-3xl flex items-center gap-4 shadow-sm">
-                                    <div className="h-11 w-11 bg-[#EAF7F2] text-[#35877D] border border-[#35877D]/20 rounded-xl flex items-center justify-center shrink-0">
+                                    <div className="h-11 w-11 bg-[#E8F6F3] text-[#2F8F83] border border-[#2F8F83]/20 rounded-xl flex items-center justify-center shrink-0">
                                         <CheckCircle2 size={20} />
                                     </div>
                                     <div>
@@ -343,7 +343,7 @@ export default function BookDemoPage() {
                             <div className="lg:col-span-7">
                                 <Suspense fallback={
                                     <Card className="p-8 bg-white border border-slate-200 rounded-3xl shadow-xl min-h-[400px] flex items-center justify-center">
-                                        <span className="h-8 w-8 border-4 border-[#35877D] border-t-transparent rounded-full animate-spin"></span>
+                                        <span className="h-8 w-8 border-4 border-[#2F8F83] border-t-transparent rounded-full animate-spin"></span>
                                     </Card>
                                 }>
                                     <BookDemoForm />
@@ -358,7 +358,7 @@ export default function BookDemoPage() {
                     <div className="w-full px-4 sm:px-8 md:px-12 lg:px-16 max-w-7xl mx-auto">
                         <div className="text-center mb-12">
                             <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight">How the Walkthrough Works</h2>
-                            <p className="text-sm text-gray-550 font-semibold mt-1.5">Get a custom-tailored implementation outline built specifically for your team size.</p>
+                            <p className="text-sm text-slate-600 font-semibold mt-1.5">Get a custom-tailored implementation outline built specifically for your team size.</p>
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative mt-8">
@@ -382,9 +382,9 @@ export default function BookDemoPage() {
                                     desc: "We run a fast screenshare session to show you the live dashboard sync, AI responder rules, and webhook integrations."
                                 }
                             ].map((item, idx) => (
-                                <Card key={idx} className="p-6 bg-white border border-slate-200 rounded-2xl relative shadow-sm flex flex-col justify-between group hover:border-[#35877D]/35 transition-all">
+                                <Card key={idx} className="p-6 bg-white border border-slate-200 rounded-2xl relative shadow-sm flex flex-col justify-between group hover:border-[#2F8F83]/35 transition-all">
                                     <div className="space-y-4">
-                                        <div className="h-10 w-10 bg-[#EAF7F2] text-[#35877D] border border-[#35877D]/20 rounded-xl flex items-center justify-center font-bold text-sm shrink-0">
+                                        <div className="h-10 w-10 bg-[#E8F6F3] text-[#2F8F83] border border-[#2F8F83]/20 rounded-xl flex items-center justify-center font-bold text-sm shrink-0">
                                             {item.step}
                                         </div>
                                         <div className="space-y-1.5">
@@ -429,10 +429,10 @@ export default function BookDemoPage() {
                                 }
                             ].map((faq) => (
                                 <AccordionItem key={faq.value} value={faq.value}>
-                                    <AccordionTrigger className="text-left text-base font-bold text-slate-900 hover:text-[#35877D]">
+                                    <AccordionTrigger className="text-left text-base font-bold text-slate-900 hover:text-[#2F8F83]">
                                         {faq.q}
                                     </AccordionTrigger>
-                                    <AccordionContent className="text-gray-650 text-sm sm:text-base leading-relaxed font-semibold text-slate-600">
+                                    <AccordionContent className="text-slate-600 text-sm sm:text-base leading-relaxed font-semibold text-slate-600">
                                         {faq.a}
                                     </AccordionContent>
                                 </AccordionItem>

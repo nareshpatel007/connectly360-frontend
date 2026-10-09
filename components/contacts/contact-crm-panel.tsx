@@ -172,9 +172,9 @@ export function ContactCrmPanel({
                 className={`fixed top-0 right-0 z-50 h-full w-full max-w-[440px] bg-white shadow-2xl flex flex-col transition-transform duration-300 ease-out ${isOpen ? "translate-x-0" : "translate-x-full"}`}
             >
                 {/* ── Header ── */}
-                <div className="flex items-center justify-between px-5 py-4 border-b border-slate-100 bg-[#35877D]/5 shrink-0">
+                <div className="flex items-center justify-between px-5 py-4 border-b border-slate-100 bg-[#2F8F83]/5 shrink-0">
                     <div className="flex items-center gap-3">
-                        <div className="h-10 w-10 rounded-full bg-[#35877D] text-white flex items-center justify-center text-sm font-bold shrink-0 shadow-sm">
+                        <div className="h-10 w-10 rounded-full bg-[#2F8F83] text-white flex items-center justify-center text-sm font-bold shrink-0 shadow-sm">
                             {initials || "?"}
                         </div>
                         <div className="min-w-0">
@@ -221,7 +221,7 @@ export function ContactCrmPanel({
                     <div>
                         <div className="flex items-center gap-2 mb-3">
                             <span className="text-[10px] font-extrabold text-slate-500 uppercase tracking-widest">Pipeline Stage</span>
-                            {isUpdatingStage && <Loader2 size={11} className="animate-spin text-[#35877D]" />}
+                            {isUpdatingStage && <Loader2 size={11} className="animate-spin text-[#2F8F83]" />}
                         </div>
 
                         {/* Stage stepper */}
@@ -242,14 +242,14 @@ export function ContactCrmPanel({
                                             disabled={isUpdatingStage}
                                             className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-left transition-all duration-150 cursor-pointer ${
                                                 isActive
-                                                    ? "bg-[#35877D]/8 border border-[#35877D]/25"
+                                                    ? "bg-[#2F8F83]/8 border border-[#2F8F83]/25"
                                                     : "hover:bg-slate-50 border border-transparent"
                                             }`}
                                         >
                                             {/* Dot */}
                                             <div className={`relative z-10 h-7 w-7 rounded-full flex items-center justify-center shrink-0 border-2 transition-all ${
                                                 isActive
-                                                    ? "bg-[#35877D] border-[#35877D]"
+                                                    ? "bg-[#2F8F83] border-[#2F8F83]"
                                                     : isPast
                                                     ? "bg-slate-200 border-slate-300"
                                                     : "bg-white border-slate-200"
@@ -264,7 +264,7 @@ export function ContactCrmPanel({
                                             </div>
 
                                             <div className="min-w-0 flex-1">
-                                                <div className={`text-xs font-bold ${isActive ? "text-[#35877D]" : isPast ? "text-slate-400" : "text-slate-600"}`}>
+                                                <div className={`text-xs font-bold ${isActive ? "text-[#2F8F83]" : isPast ? "text-slate-400" : "text-slate-600"}`}>
                                                     {s.label}
                                                 </div>
                                             </div>
@@ -285,7 +285,7 @@ export function ContactCrmPanel({
                     <div>
                         <div className="flex items-center gap-2 mb-3">
                             <span className="text-[10px] font-extrabold text-slate-500 uppercase tracking-widest">Custom Attributes</span>
-                            {isSavingAttrs && <Loader2 size={11} className="animate-spin text-[#35877D]" />}
+                            {isSavingAttrs && <Loader2 size={11} className="animate-spin text-[#2F8F83]" />}
                         </div>
 
                         {/* Existing attributes */}
@@ -293,7 +293,7 @@ export function ContactCrmPanel({
                             <div className="space-y-1.5 mb-3">
                                 {Object.entries(attrs).map(([k, v]) => (
                                     <div key={k} className="flex items-center gap-2 bg-slate-50 border border-slate-100 rounded-xl px-3 py-2 group">
-                                        <Tag size={11} className="text-[#35877D] shrink-0" />
+                                        <Tag size={11} className="text-[#2F8F83] shrink-0" />
                                         <span className="text-[11px] font-bold text-slate-500 min-w-0 max-w-[100px] truncate">{k}</span>
                                         <ChevronRight size={10} className="text-slate-300 shrink-0" />
                                         <span className="text-[11px] font-semibold text-slate-700 flex-1 min-w-0 truncate">{v}</span>
@@ -331,7 +331,7 @@ export function ContactCrmPanel({
                                 type="submit"
                                 size="icon"
                                 disabled={!newKey.trim() || !newValue.trim() || isSavingAttrs}
-                                className="h-8 w-8 bg-[#35877D] hover:bg-[#2c6761] text-white rounded-lg border-0 shrink-0 cursor-pointer"
+                                className="h-8 w-8 bg-[#2F8F83] hover:bg-[#2c6761] text-white rounded-lg border-0 shrink-0 cursor-pointer"
                             >
                                 <Plus size={13} />
                             </Button>
@@ -343,7 +343,7 @@ export function ContactCrmPanel({
                 <div className="px-5 py-4 border-t border-slate-100 bg-slate-50/50 flex items-center gap-2.5 shrink-0">
                     <Link
                         href={contact ? `/customers/inbox/${contact.id}` : "#"}
-                        className="flex-1 flex items-center justify-center gap-1.5 h-9 rounded-xl bg-[#35877D] text-white text-xs font-semibold hover:bg-[#2c6761] transition-colors"
+                        className="flex-1 flex items-center justify-center gap-1.5 h-9 rounded-xl bg-[#2F8F83] text-white text-xs font-semibold hover:bg-[#2c6761] transition-colors"
                     >
                         <MessageCircle size={13} />
                         Open Inbox

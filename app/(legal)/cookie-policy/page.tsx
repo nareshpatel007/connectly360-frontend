@@ -24,15 +24,15 @@ export default function CookiePolicyPage() {
     const { openPreferences, consent } = useCookieConsent();
 
     return (
-        <div className="min-h-screen bg-slate-50 text-slate-800 font-sans overflow-x-hidden selection:bg-[#35877D] selection:text-white">
+        <div className="min-h-screen bg-slate-50 text-slate-800 font-sans overflow-x-hidden selection:bg-[#2F8F83] selection:text-white">
             <LandingHeader />
 
             <main className="pt-36 sm:pt-40">
                 {/* Hero Header */}
                 <section className="relative pb-12 sm:pb-16 overflow-hidden border-b border-slate-200/80 bg-white">
                     <div className="w-full px-4 sm:px-8 md:px-12 lg:px-16 max-w-7xl mx-auto text-center space-y-4">
-                        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#35877D]/10 text-[#35877D] text-xs font-bold border border-[#35877D]/25">
-                            <Cookie size={14} className="text-[#35877D]" />
+                        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#2F8F83]/10 text-[#2F8F83] text-xs font-bold border border-[#2F8F83]/25">
+                            <Cookie size={14} className="text-[#2F8F83]" />
                             <span>Transparency &amp; Tracking Disclosure</span>
                         </div>
                         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
@@ -50,7 +50,7 @@ export default function CookiePolicyPage() {
                             <Button
                                 type="button"
                                 onClick={openPreferences}
-                                className="bg-[#35877D] hover:bg-[#2d736a] text-white text-xs sm:text-sm font-bold h-10 px-6 rounded-xl shadow-md hover:shadow-lg transition-all gap-2"
+                                className="bg-[#2F8F83] hover:bg-[#267A70] text-white text-xs sm:text-sm font-bold h-10 px-6 rounded-xl shadow-md hover:shadow-lg transition-all gap-2"
                             >
                                 <SlidersHorizontal size={15} />
                                 Manage Cookie Preferences
@@ -68,7 +68,7 @@ export default function CookiePolicyPage() {
                             <div className="p-5 rounded-2xl bg-teal-50/70 border border-teal-200/80 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                                 <div className="space-y-1">
                                     <div className="flex items-center gap-2 text-teal-950 font-bold text-sm">
-                                        <ShieldCheck size={16} className="text-[#35877D]" />
+                                        <ShieldCheck size={16} className="text-[#2F8F83]" />
                                         <span>Your Active Cookie Status</span>
                                     </div>
                                     <p className="text-xs text-teal-900/80">
@@ -268,7 +268,7 @@ export default function CookiePolicyPage() {
                                     If you have questions regarding this Cookie Policy or our privacy practices:
                                 </p>
                                 <div className="p-5 bg-slate-50 border border-slate-200 rounded-2xl text-xs sm:text-sm text-slate-700 space-y-1 font-medium">
-                                    <p><strong>Email:</strong> <a href="mailto:support@connectly360.com" className="text-[#35877D] underline">support@connectly360.com</a></p>
+                                    <p><strong>Email:</strong> <a href="mailto:support@connectly360.com" className="text-[#2F8F83] underline">support@connectly360.com</a></p>
                                     <p><strong>Phone:</strong> +91 9586557162</p>
                                     <p><strong>Address:</strong> Ahmedabad, Gujarat, India</p>
                                 </div>

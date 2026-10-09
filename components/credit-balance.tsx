@@ -23,7 +23,7 @@ export function CreditBalance({ variant = "header", className = "", showBuyButto
 
     if (variant === "inline") {
         return (
-            <span className={`inline-flex items-center gap-1 font-semibold ${isZero ? "text-red-500" : isLow ? "text-amber-500" : "text-[#35877D]"} ${className}`}>
+            <span className={`inline-flex items-center gap-1 font-semibold ${isZero ? "text-red-500" : isLow ? "text-amber-500" : "text-[#2F8F83]"} ${className}`}>
                 <Zap size={14} className="shrink-0 fill-current" />
                 <span>{balance.toLocaleString()} Credits</span>
             </span>
@@ -36,7 +36,7 @@ export function CreditBalance({ variant = "header", className = "", showBuyButto
                 <div className={`p-4 rounded-2xl border ${isZero ? "bg-red-50/70 border-red-200" : isLow ? "bg-amber-50/70 border-amber-200" : "bg-white border-slate-200 shadow-xs"} flex flex-col gap-3 ${className}`}>
                     <div className="flex items-center justify-between">
                         <div className="flex items-center gap-2">
-                            <div className={`h-8 w-8 rounded-xl flex items-center justify-center ${isZero ? "bg-red-100 text-red-600" : isLow ? "bg-amber-100 text-amber-600" : "bg-[#35877D]/10 text-[#35877D]"}`}>
+                            <div className={`h-8 w-8 rounded-xl flex items-center justify-center ${isZero ? "bg-red-100 text-red-600" : isLow ? "bg-amber-100 text-amber-600" : "bg-[#2F8F83]/10 text-[#2F8F83]"}`}>
                                 <Zap size={16} className="fill-current" />
                             </div>
                             <div>
@@ -48,7 +48,7 @@ export function CreditBalance({ variant = "header", className = "", showBuyButto
                             <Button
                                 size="sm"
                                 onClick={() => setIsBuyModalOpen(true)}
-                                className="bg-[#00382B] hover:bg-[#00241B] text-white text-xs font-bold rounded-xl h-8 px-3 flex items-center gap-1 shadow-xs cursor-pointer border-0"
+                                className="bg-[#0B2E1E] hover:bg-[#00241B] text-white text-xs font-bold rounded-xl h-8 px-3 flex items-center gap-1 shadow-xs cursor-pointer border-0"
                             >
                                 <Plus size={13} />
                                 <span>Recharge</span>
@@ -83,11 +83,11 @@ export function CreditBalance({ variant = "header", className = "", showBuyButto
                             ? "bg-red-50 border-red-200 text-red-600 hover:bg-red-100"
                             : isLow
                             ? "bg-amber-50 border-amber-200 text-amber-700 hover:bg-amber-100"
-                            : "bg-[#35877D]/10 border-[#35877D]/20 text-[#00382B] hover:bg-[#35877D]/15"
+                            : "bg-[#2F8F83]/10 border-[#2F8F83]/20 text-[#0B2E1E] hover:bg-[#2F8F83]/15"
                     }`}
                     title="Click to recharge credits"
                 >
-                    <Zap size={13} className={`shrink-0 ${isZero ? "fill-red-500 text-red-500" : isLow ? "fill-amber-500 text-amber-500" : "fill-[#35877D] text-[#35877D]"}`} />
+                    <Zap size={13} className={`shrink-0 ${isZero ? "fill-red-500 text-red-500" : isLow ? "fill-amber-500 text-amber-500" : "fill-[#2F8F83] text-[#2F8F83]"}`} />
                     <span>{balance.toLocaleString()} Credits</span>
                 </button>
 
@@ -95,7 +95,7 @@ export function CreditBalance({ variant = "header", className = "", showBuyButto
                     <Button
                         size="sm"
                         onClick={() => setIsBuyModalOpen(true)}
-                        className="h-7.5 px-2.5 rounded-lg bg-[#00382B] hover:bg-[#00241B] text-white text-[11px] font-semibold flex items-center gap-1 shadow-xs cursor-pointer border-0"
+                        className="h-7.5 px-2.5 rounded-lg bg-[#0B2E1E] hover:bg-[#00241B] text-white text-[11px] font-semibold flex items-center gap-1 shadow-xs cursor-pointer border-0"
                     >
                         <Sparkles size={11} className="text-emerald-300" />
                         <span>Buy Credits</span>

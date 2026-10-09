@@ -61,7 +61,7 @@ export function CookiePreferencesModal() {
             <DialogContent className="sm:max-w-2xl p-0 overflow-hidden bg-white rounded-2xl sm:rounded-3xl border-slate-200 shadow-2xl max-h-[90vh] flex flex-col">
                 <DialogHeader className="p-5 sm:p-6 pb-4 bg-slate-50/80 border-b border-slate-100 shrink-0">
                     <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-2xl bg-[#35877D]/10 text-[#35877D] flex items-center justify-center font-bold">
+                        <div className="w-10 h-10 rounded-2xl bg-[#2F8F83]/10 text-[#2F8F83] flex items-center justify-center font-bold">
                             <Cookie size={20} />
                         </div>
                         <div>
@@ -81,7 +81,7 @@ export function CookiePreferencesModal() {
                         <Link
                             href="/cookie-policy"
                             target="_blank"
-                            className="font-bold text-[#35877D] hover:underline"
+                            className="font-bold text-[#2F8F83] hover:underline"
                         >
                             Cookie Policy
                         </Link>
@@ -126,7 +126,7 @@ export function CookiePreferencesModal() {
                                     checked={functional}
                                     onCheckedChange={setFunctional}
                                     aria-label="Toggle functional cookies"
-                                    className="data-[state=checked]:bg-[#35877D]"
+                                    className="data-[state=checked]:bg-[#2F8F83]"
                                 />
                             </div>
                             <p className="text-[11px] sm:text-xs text-slate-600 leading-relaxed">
@@ -152,7 +152,7 @@ export function CookiePreferencesModal() {
                                     checked={analytics}
                                     onCheckedChange={setAnalytics}
                                     aria-label="Toggle analytics cookies"
-                                    className="data-[state=checked]:bg-[#35877D]"
+                                    className="data-[state=checked]:bg-[#2F8F83]"
                                 />
                             </div>
                             <p className="text-[11px] sm:text-xs text-slate-600 leading-relaxed">
@@ -178,7 +178,7 @@ export function CookiePreferencesModal() {
                                     checked={marketing}
                                     onCheckedChange={setMarketing}
                                     aria-label="Toggle marketing cookies"
-                                    className="data-[state=checked]:bg-[#35877D]"
+                                    className="data-[state=checked]:bg-[#2F8F83]"
                                 />
                             </div>
                             <p className="text-[11px] sm:text-xs text-slate-600 leading-relaxed">
@@ -219,7 +219,7 @@ export function CookiePreferencesModal() {
                             variant="outline"
                             size="sm"
                             onClick={closePreferences}
-                            className="text-xs font-semibold text-slate-700 bg-white border-slate-200 h-9 px-4 rounded-xl"
+                            className="text-xs font-semibold text-slate-700 bg-white border-slate-200 h-9 px-4 rounded-lg shadow-2xs"
                         >
                             Cancel
                         </Button>
@@ -227,7 +227,7 @@ export function CookiePreferencesModal() {
                             type="button"
                             size="sm"
                             onClick={handleSave}
-                            className="bg-[#35877D] hover:bg-[#2d736a] text-white text-xs font-bold h-9 px-5 rounded-xl shadow-sm"
+                            className="bg-[#2F8F83] hover:bg-[#267A70] text-white text-xs font-semibold h-9 px-5 rounded-lg shadow-xs"
                         >
                             Save Preferences
                         </Button>

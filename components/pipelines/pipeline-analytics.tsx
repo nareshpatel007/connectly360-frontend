@@ -25,7 +25,7 @@ export function PipelineAnalytics({ leads }: { leads: Lead[] }) {
             </Card>
 
             <Card className="p-4 bg-white border border-slate-200 shadow-xs flex items-center gap-3.5 rounded-2xl">
-                <div className="h-10 w-10 rounded-xl bg-[#35877D]/10 text-[#35877D] flex items-center justify-center shrink-0">
+                <div className="h-10 w-10 rounded-xl bg-[#2F8F83]/10 text-[#2F8F83] flex items-center justify-center shrink-0">
                     <CheckCircle2 size={20} />
                 </div>
                 <div>

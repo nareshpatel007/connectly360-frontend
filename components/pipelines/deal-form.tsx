@@ -164,7 +164,7 @@ export function DealForm({
                                 variant="ghost"
                                 size="sm"
                                 onClick={() => setViewMode(viewMode === "edit" ? "history" : "edit")}
-                                className="h-8 px-2.5 text-[#35877D] hover:text-[#2c6f66] hover:bg-[#35877D]/5 font-bold gap-1 rounded-lg text-xs cursor-pointer"
+                                className="h-8 px-2.5 text-[#2F8F83] hover:text-[#267A70] hover:bg-[#2F8F83]/5 font-bold gap-1 rounded-lg text-xs cursor-pointer"
                             >
                                 {viewMode === "edit" ? (
                                     <>
@@ -194,7 +194,7 @@ export function DealForm({
                                     value={customerName}
                                     onChange={(e) => setCustomerName(e.target.value)}
                                     placeholder="e.g. John Doe"
-                                    className="border-slate-200 bg-slate-50 focus-visible:ring-[#35877D] focus-visible:border-[#35877D] text-slate-800 font-semibold"
+                                    className="border-slate-200 bg-slate-50 focus-visible:ring-[#2F8F83] focus-visible:border-[#2F8F83] text-slate-800 font-semibold"
                                 />
                             </div>
 
@@ -206,7 +206,7 @@ export function DealForm({
                                     value={phone}
                                     onChange={(e) => setPhone(e.target.value)}
                                     placeholder="e.g. 919876543210"
-                                    className="border-slate-200 bg-slate-50 focus-visible:ring-[#35877D] focus-visible:border-[#35877D] text-slate-800 font-semibold"
+                                    className="border-slate-200 bg-slate-50 focus-visible:ring-[#2F8F83] focus-visible:border-[#2F8F83] text-slate-800 font-semibold"
                                 />
                             </div>
 
@@ -217,7 +217,7 @@ export function DealForm({
                                     value={location}
                                     onChange={(e) => setLocation(e.target.value)}
                                     placeholder="e.g. Mumbai"
-                                    className="border-slate-200 bg-slate-50 focus-visible:ring-[#35877D] focus-visible:border-[#35877D] text-slate-800 font-semibold"
+                                    className="border-slate-200 bg-slate-50 focus-visible:ring-[#2F8F83] focus-visible:border-[#2F8F83] text-slate-800 font-semibold"
                                 />
                             </div>
 
@@ -227,7 +227,7 @@ export function DealForm({
                                     id="status"
                                     value={status}
                                     onChange={(e) => setStatus(e.target.value as any)}
-                                    className="h-10 w-full rounded-md border border-slate-200 bg-slate-50 px-3 text-sm font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#35877D] focus:border-[#35877D]"
+                                    className="h-10 w-full rounded-md border border-slate-200 bg-slate-50 px-3 text-sm font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#2F8F83] focus:border-[#2F8F83]"
                                 >
                                     <option value="new">New Lead</option>
                                     <option value="contacted">Contacted</option>
@@ -245,7 +245,7 @@ export function DealForm({
                                         variant="ghost"
                                         size="sm"
                                         onClick={handleAddAttrRow}
-                                        className="h-7 px-2 text-[#35877D] hover:text-[#2c6f66] hover:bg-[#35877D]/5 font-bold gap-1 rounded-lg"
+                                        className="h-7 px-2 text-[#2F8F83] hover:text-[#267A70] hover:bg-[#2F8F83]/5 font-bold gap-1 rounded-lg"
                                     >
                                         <Plus size={13} />
                                         Add Attribute
@@ -262,13 +262,13 @@ export function DealForm({
                                                     placeholder="Label / Key"
                                                     value={row.key}
                                                     onChange={(e) => handleAttrChange(idx, "key", e.target.value)}
-                                                    className="flex-1 h-9 border-slate-200 bg-slate-50 text-xs font-semibold text-slate-800 focus-visible:ring-[#35877D]"
+                                                    className="flex-1 h-9 border-slate-200 bg-slate-50 text-xs font-semibold text-slate-800 focus-visible:ring-[#2F8F83]"
                                                 />
                                                 <Input
                                                     placeholder="Value"
                                                     value={row.value}
                                                     onChange={(e) => handleAttrChange(idx, "value", e.target.value)}
-                                                    className="flex-1 h-9 border-slate-200 bg-slate-50 text-xs font-semibold text-slate-800 focus-visible:ring-[#35877D]"
+                                                    className="flex-1 h-9 border-slate-200 bg-slate-50 text-xs font-semibold text-slate-800 focus-visible:ring-[#2F8F83]"
                                                 />
                                                 <Button
                                                     type="button"
@@ -299,7 +299,7 @@ export function DealForm({
                                 <Button
                                     type="submit"
                                     disabled={saving}
-                                    className="flex-1 bg-[#35877D] hover:bg-[#2c6f66] text-white font-bold"
+                                    className="flex-1 bg-[#2F8F83] hover:bg-[#267A70] text-white font-bold"
                                 >
                                     {saving ? "Saving..." : lead ? "Save Changes" : "Create Lead"}
                                 </Button>
@@ -356,7 +356,7 @@ function LeadHistoryView({ leadId }: { leadId: number }) {
     if (isLoading) {
         return (
             <div className="flex-1 flex flex-col items-center justify-center p-6 text-slate-500">
-                <Loader2 className="h-6 w-6 animate-spin text-[#35877D] mb-2" />
+                <Loader2 className="h-6 w-6 animate-spin text-[#2F8F83] mb-2" />
                 <p className="text-xs font-semibold">Loading history...</p>
             </div>
         );
@@ -406,8 +406,8 @@ function LeadHistoryView({ leadId }: { leadId: number }) {
                 {history.map((item) => (
                     <div key={item.id} className="relative">
                         {/* Dot indicator */}
-                        <div className="absolute -left-[35px] top-4 bg-white border-2 border-[#35877D] rounded-full w-4 h-4 flex items-center justify-center shadow-sm">
-                            <div className="bg-[#35877D] rounded-full w-1.5 h-1.5" />
+                        <div className="absolute -left-[35px] top-4 bg-white border-2 border-[#2F8F83] rounded-full w-4 h-4 flex items-center justify-center shadow-sm">
+                            <div className="bg-[#2F8F83] rounded-full w-1.5 h-1.5" />
                         </div>
 
                         <div className="bg-slate-50 border border-slate-100 rounded-xl p-3.5 shadow-sm space-y-2 ml-1">

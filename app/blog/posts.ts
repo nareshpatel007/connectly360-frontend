@@ -21,7 +21,7 @@ export const blogPosts: BlogPost[] = [
         author: "Jane Doe",
         authorRole: "Platform Architect",
         readTime: "6 min read",
-        gradient: "from-[#35877D] to-[#60B187]",
+        gradient: "from-[#2F8F83] to-[#2E9B72]",
         content: `
 # The Ultimate Guide to Meta's Official WhatsApp Cloud API
 
@@ -65,7 +65,7 @@ By following these principles and utilizing Connectly360's native dashboard, you
         author: "Alex Rivera",
         authorRole: "AI Research Lead",
         readTime: "8 min read",
-        gradient: "from-blue-600 to-[#35877D]",
+        gradient: "from-blue-600 to-[#2F8F83]",
         content: `
 # How to Train Your AI Support Chatbots on Custom PDF Knowledge Bases
 
@@ -112,7 +112,7 @@ By merging AI efficiency with human validation, you maintain customer satisfacti
         author: "Sarah Patel",
         authorRole: "Growth Specialist",
         readTime: "5 min read",
-        gradient: "from-purple-600 to-[#60B187]",
+        gradient: "from-purple-600 to-[#2E9B72]",
         content: `
 # Maximizing Lead Conversions Using Automated WhatsApp Broadcast Campaigns
 

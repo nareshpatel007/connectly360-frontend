@@ -21,15 +21,15 @@ import {
 
 export default function RefundPolicyPage() {
     return (
-        <div className="min-h-screen bg-slate-50 text-slate-800 font-sans overflow-x-hidden selection:bg-[#35877D] selection:text-white">
+        <div className="min-h-screen bg-slate-50 text-slate-800 font-sans overflow-x-hidden selection:bg-[#2F8F83] selection:text-white">
             <LandingHeader />
 
             <main className="pt-36 sm:pt-40">
                 {/* Hero Header */}
                 <section className="relative pb-12 sm:pb-16 overflow-hidden border-b border-slate-200/80 bg-white">
                     <div className="w-full px-4 sm:px-8 md:px-12 lg:px-16 max-w-7xl mx-auto text-center space-y-4">
-                        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#35877D]/10 text-[#35877D] text-xs font-bold border border-[#35877D]/25">
-                            <Coins size={14} className="text-[#35877D]" />
+                        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#2F8F83]/10 text-[#2F8F83] text-xs font-bold border border-[#2F8F83]/25">
+                            <Coins size={14} className="text-[#2F8F83]" />
                             <span>Transparent Billing & Guarantees</span>
                         </div>
                         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
@@ -140,7 +140,7 @@ export default function RefundPolicyPage() {
                                     If you believe you were charged in error, experienced an unintended duplicate transaction, or were billed following a verified cancellation request:
                                 </p>
                                 <ul className="list-disc pl-5 space-y-1.5 text-sm text-slate-700">
-                                    <li>Submit a ticket to <a href="mailto:support@connectly360.com" className="text-[#35877D] font-bold underline">support@connectly360.com</a> within <strong>7 days</strong> of the transaction date.</li>
+                                    <li>Submit a ticket to <a href="mailto:support@connectly360.com" className="text-[#2F8F83] font-bold underline">support@connectly360.com</a> within <strong>7 days</strong> of the transaction date.</li>
                                     <li>Include your workspace registered email, Razorpay payment ID, invoice number, and transaction receipt.</li>
                                     <li>Our billing desk will investigate transaction logs and, upon verification of error, issue a full refund to your original payment method.</li>
                                 </ul>
@@ -172,7 +172,7 @@ export default function RefundPolicyPage() {
                                     9. Policy Violations &amp; Suspensions
                                 </h2>
                                 <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
-                                    No refunds will be granted if an account or workspace is suspended or terminated as a result of violations of our <Link href="/terms" className="text-[#35877D] font-semibold underline">Terms of Service</Link>, the <a href="https://www.whatsapp.com/legal/business-messaging-policy" target="_blank" rel="noopener noreferrer" className="text-[#35877D] underline inline-flex items-center gap-0.5">Meta WhatsApp Business Messaging Policy <ExternalLink size={10} /></a>, spamming recipients without opt-in consent, or illegal communications.
+                                    No refunds will be granted if an account or workspace is suspended or terminated as a result of violations of our <Link href="/terms" className="text-[#2F8F83] font-semibold underline">Terms of Service</Link>, the <a href="https://www.whatsapp.com/legal/business-messaging-policy" target="_blank" rel="noopener noreferrer" className="text-[#2F8F83] underline inline-flex items-center gap-0.5">Meta WhatsApp Business Messaging Policy <ExternalLink size={10} /></a>, spamming recipients without opt-in consent, or illegal communications.
                                 </p>
                             </section>
 
@@ -187,15 +187,15 @@ export default function RefundPolicyPage() {
                                 <div className="p-5 bg-slate-50 border border-slate-200 rounded-2xl text-xs sm:text-sm text-slate-700 space-y-2 font-medium">
                                     <p className="font-bold text-slate-900 text-sm">Connectly360 Billing &amp; Finance Desk</p>
                                     <div className="flex items-center gap-2">
-                                        <Mail size={14} className="text-[#35877D]" />
-                                        <span>Email: <a href="mailto:support@connectly360.com" className="text-[#35877D] font-bold underline">support@connectly360.com</a></span>
+                                        <Mail size={14} className="text-[#2F8F83]" />
+                                        <span>Email: <a href="mailto:support@connectly360.com" className="text-[#2F8F83] font-bold underline">support@connectly360.com</a></span>
                                     </div>
                                     <div className="flex items-center gap-2">
-                                        <Phone size={14} className="text-[#35877D]" />
+                                        <Phone size={14} className="text-[#2F8F83]" />
                                         <span>Phone: +91 9586557162</span>
                                     </div>
                                     <div className="flex items-center gap-2">
-                                        <MapPin size={14} className="text-[#35877D]" />
+                                        <MapPin size={14} className="text-[#2F8F83]" />
                                         <span>Location: Ahmedabad, Gujarat, India</span>
                                     </div>
                                 </div>

@@ -22,7 +22,7 @@ interface ColumnDef {
 const COLUMNS: ColumnDef[] = [
     { id: "new", name: "New Lead", color: "#3b82f6" },       // Blue
     { id: "contacted", name: "Contacted", color: "#eab308" }, // Yellow
-    { id: "converted", name: "Converted", color: "#35877D" }, // Teal
+    { id: "converted", name: "Converted", color: "#2F8F83" }, // Teal
     { id: "lost", name: "Lost", color: "#ef4444" },           // Red
 ];
 
@@ -131,7 +131,7 @@ function StageColumn({
 
             <div
                 className={`mt-3 flex flex-1 flex-col gap-3 rounded-xl p-1 transition-all duration-200 ${
-                    isOver ? "bg-[#35877D]/5 outline outline-2 outline-dashed outline-[#35877D] outline-offset-2" : ""
+                    isOver ? "bg-[#2F8F83]/5 outline outline-2 outline-dashed outline-[#2F8F83] outline-offset-2" : ""
                 }`}
                 style={{ minHeight: "200px" }}
             >

@@ -66,8 +66,8 @@ function ContactFormContent() {
     return (
         <Card className="p-8 bg-white border border-slate-200 rounded-3xl shadow-sm relative overflow-hidden">
             {/* Background design accents */}
-            <div className="absolute top-0 right-0 w-32 h-32 bg-radial-gradient from-[#35877D]/5 to-transparent -z-10 rounded-full blur-xl pointer-events-none"></div>
-            <div className="absolute bottom-0 left-0 w-32 h-32 bg-radial-gradient from-[#60B187]/5 to-transparent -z-10 rounded-full blur-xl pointer-events-none"></div>
+            <div className="absolute top-0 right-0 w-32 h-32 bg-radial-gradient from-[#2F8F83]/5 to-transparent -z-10 rounded-full blur-xl pointer-events-none"></div>
+            <div className="absolute bottom-0 left-0 w-32 h-32 bg-radial-gradient from-[#2E9B72]/5 to-transparent -z-10 rounded-full blur-xl pointer-events-none"></div>
 
             <AnimatePresence mode="wait">
                 {!submitted ? (
@@ -93,7 +93,7 @@ function ContactFormContent() {
                                     placeholder="Jane Doe"
                                     value={form.name}
                                     onChange={(e) => setForm({ ...form, name: e.target.value })}
-                                    className="h-12 rounded-xl border-slate-200 bg-slate-50/30 focus:border-[#35877D] text-sm font-semibold text-slate-900"
+                                    className="h-12 rounded-xl border-slate-200 bg-slate-50/30 focus:border-[#2F8F83] text-sm font-semibold text-slate-900"
                                 />
                             </div>
                             <div className="space-y-1.5">
@@ -105,7 +105,7 @@ function ContactFormContent() {
                                     placeholder="jane@company.com"
                                     value={form.email}
                                     onChange={(e) => setForm({ ...form, email: e.target.value })}
-                                    className="h-12 rounded-xl border-slate-200 bg-slate-50/30 focus:border-[#35877D] text-sm font-semibold text-slate-900"
+                                    className="h-12 rounded-xl border-slate-200 bg-slate-50/30 focus:border-[#2F8F83] text-sm font-semibold text-slate-900"
                                 />
                             </div>
                         </div>
@@ -122,7 +122,7 @@ function ContactFormContent() {
                                     disabled={loading}
                                     required
                                     numberInputProps={{
-                                        className: "h-12 w-full border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#35877D]/20 focus:border-[#35877D] rounded-xl bg-slate-50/30 font-semibold px-3 text-sm text-slate-900 transition-all"
+                                        className: "h-12 w-full border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#2F8F83]/20 focus:border-[#2F8F83] rounded-xl bg-slate-50/30 font-semibold px-3 text-sm text-slate-900 transition-all"
                                     }}
                                     className="flex gap-2 items-center"
                                 />
@@ -135,7 +135,7 @@ function ContactFormContent() {
                                     placeholder="Acme Corporation"
                                     value={form.company}
                                     onChange={(e) => setForm({ ...form, company: e.target.value })}
-                                    className="h-12 rounded-xl border-slate-200 bg-slate-50/30 focus:border-[#35877D] text-sm font-semibold text-slate-900"
+                                    className="h-12 rounded-xl border-slate-200 bg-slate-50/30 focus:border-[#2F8F83] text-sm font-semibold text-slate-900"
                                 />
                             </div>
                         </div>
@@ -146,7 +146,7 @@ function ContactFormContent() {
                                 id="plan"
                                 value={form.plan}
                                 onChange={(e) => setForm({ ...form, plan: e.target.value })}
-                                className="flex h-12 w-full items-center justify-between rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm font-semibold shadow-xs text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#35877D]/20 focus:border-[#35877D]"
+                                className="flex h-12 w-full items-center justify-between rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm font-semibold shadow-xs text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#2F8F83]/20 focus:border-[#2F8F83]"
                             >
                                 <option value="starter">Starter Plan (Sandbox Play)</option>
                                 <option value="growth">Growth Plan (CRM & AI Bots)</option>
@@ -163,14 +163,14 @@ function ContactFormContent() {
                                 placeholder="E.g., We send 50k messages monthly and need a custom AI chatbot integration..."
                                 value={form.message}
                                 onChange={(e) => setForm({ ...form, message: e.target.value })}
-                                className="rounded-xl border-slate-200 bg-slate-50/30 focus:border-[#35877D] text-sm font-semibold text-slate-900 leading-relaxed resize-none"
+                                className="rounded-xl border-slate-200 bg-slate-50/30 focus:border-[#2F8F83] text-sm font-semibold text-slate-900 leading-relaxed resize-none"
                             />
                         </div>
 
                         <Button
                             type="submit"
                             disabled={loading}
-                            className="w-full h-12 bg-[#35877D] hover:bg-[#2c6f66] text-white rounded-xl text-sm font-bold shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 mt-4 cursor-pointer border-0"
+                            className="w-full h-12 bg-[#2F8F83] hover:bg-[#267A70] text-white rounded-xl text-sm font-bold shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 mt-4 cursor-pointer border-0"
                         >
                             {loading ? (
                                 <>
@@ -193,19 +193,19 @@ function ContactFormContent() {
                         exit={{ opacity: 0 }}
                         className="text-center py-10 space-y-6 flex flex-col items-center justify-center"
                     >
-                        <div className="h-16 w-16 bg-slate-50 border border-slate-200 rounded-full flex items-center justify-center text-[#35877D] shadow-sm animate-bounce">
+                        <div className="h-16 w-16 bg-slate-50 border border-slate-200 rounded-full flex items-center justify-center text-[#2F8F83] shadow-sm animate-bounce">
                             <CheckCircle2 size={36} className="stroke-[2.5]" />
                         </div>
                         <div className="space-y-2 max-w-md">
                             <h3 className="text-2xl font-extrabold text-slate-900 tracking-tight">Proposal Request Logged!</h3>
-                            <p className="text-sm sm:text-base text-gray-650 font-semibold leading-relaxed">
-                                Thank you, <span className="text-[#35877D] font-bold">{form.name}</span>. We've captured your specs for <span className="text-[#60B187] font-bold">{form.company}</span>.
+                            <p className="text-sm sm:text-base text-slate-600 font-semibold leading-relaxed">
+                                Thank you, <span className="text-[#2F8F83] font-bold">{form.name}</span>. We've captured your specs for <span className="text-[#2E9B72] font-bold">{form.company}</span>.
                             </p>
                             <p className="text-xs text-slate-500 font-semibold leading-relaxed mt-2">
                                 A dedicated account manager has been assigned and will reach out to you on WhatsApp at <span className="font-bold text-slate-900">{form.phone}</span> or email to discuss implementation.
                             </p>
                         </div>
-                        <Button asChild className="h-11 bg-[#35877D] hover:bg-[#2c6f66] text-white rounded-xl text-xs font-bold px-6 shadow-sm cursor-pointer border-0">
+                        <Button asChild className="h-11 bg-[#2F8F83] hover:bg-[#267A70] text-white rounded-xl text-xs font-bold px-6 shadow-sm cursor-pointer border-0">
                             <Link href="/">Return to Homepage</Link>
                         </Button>
                     </motion.div>
@@ -217,21 +217,21 @@ function ContactFormContent() {
 
 export default function ContactPage() {
     return (
-        <div className="min-h-screen bg-slate-50 text-slate-900 font-sans overflow-x-hidden selection:bg-[#35877D] selection:text-white">
+        <div className="min-h-screen bg-slate-50 text-slate-900 font-sans overflow-x-hidden selection:bg-[#2F8F83] selection:text-white">
             <LandingHeader />
 
             <main className="pt-40">
                 {/* Page Hero Title */}
                 <section className="relative pb-16 overflow-hidden">
                     <div className="w-full px-4 sm:px-8 md:px-12 lg:px-16 max-w-7xl mx-auto text-center space-y-4">
-                        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#35877D]/10 text-[#35877D] text-xs font-bold border border-[#35877D]/20 mb-1">
+                        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#2F8F83]/10 text-[#2F8F83] text-xs font-bold border border-[#2F8F83]/20 mb-1">
                             <Sparkles size={12} className="animate-pulse" />
                             Enterprise Configuration Desk
                         </span>
                         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight tracking-tight">
-                            Build Your Custom <span className="text-[#35877D]">Workflow Solution</span>
+                            Build Your Custom <span className="text-[#2F8F83]">Workflow Solution</span>
                         </h1>
-                        <p className="text-base text-gray-550 font-semibold max-w-2xl mx-auto leading-relaxed">
+                        <p className="text-base text-slate-600 font-semibold max-w-2xl mx-auto leading-relaxed">
                             Need custom database integrations, priority SLA support, or trained LLM agents? Share your specifications and we'll draft the optimal layout.
                         </p>
                     </div>
@@ -253,17 +253,17 @@ export default function ContactPage() {
                                 <div className="space-y-5">
                                     {[
                                         {
-                                            icon: <Clock className="text-[#35877D]" size={16} />,
+                                            icon: <Clock className="text-[#2F8F83]" size={16} />,
                                             title: "Guaranteed 1-Hour SLA response",
                                             desc: "Direct support channels on WhatsApp and secure developer boards with priority response schedules."
                                         },
                                         {
-                                            icon: <ShieldCheck className="text-[#35877D]" size={16} />,
+                                            icon: <ShieldCheck className="text-[#2F8F83]" size={16} />,
                                             title: "Meta official compliance",
                                             desc: "Connect your official Cloud API registers directly inside our console with meta safety standards."
                                         },
                                         {
-                                            icon: <MessageSquare className="text-[#35877D]" size={16} />,
+                                            icon: <MessageSquare className="text-[#2F8F83]" size={16} />,
                                             title: "Trained Knowledge Base agents",
                                             desc: "Upload shipping sheets or catalog files to deploy auto-reply agents answering repetitive questions 24/7."
                                         }
@@ -274,7 +274,7 @@ export default function ContactPage() {
                                             </div>
                                             <div>
                                                 <h4 className="text-sm font-bold text-slate-900">{item.title}</h4>
-                                                <p className="text-xs text-gray-550 font-semibold leading-relaxed mt-0.5">{item.desc}</p>
+                                                <p className="text-xs text-slate-600 font-semibold leading-relaxed mt-0.5">{item.desc}</p>
                                             </div>
                                         </div>
                                     ))}
@@ -283,17 +283,17 @@ export default function ContactPage() {
                                 {/* Instant Contact Details */}
                                 <div className="p-6 bg-white border border-slate-200 rounded-3xl space-y-4 shadow-sm">
                                     <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wider">Connect Direct</h4>
-                                    <div className="space-y-3.5 text-sm font-semibold text-gray-650">
+                                    <div className="space-y-3.5 text-sm font-semibold text-slate-600">
                                         <div className="flex items-center gap-3">
-                                            <Mail size={15} className="text-[#35877D]" />
+                                            <Mail size={15} className="text-[#2F8F83]" />
                                             <span>support@connectly360.com</span>
                                         </div>
                                         <div className="flex items-center gap-3">
-                                            <Phone size={15} className="text-[#35877D]" />
+                                            <Phone size={15} className="text-[#2F8F83]" />
                                             <span>+91 9586557162</span>
                                         </div>
                                         <div className="flex items-center gap-3">
-                                            <MapPin size={15} className="text-[#35877D]" />
+                                            <MapPin size={15} className="text-[#2F8F83]" />
                                             <span>Ahmedabad, Gujarat</span>
                                         </div>
                                     </div>
@@ -304,7 +304,7 @@ export default function ContactPage() {
                             <div className="lg:col-span-7">
                                 <Suspense fallback={
                                     <Card className="p-8 bg-white border border-slate-200 rounded-3xl shadow-sm min-h-[400px] flex items-center justify-center">
-                                        <span className="h-8 w-8 border-4 border-[#35877D] border-t-transparent rounded-full animate-spin"></span>
+                                        <span className="h-8 w-8 border-4 border-[#2F8F83] border-t-transparent rounded-full animate-spin"></span>
                                     </Card>
                                 }>
                                     <ContactFormContent />
@@ -319,7 +319,7 @@ export default function ContactPage() {
                     <div className="w-full px-4 sm:px-8 md:px-12 lg:px-16 max-w-7xl mx-auto">
                         <div className="text-center mb-12">
                             <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight">What Happens Next?</h2>
-                            <p className="text-sm text-gray-550 font-semibold mt-1.5">Your implementation timeline from request submission to deployment kickoff.</p>
+                            <p className="text-sm text-slate-600 font-semibold mt-1.5">Your implementation timeline from request submission to deployment kickoff.</p>
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative mt-8">
@@ -342,9 +342,9 @@ export default function ContactPage() {
                                     desc: "We coordinate a fast screenshare session to verify your official WhatsApp WABA credentials and launch templates."
                                 }
                             ].map((item, idx) => (
-                                <Card key={idx} className="p-6 bg-white border border-slate-200 rounded-2xl shadow-sm flex flex-col justify-between group hover:border-[#35877D]/35 transition-all">
+                                <Card key={idx} className="p-6 bg-white border border-slate-200 rounded-2xl shadow-sm flex flex-col justify-between group hover:border-[#2F8F83]/35 transition-all">
                                     <div className="space-y-4">
-                                        <span className="inline-flex h-10 w-10 bg-[#EAF7F2] text-[#35877D] border border-[#35877D]/20 rounded-xl items-center justify-center font-bold text-sm shrink-0">
+                                        <span className="inline-flex h-10 w-10 bg-[#E8F6F3] text-[#2F8F83] border border-[#2F8F83]/20 rounded-xl items-center justify-center font-bold text-sm shrink-0">
                                             {item.step}
                                         </span>
                                         <div className="space-y-1.5">
@@ -361,10 +361,10 @@ export default function ContactPage() {
                 {/* Instant Support / Chat CTA widgets */}
                 <section className="py-16 bg-white border-t border-slate-200">
                     <div className="w-full px-4 sm:px-8 md:px-12 lg:px-16 max-w-7xl mx-auto">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-[#EAF7F2] border border-[#35877D]/20 p-8 sm:p-12 rounded-3xl relative overflow-hidden">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-[#E8F6F3] border border-[#2F8F83]/20 p-8 sm:p-12 rounded-3xl relative overflow-hidden">
                             <div className="space-y-4 z-10">
-                                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#35877D]/10 text-[#35877D] text-xs font-bold border border-[#35877D]/20">
-                                    <Zap size={12} className="text-[#35877D]" />
+                                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#2F8F83]/10 text-[#2F8F83] text-xs font-bold border border-[#2F8F83]/20">
+                                    <Zap size={12} className="text-[#2F8F83]" />
                                     Instant Live Chat Support
                                 </span>
                                 <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">Need immediate response?</h3>
@@ -373,7 +373,7 @@ export default function ContactPage() {
                                 </p>
                             </div>
                             <div className="flex flex-col sm:flex-row items-center gap-4 z-10 justify-end">
-                                <Button asChild className="w-full sm:w-auto h-12 bg-[#35877D] hover:bg-[#2c6f66] text-white rounded-xl text-sm font-bold shadow-md flex items-center justify-center gap-2 cursor-pointer border-0">
+                                <Button asChild className="w-full sm:w-auto h-12 bg-[#2F8F83] hover:bg-[#267A70] text-white rounded-xl text-sm font-bold shadow-md flex items-center justify-center gap-2 cursor-pointer border-0">
                                     <a href="https://wa.me/919586557162" target="_blank" rel="noopener noreferrer">
                                         <MessageCircle size={16} />
                                         <span>Chat on WhatsApp</span>
@@ -392,7 +392,7 @@ export default function ContactPage() {
                     <div className="w-full px-4 sm:px-8 md:px-12 lg:px-16 max-w-7xl mx-auto">
                         <div className="text-center mb-12">
                             <h2 className="text-3xl font-extrabold text-slate-900">Our Office Coordinates</h2>
-                            <p className="text-sm text-gray-550 font-semibold mt-1.5">Where we architect Platform Systems and run lead scaling pipelines.</p>
+                            <p className="text-sm text-slate-600 font-semibold mt-1.5">Where we architect Platform Systems and run lead scaling pipelines.</p>
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -416,13 +416,13 @@ export default function ContactPage() {
                                     address: "Marina Boulevard, Singapore 018981"
                                 }
                             ].map((office, idx) => (
-                                <Card key={idx} className="p-6 bg-white border border-slate-200 rounded-2xl shadow-sm flex flex-col justify-between group hover:border-[#35877D]/35 transition-all">
+                                <Card key={idx} className="p-6 bg-white border border-slate-200 rounded-2xl shadow-sm flex flex-col justify-between group hover:border-[#2F8F83]/35 transition-all">
                                     <div className="space-y-4">
                                         <div className="flex items-center gap-2">
-                                            <Globe size={18} className="text-[#35877D]" />
+                                            <Globe size={18} className="text-[#2F8F83]" />
                                             <h4 className="text-base font-extrabold text-slate-900">{office.location}</h4>
                                         </div>
-                                        <span className="inline-block text-[9px] font-bold text-[#35877D] bg-[#EAF7F2] border border-[#35877D]/20 px-2 py-0.5 rounded-full uppercase tracking-wider">
+                                        <span className="inline-block text-[9px] font-bold text-[#2F8F83] bg-[#E8F6F3] border border-[#2F8F83]/20 px-2 py-0.5 rounded-full uppercase tracking-wider">
                                             {office.type}
                                         </span>
                                         <p className="text-xs text-gray-500 font-semibold leading-relaxed">{office.desc}</p>

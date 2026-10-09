@@ -45,8 +45,8 @@ export function CampaignCreditConfirmDialog({
             <Dialog open={open} onOpenChange={onOpenChange}>
                 <DialogContent className="sm:max-w-[480px] p-6 rounded-3xl bg-white border border-slate-200 shadow-2xl">
                     <DialogHeader className="text-center space-y-2 pb-1">
-                        <div className={`mx-auto h-12 w-12 rounded-2xl flex items-center justify-center ${isInsufficient ? "bg-red-50 text-red-600" : "bg-[#35877D]/10 text-[#00382B]"}`}>
-                            {isInsufficient ? <AlertTriangle size={24} /> : <Zap size={24} className="fill-[#35877D]" />}
+                        <div className={`mx-auto h-12 w-12 rounded-2xl flex items-center justify-center ${isInsufficient ? "bg-red-50 text-red-600" : "bg-[#2F8F83]/10 text-[#0B2E1E]"}`}>
+                            {isInsufficient ? <AlertTriangle size={24} /> : <Zap size={24} className="fill-[#2F8F83]" />}
                         </div>
                         <DialogTitle className="text-xl font-black text-slate-900 tracking-tight">
                             {isInsufficient ? "Insufficient Credits for Campaign" : "Confirm Campaign Dispatch"}
@@ -70,7 +70,7 @@ export function CampaignCreditConfirmDialog({
                             </div>
                             <div className="flex justify-between items-center py-2.5">
                                 <span className="text-slate-500 font-semibold">Estimated Usage</span>
-                                <span className="font-black text-[#00382B] text-sm">{requiredCredits.toLocaleString()} Credits</span>
+                                <span className="font-black text-[#0B2E1E] text-sm">{requiredCredits.toLocaleString()} Credits</span>
                             </div>
                             <div className="flex justify-between items-center py-2.5">
                                 <span className="text-slate-500 font-medium">Available Balance</span>
@@ -116,7 +116,7 @@ export function CampaignCreditConfirmDialog({
                                     onOpenChange(false);
                                     setBuyModalOpen(true);
                                 }}
-                                className="rounded-xl bg-[#00382B] hover:bg-[#00241B] text-white text-xs font-bold h-10 px-5 flex items-center gap-1.5 shadow-sm cursor-pointer border-0"
+                                className="rounded-xl bg-[#0B2E1E] hover:bg-[#00241B] text-white text-xs font-bold h-10 px-5 flex items-center gap-1.5 shadow-sm cursor-pointer border-0"
                             >
                                 <Sparkles size={14} className="text-emerald-300" />
                                 <span>Buy Credits Pack</span>
@@ -125,7 +125,7 @@ export function CampaignCreditConfirmDialog({
                             <Button
                                 onClick={onConfirm}
                                 disabled={isSending}
-                                className="rounded-xl bg-[#00382B] hover:bg-[#00241B] text-white text-xs font-bold h-10 px-5 flex items-center gap-1.5 shadow-sm cursor-pointer border-0"
+                                className="rounded-xl bg-[#0B2E1E] hover:bg-[#00241B] text-white text-xs font-bold h-10 px-5 flex items-center gap-1.5 shadow-sm cursor-pointer border-0"
                             >
                                 <Send size={14} />
                                 <span>{isSending ? "Launching..." : "Start Campaign"}</span>

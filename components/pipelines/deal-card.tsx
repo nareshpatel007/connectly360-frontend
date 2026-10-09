@@ -26,7 +26,7 @@ function initials(name?: string, fallback?: string) {
 const STATUS_COLORS: Record<string, string> = {
     new: "#3b82f6",       // Blue
     contacted: "#eab308", // Yellow
-    converted: "#35877D", // Teal
+    converted: "#2F8F83", // Teal
     lost: "#ef4444",      // Red
 };
 
@@ -59,7 +59,7 @@ export function DealCard({ lead, onEdit, isOverlay }: DealCardProps) {
                     {contactLabel}
                 </h4>
                 {lead.status === "converted" && (
-                    <span className="inline-flex shrink-0 items-center gap-1 rounded-full bg-[#35877D]/10 px-2 py-0.5 text-[10px] font-bold text-[#35877D]">
+                    <span className="inline-flex shrink-0 items-center gap-1 rounded-full bg-[#2F8F83]/10 px-2 py-0.5 text-[10px] font-bold text-[#2F8F83]">
                         <Check className="h-2.5 w-2.5" />
                         Converted
                     </span>
@@ -103,7 +103,7 @@ export function DealCard({ lead, onEdit, isOverlay }: DealCardProps) {
                     <Calendar className="h-3 w-3" />
                     {formatDate(lead.createdAt)}
                 </span>
-                <span className="h-5 w-5 rounded-full bg-[#35877D]/10 text-[#35877D] flex items-center justify-center font-bold text-[9px]">
+                <span className="h-5 w-5 rounded-full bg-[#2F8F83]/10 text-[#2F8F83] flex items-center justify-center font-bold text-[9px]">
                     {initials(lead.customerName, lead.phone)}
                 </span>
             </div>

@@ -20,21 +20,21 @@ export function CookieBanner() {
             aria-describedby="cookie-consent-description"
             className="fixed bottom-0 inset-x-0 z-50 p-3 sm:p-5 pointer-events-none animate-in fade-in slide-in-from-bottom-5 duration-300"
         >
-            <div className="max-w-7xl mx-auto bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl sm:rounded-3xl shadow-2xl p-4 sm:p-6 pointer-events-auto ring-1 ring-slate-900/5">
+            <div className="max-w-7xl mx-auto bg-white/95 backdrop-blur-md border border-[#E5E9EE] rounded-2xl shadow-xl p-4 sm:p-6 pointer-events-auto ring-1 ring-slate-900/5">
                 <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-5">
                     {/* Left Icon & Text */}
                     <div className="flex items-start gap-3.5 max-w-4xl">
-                        <div className="w-10 h-10 rounded-xl bg-[#35877D]/10 text-[#35877D] flex items-center justify-center shrink-0 mt-0.5">
+                        <div className="w-10 h-10 rounded-lg bg-[#E8F6F3] text-[#2F8F83] border border-[#BFE4DD] flex items-center justify-center shrink-0 mt-0.5 shadow-2xs">
                             <Cookie size={20} />
                         </div>
 
                         <div className="space-y-1.5">
                             <div className="flex items-center gap-2">
-                                <h3 className="text-sm sm:text-base font-extrabold text-slate-900 tracking-tight">
+                                <h3 className="text-sm sm:text-base font-bold text-slate-900 tracking-tight">
                                     We value your privacy
                                 </h3>
-                                <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-teal-800 bg-teal-50 px-2 py-0.5 rounded-full border border-teal-200/60">
-                                    <ShieldCheck size={12} className="text-[#35877D]" />
+                                <span className="inline-flex items-center gap-1 text-[11px] font-medium text-[#2F8F83] bg-[#E8F6F3] px-2 py-0.5 rounded-full border border-[#BFE4DD]">
+                                    <ShieldCheck size={12} className="text-[#2F8F83]" />
                                     GDPR & Privacy Ready
                                 </span>
                             </div>
@@ -46,14 +46,14 @@ export function CookieBanner() {
                                 We use cookies and similar technologies to keep Connectly360 secure, improve your experience, understand how our website is used, and support our marketing activities. You can accept all cookies, reject non-essential cookies, or manage your preferences. Read our{" "}
                                 <Link
                                     href="/cookie-policy"
-                                    className="font-semibold text-[#35877D] hover:underline underline-offset-2"
+                                    className="font-medium text-[#2F8F83] hover:underline underline-offset-2"
                                 >
                                     Cookie Policy
                                 </Link>{" "}
                                 and{" "}
                                 <Link
                                     href="/privacy"
-                                    className="font-semibold text-[#35877D] hover:underline underline-offset-2"
+                                    className="font-medium text-[#2F8F83] hover:underline underline-offset-2"
                                 >
                                     Privacy Policy
                                 </Link>
@@ -68,7 +68,7 @@ export function CookieBanner() {
                             type="button"
                             variant="outline"
                             onClick={rejectAll}
-                            className="h-10 text-xs sm:text-sm font-bold text-slate-700 bg-slate-50 hover:bg-slate-100 border-slate-200 rounded-xl px-4 order-2 sm:order-1 transition-colors"
+                            className="h-9 text-xs sm:text-sm font-semibold text-slate-700 bg-slate-50 hover:bg-slate-100 border-slate-200 rounded-lg px-4 order-2 sm:order-1 transition-colors"
                         >
                             Reject Non-Essential
                         </Button>
@@ -77,16 +77,16 @@ export function CookieBanner() {
                             type="button"
                             variant="outline"
                             onClick={openPreferences}
-                            className="h-10 text-xs sm:text-sm font-bold text-slate-700 bg-white hover:bg-slate-50 border-slate-200 rounded-xl px-4 gap-1.5 order-3 sm:order-2 transition-colors"
+                            className="h-9 text-xs sm:text-sm font-semibold text-slate-700 bg-white hover:bg-slate-50 border-slate-200 rounded-lg px-4 gap-1.5 order-3 sm:order-2 transition-colors"
                         >
-                            <SlidersHorizontal size={14} className="text-[#35877D]" />
+                            <SlidersHorizontal size={14} className="text-[#2F8F83]" />
                             Customize
                         </Button>
 
                         <Button
                             type="button"
                             onClick={acceptAll}
-                            className="h-10 text-xs sm:text-sm font-bold text-white bg-[#35877D] hover:bg-[#2d736a] rounded-xl px-5 order-1 sm:order-3 shadow-sm hover:shadow transition-all"
+                            className="h-9 text-xs sm:text-sm font-semibold text-white bg-[#2F8F83] hover:bg-[#267A70] rounded-lg px-5 order-1 sm:order-3 shadow-xs hover:shadow-sm transition-all"
                         >
                             Accept All
                         </Button>

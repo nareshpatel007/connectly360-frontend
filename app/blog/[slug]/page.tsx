@@ -36,7 +36,7 @@ export default function BlogPostPage({ params }: PageProps) {
 
     if (!post) {
         return (
-            <div className="min-h-screen bg-slate-50 text-slate-800 font-sans overflow-x-hidden selection:bg-[#35877D] selection:text-white">
+            <div className="min-h-screen bg-slate-50 text-slate-800 font-sans overflow-x-hidden selection:bg-[#2F8F83] selection:text-white">
                 <LandingHeader />
                 <main className="pt-40 pb-24 flex items-center justify-center">
                     <div className="w-full px-4 max-w-md text-center space-y-6">
@@ -45,11 +45,11 @@ export default function BlogPostPage({ params }: PageProps) {
                         </div>
                         <div className="space-y-2">
                             <h2 className="text-xl font-extrabold text-slate-900">Article Not Found</h2>
-                            <p className="text-sm text-gray-550 font-semibold leading-relaxed">
+                            <p className="text-sm text-slate-600 font-semibold leading-relaxed">
                                 The article you are looking for does not exist or has been moved to a new route.
                             </p>
                         </div>
-                        <Button asChild className="bg-[#35877D] hover:bg-[#2c6f66] text-white rounded-xl text-xs font-bold px-6 shadow-sm">
+                        <Button asChild className="bg-[#2F8F83] hover:bg-[#267A70] text-white rounded-xl text-xs font-bold px-6 shadow-sm">
                             <Link href="/blog">Back to Blog Grid</Link>
                         </Button>
                     </div>
@@ -95,7 +95,7 @@ export default function BlogPostPage({ params }: PageProps) {
                 .replace(/>/g, "&gt;");
             
             // Replace inline code `code`
-            formatted = formatted.replace(/`([^`]+)`/g, '<code class="bg-slate-100 text-[#35877D] px-1.5 py-0.5 rounded-md font-mono text-xs font-bold">$1</code>');
+            formatted = formatted.replace(/`([^`]+)`/g, '<code class="bg-slate-100 text-[#2F8F83] px-1.5 py-0.5 rounded-md font-mono text-xs font-bold">$1</code>');
             // Replace **bold**
             formatted = formatted.replace(/\*\*([^*]+)\*\*/g, '<strong class="font-extrabold text-slate-900">$1</strong>');
             
@@ -125,7 +125,7 @@ export default function BlogPostPage({ params }: PageProps) {
             } else if (trimmed.startsWith("> ")) {
                 flushList(index);
                 renderedElements.push(
-                    <blockquote key={index} className="border-l-4 border-[#35877D] bg-slate-50 p-4.5 rounded-r-2xl text-slate-650 my-6 font-semibold italic text-sm sm:text-base leading-relaxed">
+                    <blockquote key={index} className="border-l-4 border-[#2F8F83] bg-slate-50 p-4.5 rounded-r-2xl text-slate-650 my-6 font-semibold italic text-sm sm:text-base leading-relaxed">
                         {formatText(trimmed.replace("> ", ""))}
                     </blockquote>
                 );
@@ -136,7 +136,7 @@ export default function BlogPostPage({ params }: PageProps) {
                 }
                 listItems.push(
                     <li key={`li-${index}`} className="flex items-start gap-2 text-sm sm:text-base text-slate-600 leading-relaxed font-semibold">
-                        <CheckCircle2 size={14} className="text-[#35877D] shrink-0 mt-1" />
+                        <CheckCircle2 size={14} className="text-[#2F8F83] shrink-0 mt-1" />
                         <span>{formatText(trimmed.replace("- ", ""))}</span>
                     </li>
                 );
@@ -172,7 +172,7 @@ export default function BlogPostPage({ params }: PageProps) {
     };
 
     return (
-        <div className="min-h-screen bg-slate-50 text-slate-800 font-sans overflow-x-hidden selection:bg-[#35877D] selection:text-white">
+        <div className="min-h-screen bg-slate-50 text-slate-800 font-sans overflow-x-hidden selection:bg-[#2F8F83] selection:text-white">
             <LandingHeader />
 
             <main className="pt-40">
@@ -181,14 +181,14 @@ export default function BlogPostPage({ params }: PageProps) {
                     <div className="flex items-center justify-between gap-4 mb-6">
                         <Link
                             href="/blog"
-                            className="inline-flex items-center gap-1 text-xs font-bold text-slate-500 hover:text-[#35877D] transition-colors"
+                            className="inline-flex items-center gap-1 text-xs font-bold text-slate-500 hover:text-[#2F8F83] transition-colors"
                         >
                             <ArrowLeft size={13} />
                             Back to Articles
                         </Link>
                         <button
                             onClick={handleShare}
-                            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white border border-slate-200 text-slate-500 hover:text-[#35877D] hover:border-[#35877D]/30 text-xs font-bold cursor-pointer transition-all shadow-xs"
+                            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white border border-slate-200 text-slate-500 hover:text-[#2F8F83] hover:border-[#2F8F83]/30 text-xs font-bold cursor-pointer transition-all shadow-xs"
                         >
                             <Share2 size={12} />
                             Share Article
@@ -198,7 +198,7 @@ export default function BlogPostPage({ params }: PageProps) {
                     {/* Post Header Hero */}
                     <div className="space-y-5 mb-8">
                         <div className="flex items-center gap-2.5">
-                            <span className="bg-[#35877D]/10 text-[#35877D] text-[10px] px-2.5 py-0.5 rounded-full font-bold border border-[#35877D]/20 uppercase">
+                            <span className="bg-[#2F8F83]/10 text-[#2F8F83] text-[10px] px-2.5 py-0.5 rounded-full font-bold border border-[#2F8F83]/20 uppercase">
                                 {post.category}
                             </span>
                             <div className="flex items-center gap-1 text-[10px] font-bold text-slate-400">
@@ -213,7 +213,7 @@ export default function BlogPostPage({ params }: PageProps) {
 
                         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-2 border-b border-slate-200 pb-5">
                             <div className="flex items-center gap-3">
-                                <div className="h-10 w-10 bg-[#35877D]/10 border border-[#35877D]/20 text-[#35877D] rounded-full flex items-center justify-center font-bold text-sm">
+                                <div className="h-10 w-10 bg-[#2F8F83]/10 border border-[#2F8F83]/20 text-[#2F8F83] rounded-full flex items-center justify-center font-bold text-sm">
                                     {post.author.charAt(0)}
                                 </div>
                                 <div>
@@ -232,7 +232,7 @@ export default function BlogPostPage({ params }: PageProps) {
                     <section className="pb-24">
                         <Card className="p-8 md:p-12 bg-white border border-slate-200 rounded-3xl shadow-sm relative overflow-hidden">
                             {/* Accent gradients inside the article background for luxury look */}
-                            <div className="absolute top-0 right-0 w-48 h-48 bg-radial-gradient from-[#35877D]/3 to-transparent -z-10 rounded-full blur-xl pointer-events-none" />
+                            <div className="absolute top-0 right-0 w-48 h-48 bg-radial-gradient from-[#2F8F83]/3 to-transparent -z-10 rounded-full blur-xl pointer-events-none" />
                             
                             <div className="article-body">
                                 {renderContent()}

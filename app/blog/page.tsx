@@ -52,21 +52,21 @@ export default function BlogPage() {
     }, [filteredPosts, showFeatured]);
 
     return (
-        <div className="min-h-screen bg-slate-50 text-slate-800 font-sans overflow-x-hidden selection:bg-[#35877D] selection:text-white">
+        <div className="min-h-screen bg-slate-50 text-slate-800 font-sans overflow-x-hidden selection:bg-[#2F8F83] selection:text-white">
             <LandingHeader />
 
             <main className="pt-40">
                 {/* Hero section */}
                 <section className="relative pb-12 overflow-hidden">
                     <div className="w-full px-4 sm:px-8 md:px-12 lg:px-16 max-w-7xl mx-auto text-center space-y-4">
-                        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#35877D]/10 text-[#35877D] text-xs font-bold border border-[#35877D]/20 mb-1">
+                        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#2F8F83]/10 text-[#2F8F83] text-xs font-bold border border-[#2F8F83]/20 mb-1">
                             <Sparkles size={12} className="animate-pulse" />
                             Insights & Resources
                         </span>
                         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight tracking-tight">
-                            The Connectly360 <span className="text-[#35877D]">Blog</span>
+                            The Connectly360 <span className="text-[#2F8F83]">Blog</span>
                         </h1>
-                        <p className="text-base text-gray-550 font-semibold max-w-2xl mx-auto leading-relaxed">
+                        <p className="text-base text-slate-600 font-semibold max-w-2xl mx-auto leading-relaxed">
                             Expert guides, tutorials, and success stories to elevate your conversational automation and customer success.
                         </p>
                     </div>
@@ -83,7 +83,7 @@ export default function BlogPage() {
                                         key={category}
                                         onClick={() => setSelectedCategory(category)}
                                         className={`px-4 py-2 text-xs font-bold rounded-xl transition-all cursor-pointer border ${selectedCategory === category
-                                            ? "bg-[#35877D] border-[#35877D] text-white shadow-sm"
+                                            ? "bg-[#2F8F83] border-[#2F8F83] text-white shadow-sm"
                                             : "bg-slate-50 border-slate-200 text-slate-600 hover:bg-slate-100 hover:text-slate-900"
                                             }`}
                                     >
@@ -100,7 +100,7 @@ export default function BlogPage() {
                                     placeholder="Search articles..."
                                     value={searchQuery}
                                     onChange={(e) => setSearchQuery(e.target.value)}
-                                    className="pl-10 h-11 border-slate-200 focus-visible:ring-[#35877D] focus-visible:border-[#35877D] rounded-xl bg-slate-50/50 font-semibold text-sm w-full"
+                                    className="pl-10 h-11 border-slate-200 focus-visible:ring-[#2F8F83] focus-visible:border-[#2F8F83] rounded-xl bg-slate-50/50 font-semibold text-sm w-full"
                                 />
                             </div>
                         </div>
@@ -117,7 +117,7 @@ export default function BlogPage() {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.4 }}
                             >
-                                <Card className="p-0 border border-slate-200 bg-white rounded-3xl shadow-sm overflow-hidden grid grid-cols-1 lg:grid-cols-12 group hover:border-[#35877D]/25 hover:shadow-md transition-all duration-300">
+                                <Card className="p-0 border border-slate-200 bg-white rounded-3xl shadow-sm overflow-hidden grid grid-cols-1 lg:grid-cols-12 group hover:border-[#2F8F83]/25 hover:shadow-md transition-all duration-300">
                                     <div className={`lg:col-span-6 bg-gradient-to-br ${featuredPost.gradient} p-8 flex flex-col justify-between text-white relative min-h-[300px] lg:min-h-full`}>
                                         <div className="absolute inset-0 bg-radial-gradient from-white/10 to-transparent pointer-events-none" />
                                         <span className="bg-white/15 backdrop-blur-sm border border-white/20 px-3 py-1 rounded-full text-xs font-bold tracking-wide self-start shadow-xs">
@@ -145,14 +145,14 @@ export default function BlogPage() {
                                                     {featuredPost.readTime}
                                                 </span>
                                             </div>
-                                            <p className="text-sm sm:text-base text-gray-550 leading-relaxed font-semibold">
+                                            <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-semibold">
                                                 {featuredPost.excerpt}
                                             </p>
                                         </div>
 
                                         <div className="flex items-center justify-between pt-4 border-t border-slate-100">
                                             <div className="flex items-center gap-3">
-                                                <div className="h-10 w-10 bg-slate-50 border border-slate-200 rounded-full flex items-center justify-center font-bold text-[#35877D]">
+                                                <div className="h-10 w-10 bg-slate-50 border border-slate-200 rounded-full flex items-center justify-center font-bold text-[#2F8F83]">
                                                     {featuredPost.author.charAt(0)}
                                                 </div>
                                                 <div>
@@ -160,7 +160,7 @@ export default function BlogPage() {
                                                     <p className="text-[10px] font-medium text-slate-400">{featuredPost.authorRole}</p>
                                                 </div>
                                             </div>
-                                            <Button asChild className="bg-[#35877D] hover:bg-[#2c6f66] text-white rounded-xl text-xs font-bold gap-1.5 cursor-pointer shadow-sm">
+                                            <Button asChild className="bg-[#2F8F83] hover:bg-[#267A70] text-white rounded-xl text-xs font-bold gap-1.5 cursor-pointer shadow-sm">
                                                 <Link href={`/blog/${featuredPost.slug}`}>
                                                     <span>Read Article</span>
                                                     <ArrowRight size={13} />
@@ -188,7 +188,7 @@ export default function BlogPage() {
                                             exit={{ opacity: 0, scale: 0.95 }}
                                             transition={{ duration: 0.3 }}
                                         >
-                                            <Card className="h-full flex flex-col justify-between border border-slate-200 bg-white rounded-3xl overflow-hidden group hover:border-[#35877D]/25 hover:shadow-md transition-all duration-300">
+                                            <Card className="h-full flex flex-col justify-between border border-slate-200 bg-white rounded-3xl overflow-hidden group hover:border-[#2F8F83]/25 hover:shadow-md transition-all duration-300">
                                                 <div>
                                                     {/* Card Header Gradient Visual */}
                                                     <div className={`bg-gradient-to-br ${post.gradient} h-40 p-6 flex flex-col justify-between text-white relative`}>
@@ -210,10 +210,10 @@ export default function BlogPage() {
                                                                 {post.readTime}
                                                             </span>
                                                         </div>
-                                                        <h3 className="text-base font-extrabold text-slate-900 leading-snug group-hover:text-[#35877D] transition-colors">
+                                                        <h3 className="text-base font-extrabold text-slate-900 leading-snug group-hover:text-[#2F8F83] transition-colors">
                                                             {post.title}
                                                         </h3>
-                                                        <p className="text-xs text-gray-550 leading-relaxed font-semibold line-clamp-3">
+                                                        <p className="text-xs text-slate-600 leading-relaxed font-semibold line-clamp-3">
                                                             {post.excerpt}
                                                         </p>
                                                     </div>
@@ -221,7 +221,7 @@ export default function BlogPage() {
 
                                                 <div className="p-6 pt-4 border-t border-slate-100 flex items-center justify-between bg-slate-50/20">
                                                     <div className="flex items-center gap-2.5">
-                                                        <div className="h-8 w-8 bg-slate-100 border border-slate-200 rounded-full flex items-center justify-center font-bold text-xs text-[#35877D]">
+                                                        <div className="h-8 w-8 bg-slate-100 border border-slate-200 rounded-full flex items-center justify-center font-bold text-xs text-[#2F8F83]">
                                                             {post.author.charAt(0)}
                                                         </div>
                                                         <div>
@@ -229,7 +229,7 @@ export default function BlogPage() {
                                                             <p className="text-[8px] font-medium text-slate-400">{post.authorRole}</p>
                                                         </div>
                                                     </div>
-                                                    <Button asChild variant="outline" className="border-slate-200 hover:border-[#35877D]/40 text-[#35877D] hover:bg-[#35877D]/5 rounded-xl text-[10px] font-bold h-8 px-3.5 cursor-pointer">
+                                                    <Button asChild variant="outline" className="border-slate-200 hover:border-[#2F8F83]/40 text-[#2F8F83] hover:bg-[#2F8F83]/5 rounded-xl text-[10px] font-bold h-8 px-3.5 cursor-pointer">
                                                         <Link href={`/blog/${post.slug}`}>
                                                             <span>Read</span>
                                                             <ArrowRight size={10} className="ml-1" />
@@ -260,7 +260,7 @@ export default function BlogPage() {
                                             setSearchQuery("");
                                             setSelectedCategory("All");
                                         }}
-                                        className="h-10 bg-[#35877D] hover:bg-[#2c6f66] text-white rounded-xl text-xs font-bold px-5 cursor-pointer"
+                                        className="h-10 bg-[#2F8F83] hover:bg-[#267A70] text-white rounded-xl text-xs font-bold px-5 cursor-pointer"
                                     >
                                         Reset Filters
                                     </Button>
